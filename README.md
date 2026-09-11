@@ -1,3 +1,1 @@
 # cleezoclass-web
-
-* Testing
