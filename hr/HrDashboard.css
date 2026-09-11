@@ -1,0 +1,1308 @@
+/* ============================================
+   HR DASHBOARD GRID LAYOUT
+   ============================================ */
+.bio-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0;
+  padding: 10px 14px;
+  background: #fff;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.bio-section-heading:hover {
+}
+
+.bio-icon {
+  font-size: 20px;
+  color: #f9b1b8;
+  flex-shrink: 0;
+}
+.hr-grid {
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) minmax(0, 0.82fr);
+  gap: 0.48rem;
+  overflow: hidden;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  padding: 34px;
+}
+
+.hr-row-top,
+.hr-row-middle,
+.hr-row-bottom,
+.hr-bottom-right {
+  min-width: 0;
+  min-height: 0;
+}
+
+
+
+.hr-row-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 0.48rem;
+  align-items: stretch;
+}
+
+.hr-welcome-block {
+  background: rgb(255, 255, 255);
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.hr-welcome-block h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.hr-welcome-block p {
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+.hr-task-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.891);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 2px black;
+}
+
+.hr-task-card .task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 1rem; */
+  /* padding-bottom: 0.75rem; */
+  /* border-bottom: 2px solid #f3f4f6; */
+}
+
+.hr-task-card .task-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.hr-task-card .task-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.hr-mini-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.hr-quick-card {
+  background: white;
+  border-radius: 20px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.337);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.hr-quick-card:hover {
+  transform: translateY(-4px);
+}
+
+.hr-quick-card img {
+  width: 48px;
+  height: 48px;
+  /* margin-bottom: 0.75rem; */
+  object-fit: contain;
+}
+
+.hr-quick-card h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.hr-quick-card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* ============================================
+   MIDDLE ROW - 3 Equal Columns
+   ============================================ */
+
+.hr-row-middle {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.48rem;
+  align-items: stretch;
+}
+
+/* ============================================
+   BOTTOM ROW - 3 Columns (1.5fr 0.5fr 1fr)
+   ============================================ */
+
+.hr-row-bottom {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1.4fr;
+  gap: 0.48rem;
+  align-items: stretch;
+}
+
+.hr-bottom-right {
+  display: grid;
+  /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
+  grid-template-rows: minmax(0, 0.86fr) auto;
+  gap: 0.34rem;
+  height: 100%;
+  align-content: stretch;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.344);
+    border-radius: 20px;
+}
+
+/* ============================================
+   BASE CARD STYLES
+   ============================================ */
+
+.hr-card {
+  background: white;
+  border-radius: 20px;
+  padding: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.344);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+  min-height: 0;
+}
+
+.hr-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 1rem; */
+  /* padding-bottom: 0.75rem; */
+  /* border-bottom: 2px solid #f3f4f6; */
+}
+
+.hr-card-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.hr-card-filters {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* ============================================
+   EMPLOYEE OVERVIEW CARD
+   ============================================ */
+
+.hr-employee-card {
+  position: relative;
+}
+
+.hr-employee-card .employee-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.hr-employee-stat {
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.hr-employee-stat .stat-number {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f9b1b8;
+  /* margin-bottom: 0.25rem; */
+}
+
+.hr-employee-stat .stat-label {
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hr-employee-card .add-employee-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f9b1b8;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.hr-employee-card .add-employee-btn:hover {
+  background: #f9b1b8;
+  transform: scale(1.1);
+}
+
+/* ============================================
+   ATTENDANCE CARD
+   ============================================ */
+
+.hr-attendance-card .attendance-content {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex: 1;
+}
+
+.hr-attendance-card .attendance-ring {
+  flex-shrink: 0;
+}
+
+.hr-attendance-card .attendance-stats {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hr-attendance-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.hr-attendance-stat .stat-label {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.hr-attendance-stat .stat-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+/* ============================================
+   RECRUITMENT PIPELINE CARD
+   ============================================ */
+
+.hr-recruitment-card .recruitment-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.hr-recruitment-pipeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hr-pipeline-stage {
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 1rem;
+  border-left: 4px solid #f9b1b8;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hr-pipeline-stage:hover {
+  background: #f3f4f6;
+  transform: translateX(4px);
+}
+
+.hr-pipeline-stage .stage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 0.5rem; */
+}
+
+.hr-pipeline-stage .stage-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.hr-pipeline-stage .stage-count {
+  background: #f9b1b8;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.hr-pipeline-stage .stage-desc {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* ============================================
+   EVENTS CARD
+   ============================================ */
+
+.hr-events-card .events-content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.hr-event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.hr-event-item {
+  display: flex;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: #f9fafb;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hr-event-item:hover {
+  background: #f3f4f6;
+  transform: translateX(4px);
+}
+
+.hr-event-date {
+  background: #f9b1b8;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hr-event-date .day {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.hr-event-date .month {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+}
+
+.hr-event-details {
+  flex: 1;
+}
+
+.hr-event-details h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.hr-event-details p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* ============================================
+   PREMIUM CARD
+   ============================================ */
+
+.hr-premium-card {
+  /* background: linear-gradient(135deg, #f9b1b8 0%, #f5576c 100%); */
+  color: rgb(0, 0, 0);
+  text-align: center;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 1.3rem;
+}
+
+.hr-premium-card img {
+  width: 64px;
+  height: 64px;
+  /* margin-bottom: 1rem; */
+}
+
+.hr-premium-card h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.hr-premium-card p {
+  margin: 0 0 1.25rem 0;
+  font-size: 0.9rem;
+  opacity: 0.95;
+  line-height: 1.5;
+}
+
+.hr-premium-card button {
+  background: white;
+  color: #f5576c;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hr-premium-card button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================================
+   STATS CARDS (Income, Previous Year Due)
+   ============================================ */
+
+.hr-income-card,
+.hr-prevdue-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hr-income-card .blockText,
+.hr-prevdue-card .blockText {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-top: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hr-income-card .normalText,
+.hr-prevdue-card .normalText {
+  font-size: 0.8rem;
+  color: #9ca3af;
+  /* margin-top: 0.25rem; */
+}
+
+.hr-prevdue-card .amount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f5576c;
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   TOTAL STRIP (Bottom Summary)
+   ============================================ */
+
+.hr-total-strip {
+  grid-column: 1 / -1;
+  background: white;
+  border-radius: 20px;
+  padding: 0.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.201);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hr-total-strip-list {
+  display: flex;
+  gap: 2rem;
+}
+
+.hr-total-strip-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hr-total-strip-item strong {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f9b1b8;
+  margin-bottom: 0.25rem;
+}
+
+.hr-total-strip-item span {
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hr-total-strip-right {
+  text-align: right;
+}
+
+.hr-total-strip-right span {
+  font-size: 0.9rem;
+  color: #6b7280;
+  display: block;
+  /* margin-bottom: 0.25rem; */
+}
+
+.hr-total-strip-right h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f5576c;
+}
+
+.hr-total-strip-right p {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .hr-row-top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr;
+  gap: 0.48rem;
+  align-items: stretch;
+}
+
+  .hr-row-middle,
+  .hr-row-bottom {
+ grid-template-columns: 1.5fr 1fr 1.5fr;
+  }
+
+  .hr-bottom-right {
+   /* grid-template-columns: 1.5fr 1fr 1.5fr; */
+  }
+
+  .hr-mini-cards {
+   grid-template-columns: 1.5fr 1fr 1.5fr;
+  }
+
+  .hr-total-strip {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hr-total-strip-list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hr-grid {
+    padding: 0.25rem;
+    gap: 0.25rem;
+  }
+
+  .hr-card {
+    padding: 1rem;
+  }
+
+  .hr-welcome-block h2 {
+    font-size: 1.5rem;
+  }
+
+  .hr-employee-stat .stat-number {
+    font-size: 1.5rem;
+  }
+}
+
+/* ============================================
+   SCROLLBAR STYLING
+   ============================================ */
+
+.hr-card ::-webkit-scrollbar {
+  width: 6px;
+}
+
+.hr-card ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.hr-card ::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.hr-card ::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+/* ============ TOP BAR ============ */
+.hr-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+  position: sticky;
+  background: #ffffff;
+  top: 0;
+  z-index: 100;
+}
+
+.hr-topbar-left {
+  display: flex;
+  gap: 6px;
+}
+
+.hr-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Base tab button */
+.hr-topbar-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 2px solid transparent;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.hr-topbar-tab:hover {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+/* Active tab — matches sidebar active style */
+.hr-topbar-tab-active {
+  background: #f9b1b8 !important;
+  color: white !important;
+  border-color: #f9b1b8 !important;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+.hr-topbar-tab-active:hover {
+  background: #f9b1b8 !important;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 768px) {
+  .hr-topbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .hr-topbar-left {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 4px;
+  }
+
+  .hr-topbar-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.hr-bottom-right {
+  padding: 3px;
+  /* width: 200%; */
+}
+
+.hr-leave-overview {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.hr-leave-card {
+  width: 100%;
+  min-width: 0;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  /* transition: all 0.25s ease; */
+}
+
+.hr-leave-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.hr-leave-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 18px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.hr-teacher-title {
+  color: #1e293b;
+  border-bottom: 2px solid #f9b1b8;
+}
+
+.hr-student-title {
+  color: #1e293b;
+  border-bottom: 2px solid #f9b1b8;
+}
+
+.hr-leave-loading {
+  color: #94a3b8;
+}
+
+.hr-leave-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.hr-leave-row:last-child {
+  border-bottom: none;
+}
+
+.hr-leave-row span {
+  color: #64748b;
+}
+
+.hr-approved {
+  color: #16a34a;
+}
+
+.hr-pending {
+  color: #d97706;
+}
+
+@media (max-width: 768px) {
+  .hr-leave-overview {
+    grid-template-columns: 1fr;
+  }
+}
+/* Main Container */
+.hr-dashboard-stats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Top Row Layout */
+.hr-leaves-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Base Card Styling */
+.hr-leaves-card, 
+.hr-payroll-card {
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  flex: 1; 
+}
+.hr-payroll-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  flex: 1; 
+}
+.hr-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 2px solid #f9b1b8;
+}
+
+.hr-stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  color: #555;
+  border-bottom: 1px solid #fafafa;
+}
+
+.hr-stat-item:last-child {
+  border-bottom: none;
+}
+
+.hr-stat-item strong {
+  font-size: 18px;
+  color: #222;
+}
+
+/* Color Coding for Stats */
+.hr-stat-item.approved strong {
+  color: #4CAF50; /* Green */
+}
+
+.hr-stat-item.pending strong {
+  color: #FF9800; /* Orange */
+}
+
+/* Payroll Card Specifics */
+.hr-payroll-card {
+  width: 100%;
+  flex: none; /* Prevents it from stretching like the top cards */
+}
+
+.hr-payroll-title {
+  text-align: center;
+  border-bottom: none;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.hr-payroll-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.hr-payroll-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.hr-section-label {
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Circular Progress Bar */
+.hr-progress-circle {
+  width: 120px;
+  height: 120px;
+}
+
+.circular-chart {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.percentage-text {
+  font-size: 0.6em;
+  text-anchor: middle;
+  fill: #333;
+  font-weight: bold;
+}
+
+/* Pending Salary Amount */
+.hr-salary-amount {
+  font-size: 32px;
+  color: #E91E63; /* Pink/Red to highlight pending money */
+  font-weight: 700;
+}
+
+/* ============================================
+   CURRENT HR DASHBOARD
+   ============================================ */
+
+.hr-accountant-dashboard-page .dashboard-school-brand {
+  min-width: 0;
+}
+
+.hr-accountant-dashboard-page .dashboard-school-logo {
+  width: 42px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.hr-accountant-dashboard-page .dashboard-school-name {
+  max-width: 160px;
+  font-size: 12px;
+  line-height: 1.05;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hr-accountant-dashboard-page .accountant-row-top {
+  grid-template-columns: minmax(220px, 0.95fr) minmax(340px, 1fr) minmax(420px, 1fr);
+  gap: 10px;
+}
+
+.hr-accountant-dashboard-page .accountant-row-middle {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.hr-accountant-dashboard-page .accountant-row-bottom {
+  grid-template-columns: minmax(420px, 1.45fr) minmax(220px, 0.7fr) minmax(300px, 0.9fr);
+  gap: 10px;
+}
+
+.hr-accountant-dashboard-page .accountant-welcome-block {
+  padding: 14px 0;
+}
+
+.hr-accountant-task {
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 158px;
+  padding: 12px 20px;
+  text-align: center;
+}
+
+.hr-accountant-task .Heading {
+  margin-bottom: 6px;
+}
+
+.hr-accountant-task-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  max-width: 100%;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.hr-accountant-task-box strong,
+.hr-accountant-task-box span {
+  display: inline-block;
+  min-width: 0;
+}
+
+.hr-accountant-dashboard-page .accountant-mini-cards {
+  grid-template-columns: repeat(3, minmax(132px, 1fr));
+  gap: 8px;
+  min-width: 0;
+}
+
+.hr-accountant-dashboard-page .accountant-quick-card {
+  min-width: 0;
+  min-height: 138px;
+  padding: 14px 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+}
+
+.hr-accountant-dashboard-page .accountant-quick-card img {
+  width: 54px;
+  height: 54px;
+}
+
+.hr-accountant-dashboard-page .accountant-quick-card h4 {
+  width: 100%;
+  margin: 8px 0 3px;
+  font-size: 13px;
+  line-height: 1.2;
+  white-space: normal;
+}
+
+.hr-accountant-dashboard-page .accountant-quick-card p {
+  width: 100%;
+  font-size: 11px;
+  line-height: 1.25;
+  white-space: normal;
+}
+
+.hr-accountant-big-card,
+.hr-accountant-summary-card,
+.hr-accountant-action-card,
+.hr-accountant-module-list button {
+  appearance: none;
+  border: 1px solid #d5d5d5;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #050505;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.hr-accountant-big-card {
+  min-height: 282px;
+  display: grid;
+  grid-template-columns: auto minmax(0, max-content) minmax(0, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 22px;
+}
+
+.hr-accountant-big-card svg {
+  flex: 0 0 auto;
+}
+
+.hr-accountant-big-card strong,
+.hr-accountant-summary-card strong,
+.hr-accountant-action-card strong,
+.hr-accountant-module-list strong {
+  font-size: 16px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.hr-accountant-big-card span,
+.hr-accountant-summary-card span,
+.hr-accountant-action-card small,
+.hr-accountant-module-list small {
+  display: block;
+  min-width: 0;
+  color: #111827;
+  font-size: 14px;
+  line-height: 1.35;
+  white-space: normal;
+}
+
+.hr-accountant-module-card {
+  min-height: 282px;
+  padding: 10px;
+}
+
+.hr-accountant-module-list {
+  display: grid;
+  gap: 12px;
+  padding: 12px 0 0;
+}
+
+.hr-accountant-module-list button {
+  width: 100%;
+  min-height: 44px;
+  display: grid;
+  grid-template-columns: auto minmax(0, max-content) minmax(160px, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 10px 14px;
+  box-shadow: 1px 1px 4px rgba(80, 80, 80, 0.18);
+}
+
+.hr-accountant-module-list button span {
+  display: contents;
+}
+
+.hr-accountant-bottom .hr-accountant-module-card {
+  min-height: 302px;
+}
+
+.hr-accountant-summary-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, max-content) minmax(0, 1fr);
+  align-items: start;
+  justify-content: center;
+  gap: 4px;
+  min-height: 302px;
+  padding: 14px;
+  text-align: center;
+}
+
+.hr-accountant-summary-card span {
+  text-align: center;
+}
+
+.hr-accountant-action-grid {
+  display: grid;
+  gap: 12px;
+  width: 100%;
+}
+
+.hr-accountant-action-card {
+  width: 100%;
+  min-height: 56px;
+  display: grid;
+  grid-template-columns: auto minmax(0, max-content) minmax(220px, 1fr);
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 16px;
+  box-shadow: 1px 1px 4px rgba(80, 80, 80, 0.2);
+}
+
+.hr-accountant-action-card > span:last-child {
+  display: contents;
+}
+
+.hr-accountant-action-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hr-accountant-report-card-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(160px, 250px));
+  gap: 0.6rem;
+  align-content: start;
+  justify-content: center;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.hr-accountant-report-card {
+  width: 100%;
+  min-height: 114px;
+  padding: 9px 7px;
+  border: 2px solid #efefef;
+  border-radius: 20px;
+  background: #ffffff;
+  color: #212121;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.hr-accountant-report-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(16, 42, 67, 0.12);
+  border-color: #f36b79;
+  background: #fff7f8;
+}
+
+.hr-accountant-report-card-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 6px;
+  display: grid;
+  place-items: center;
+  color: #111111;
+}
+
+.hr-accountant-report-card-title {
+  max-width: 100%;
+  color: #212121;
+  font-size: 16px;
+  line-height: 1.05;
+  font-weight: 800;
+  text-align: center;
+  white-space: normal;
+}
+
+.hr-accountant-report-card-subtitle {
+  max-width: 100%;
+  margin-top: 2px;
+  color: #6a6a6a;
+  font-size: 10.5px;
+  line-height: 1.2;
+  text-align: center;
+  white-space: normal;
+}
+
+.hr-accountant-big-card:hover,
+.hr-accountant-action-card:hover,
+.hr-accountant-module-list button:hover {
+  border-color: #f0aab3;
+  background: #fff9fa;
+}
+
+.hr-accountant-work-card {
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hr-accountant-work-body {
+  min-height: 0;
+  height: calc(100% - 42px);
+  overflow: auto;
+  padding: 12px 8px;
+}
+
+@media (max-width: 1200px) {
+  .hr-accountant-dashboard-page .accountant-row-top,
+  .hr-accountant-dashboard-page .accountant-row-middle,
+  .hr-accountant-dashboard-page .accountant-row-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .hr-accountant-dashboard-page .accountant-mini-cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .hr-accountant-big-card,
+  .hr-accountant-summary-card,
+  .hr-accountant-action-card,
+  .hr-accountant-module-list button {
+    grid-template-columns: auto minmax(0, 1fr);
+    justify-content: stretch;
+    text-align: left;
+  }
+
+  .hr-accountant-big-card span,
+  .hr-accountant-summary-card span,
+  .hr-accountant-action-card small,
+  .hr-accountant-module-list small {
+    grid-column: 2;
+  }
+
+  .hr-accountant-report-card-row {
+    grid-template-columns: repeat(2, minmax(150px, 250px));
+  }
+}
+
+@media (max-width: 620px) {
+  .hr-accountant-report-card-row {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,726 @@
+.admin-reports-page {
+  overflow: hidden;
+}
+
+.admin-reports-page .dashboard-main {
+  min-width: 0;
+}
+
+.admin-reports-main {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.admin-reports-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 0 0 14px;
+  min-height: auto;
+}
+
+.admin-reports-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.admin-reports-section-row {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.admin-reports-mark-row {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.admin-reports-main-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.admin-reports-main-tab {
+  border: 2px solid #efefef;
+  border-radius: 20px;
+  background: #fff;
+  min-height: 118px;
+  padding: 10px 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-reports-main-tab:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(16, 42, 67, 0.12);
+}
+
+.admin-reports-main-tab-active {
+  border-color: #f36b79;
+  background: #fff7f8;
+}
+
+.admin-reports-attendance-tabs {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.55rem;
+  padding: 0.35rem;
+  border: 1px solid #e8edf3;
+  border-radius: 12px;
+  background: #f7f9fc;
+}
+
+.admin-reports-mark-tabs {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.admin-reports-attendance-tab {
+  min-width: 0;
+  min-height: 58px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  color: #1f2937;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-reports-attendance-tab:hover {
+  background: #ffffff;
+  border-color: #dbe4ee;
+}
+
+.admin-reports-attendance-tab-active {
+  background: #ffffff;
+  border-color: #f36b79;
+  box-shadow: 0 8px 18px rgba(16, 42, 67, 0.08);
+}
+
+.admin-reports-attendance-tab-icon {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  display: grid;
+  place-items: center;
+  color: #0a4d82;
+}
+
+.admin-reports-attendance-tab-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.admin-reports-attendance-tab-text {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.admin-reports-attendance-tab-text b {
+  color: #172033;
+  font-size: 0.82rem;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.admin-reports-attendance-tab-text small {
+  color: #64748b;
+  font-size: 0.68rem;
+  line-height: 1.15;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.accountant-reports-label-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.accountant-reports-label-grid.admin-reports-filter-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.admin-reports-filter-chip {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.8rem 0.9rem;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(220, 225, 232, 0.95);
+  border-radius: 1rem;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.04);
+}
+
+.admin-reports-filter-chip span {
+  font-size: 0.73rem;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.admin-reports-filter-chip select,
+.admin-reports-filter-chip input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #111827;
+  font-size: 0.95rem;
+  padding: 0;
+  min-width: 0;
+}
+
+.admin-reports-search-chip input::placeholder {
+  color: #9ca3af;
+}
+
+.accountant-reports-label-chip {
+  border: 1px solid #1f4f75;
+  border-radius: 0.65rem;
+  background: #f8fbff;
+  min-height: 2.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #18486b;
+  padding: 0.2rem 0.5rem;
+}
+
+.accountant-reports-label-chip span {
+  font-size: 0.73rem;
+  font-weight: 700;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.accountant-reports-label-chip:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.accountant-reports-label-chip img {
+  width: 1.1rem;
+  height: 1.1rem;
+  object-fit: contain;
+}
+
+.accountant-reports-field-chip {
+  justify-content: flex-start;
+}
+
+.accountant-reports-field-chip input,
+.accountant-reports-field-chip select {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #18486b;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.accountant-reports-field-chip input::placeholder {
+  color: #18486b;
+  opacity: 0.9;
+}
+
+.admin-reports-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.admin-reports-hr-summary-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.admin-reports-all-cards-row {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.admin-reports-summary-card {
+  padding: 0.95rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(232, 202, 208, 0.95);
+  background: linear-gradient(180deg, #ffffff 0%, #fff8f9 100%);
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.admin-reports-summary-card span {
+  color: #6b7280;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.admin-reports-summary-card strong {
+  color: #111827;
+  font-size: 1.28rem;
+  line-height: 1;
+}
+
+.admin-reports-hr-card {
+  min-height: 118px;
+}
+
+.admin-reports-hr-card-active {
+  border-color: #f36b79 !important;
+  background: #fff7f8 !important;
+  box-shadow: 0 8px 18px rgba(16, 42, 67, 0.12);
+}
+
+.admin-reports-summary-card-lines {
+  display: grid;
+  gap: 0.35rem;
+  margin-top: 0.15rem;
+}
+
+.admin-reports-summary-card-lines div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.84rem;
+  color: #4b5563;
+}
+
+.admin-reports-summary-card-lines b {
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.admin-reports-summary-card-lines span {
+  font-weight: 800;
+  color: #f36b79;
+}
+
+.admin-reports-summary-card-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-top: auto;
+  font-size: 0.78rem;
+  color: #6b7280;
+}
+
+.admin-reports-summary-card-preview p {
+  margin: 0;
+}
+
+.admin-reports-hr-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  color: #111827;
+}
+
+.admin-reports-hr-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.admin-reports-empty-cell {
+  text-align: center;
+  color: #6b7280;
+  padding: 1rem;
+}
+
+.admin-reports-card-row,
+.accountant-reports-card-row {
+  display: grid;
+  /* grid-template-columns: repeat(7, minmax(0, 1fr)); */
+  gap: 0.85rem;
+}
+
+.admin-reports-card,
+.accountant-reports-card {
+  border: 2px solid #efefef;
+  border-radius: 20px;
+  background: #fff;
+  min-height: 118px;
+  padding: 10px 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-reports-card:hover,
+.accountant-reports-card:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(16, 42, 67, 0.12);
+}
+
+.admin-reports-card:disabled,
+.accountant-reports-card:disabled {
+  opacity: 0.72;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.admin-reports-card-active,
+.accountant-reports-card-active {
+  border-color: #f36b79;
+  background: #fff7f8;
+}
+
+.admin-reports-card-icon,
+.accountant-reports-card-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 6px;
+}
+
+.admin-reports-card-icon img,
+.accountant-reports-card img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+}
+
+.admin-reports-card-title,
+.accountant-reports-card-title {
+  font-size: 15px;
+  line-height: 1.05;
+  font-weight: 800;
+  color: #212121;
+  text-align: center;
+}
+
+.admin-reports-card-subtitle,
+.accountant-reports-card-subtitle {
+  font-size: 10px;
+  color: #6a6a6a;
+  margin-top: 2px;
+  text-align: center;
+}
+
+.admin-reports-table-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 12px;
+  border-radius: 16px;
+  border: 2px solid #efefef;
+  background: #fff;
+  box-shadow: none;
+  gap: 10px;
+  margin-top: 10px;
+  height: auto;
+  overflow: hidden;
+  min-height: 360px;
+}
+
+.admin-reports-toolbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.admin-reports-toolbar strong {
+  display: block;
+  font-size: 1rem;
+  color: #111827;
+}
+
+.admin-reports-toolbar p {
+  margin: 0.15rem 0 0;
+  color: #6b7280;
+  font-size: 0.86rem;
+}
+
+.admin-reports-toolbar-meta {
+  color: #6b7280;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.admin-reports-error {
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.8rem;
+  background: #fff1f2;
+  color: #9f1239;
+  border: 1px solid #fecdd3;
+  font-size: 0.9rem;
+}
+
+.admin-reports-table-wrap {
+  overflow: auto;
+  max-height: none;
+  border-radius: 10px;
+  border: 1px solid #ececec;
+  flex: 1;
+  min-height: 0;
+}
+
+.admin-reports-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 960px;
+  background: #ffffff;
+}
+
+.admin-reports-table th,
+.admin-reports-table td {
+  padding: 9px 10px;
+  border-bottom: 1px solid #f0f0f0;
+  text-align: left;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.admin-reports-table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #0A4D82;
+  color: #fff;
+  font-size: 12px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.admin-reports-table tbody tr:nth-child(even) {
+  background: #fff;
+}
+
+.admin-reports-empty-state {
+  text-align: center;
+  color: #666;
+  font-size: 13px;
+  padding: 24px 10px !important;
+}
+
+@media (max-width: 1280px) {
+  .admin-reports-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .admin-reports-attendance-tabs {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .admin-reports-all-cards-row,
+  .admin-reports-hr-summary-grid {
+    /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
+  }
+
+  .accountant-reports-label-grid {
+    /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
+  }
+}
+
+@media (max-width: 900px) {
+  .admin-reports-toolbar {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-reports-summary-grid,
+  .admin-reports-card-row {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-reports-filter-grid,
+  .admin-reports-mark-row {
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .admin-reports-filter-grid::-webkit-scrollbar,
+  .admin-reports-mark-row::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  .admin-reports-all-cards-row,
+  .admin-reports-hr-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-reports-attendance-tabs {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .admin-reports-attendance-tabs::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  .admin-reports-attendance-tab {
+    flex: 0 0 180px;
+  }
+
+  .admin-reports-main-tabs {
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .admin-reports-main-tabs::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  .accountant-reports-label-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .accountant-reports-label-grid.admin-reports-filter-grid {
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+  }
+
+  .admin-reports-content {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .admin-reports-page .admin-reports-main,
+  .admin-reports-page .accountant-main-area {
+    overflow: auto !important;
+  }
+
+  .admin-reports-page .admin-reports-content {
+    min-width: 64rem;
+    padding-right: 0.5rem;
+  }
+
+  .admin-reports-page .admin-reports-table-wrap {
+    max-height: 52vh;
+  }
+}
+
+.admin-reports-page .dashboard-shell,
+.admin-reports-page .accountant-dashboard-shell {
+  height: 100% !important;
+  min-height: 100vh !important;
+  overflow: hidden !important;
+}
+
+.admin-reports-page .accountant-main-area {
+  overflow: auto !important;
+  min-height: 0;
+}
+
+.admin-reports-page .dashboard-sidebar,
+.admin-reports-page .accountant-sidebar-strip {
+  flex-shrink: 0;
+}
+
+@media (max-width: 1370px) {
+  .admin-reports-card-row {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(170px, 1fr);
+  }
+
+  .admin-reports-card-row::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-reports-card {
+    min-height: 124px;
+    padding: 10px 8px;
+    border-radius: 20px;
+  }
+
+  .admin-reports-card-icon,
+  .admin-reports-card-icon img {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 6px;
+  }
+
+  .admin-reports-card-title {
+    font-size: 16px;
+  }
+
+  .admin-reports-card-subtitle {
+    font-size: 10px;
+  }
+}
+.accountant-reports-download-group {
+  display: flex;
+  gap: 8px;
+  margin-left: 12px;
+}
+
+.accountant-reports-download-btn {
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* .accountant-reports-btn-excel {
+  background-color: #10b981;
+  color: #fff;
+}
+
+.accountant-reports-btn-excel:hover {
+  background-color: #059669;
+  transform: translateY(-1px);
+}
+
+.accountant-reports-btn-image {
+  background-color: #3b82f6;
+  color: #fff;
+}
+
+.accountant-reports-btn-image:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+} */

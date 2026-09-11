@@ -1,0 +1,555 @@
+.admin-store-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.28);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.4rem;
+  z-index: 1200;
+}
+
+.admin-store-modal-card {
+  width: min(94vw, 1380px);
+  height: min(90vh, 900px);
+  background: linear-gradient(180deg, #ffffff 0%, #fff8f8 100%);
+  border: 1px solid rgba(218, 185, 191, 0.95);
+  border-radius: 2rem;
+  box-shadow: 0 32px 80px rgba(15, 23, 42, 0.18);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-store-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid rgba(226, 209, 213, 0.92);
+  background: linear-gradient(180deg, #ffffff 0%, #fff5f6 100%);
+}
+
+.admin-store-modal-header h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #1f2937;
+}
+
+.dashboard-school-brand,
+.accountant-school-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.dashboard-school-logo,
+.accountant-school-logo {
+  width: auto;
+  max-width: 6.2rem;
+  height: 3.6rem;
+  object-fit: contain;
+}
+
+.dashboard-school-name,
+.accountant-school-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.05;
+  white-space: normal;
+  overflow: hidden;
+  max-width: 220px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.dashboard-school-name-line,
+.accountant-school-name-line {
+  display: block;
+  min-width: 0;
+}
+
+.dashboard-school-name-line-primary,
+.accountant-school-name-line-primary {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.dashboard-school-name-line-secondary,
+.accountant-school-name-line-secondary {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.admin-store-modal-header p {
+  margin: 0.18rem 0 0;
+  font-size: 0.82rem;
+  color: #7a7f87;
+}
+
+.admin-store-modal-close {
+  border: 1px solid #cdd3db;
+  border-radius: 999px;
+  background: #fff;
+  color: #1f2937;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.65rem 1rem;
+  cursor: pointer;
+}
+
+.admin-store-modal-body {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  padding: 1rem 1.1rem 1.2rem;
+  background: transparent;
+}
+
+.admin-store-modal-body .store-outer-container {
+  min-height: 100%;
+}
+
+.admission-dashboard-page .accountant-grid {
+  gap: 0.72rem;
+  max-height: 100%;
+  align-self: stretch;
+  align-content: start;
+  grid-template-rows: auto minmax(0, 1fr) minmax(0, 1fr);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 0;
+}
+
+.admission-dashboard-page .accountant-row-bottom {
+  min-height: 0;
+}
+
+.admission-dashboard-page .accountant-row-top,
+.admission-dashboard-page .accountant-row-middle,
+.admission-dashboard-page .accountant-row-bottom,
+.admission-dashboard-page .accountant-bottom-left,
+.admission-dashboard-page .accountant-bottom-right,
+.admission-dashboard-page .accountant-ticket-card,
+.admission-dashboard-page .accountant-premium-card,
+.admission-dashboard-page .accountant-income-card,
+.admission-dashboard-page .accountant-prevdue-card {
+  min-width: 0;
+  min-height: 0;
+}
+
+@media (min-width: 1201px) and (max-width: 1366px) {
+  .admission-dashboard-page .accountant-grid {
+    grid-template-rows: auto minmax(0, 1.08fr) minmax(0, 0.78fr);
+  }
+
+  .admission-dashboard-page .accountant-row-middle {
+    align-items: stretch;
+  }
+
+  .admission-dashboard-page .admin-events-task,
+  .admission-dashboard-page .admin-events-calendar,
+  .admission-dashboard-page .admin-events-livechat {
+    height: 100%;
+    min-height: 0;
+  }
+
+  .admission-dashboard-page .admin-events-calendar {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .admission-dashboard-page .admin-events-calendar-stack,
+  .admission-dashboard-page .admin-events-livechat {
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  .admission-dashboard-page .admin-events-calendar-stack {
+    overflow: hidden;
+  }
+}
+
+.admission-dashboard-page .accountant-ticket-card {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 0;
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.admission-events-summary {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.admission-events-summary-line {
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+.admission-events-card .accountant-card-filters,
+.admission-livechat-card .accountant-card-filters {
+  top: 0;
+  align-self: flex-end;
+}
+
+.admission-events-card .accountant-card-filter,
+.admission-livechat-card .accountant-card-filter {
+  top: 0;
+}
+
+.admission-events-card .accountant-card-header,
+.admission-livechat-card .accountant-card-header {
+  align-items: flex-start;
+}
+
+.admission-livechat-card,
+.admission-livechat-card .accountant-card-header,
+.admission-livechat-card .accountant-card-filters,
+.admission-livechat-card .chat-list {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.admission-livechat-card .accountant-card-filters {
+  justify-content: flex-end;
+}
+
+.admission-livechat-card .accountant-feetype-count {
+  margin-left: auto;
+  justify-content: flex-end;
+}
+
+.admission-livechat-card .chat-list > * {
+  justify-items: flex-start;
+  text-align: left;
+}
+
+.admission-dashboard-page .accountant-ticket-card .tickets-container {
+  min-height: 0 !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  padding: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+.admission-dashboard-page .accountant-ticket-card .campaignSection,
+.admission-dashboard-page .accountant-ticket-card .fd-ticket-section-lock {
+  min-height: 0 !important;
+  height: 100% !important;
+  flex: 1 1 auto !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.admission-dashboard-page .accountant-ticket-card .tickets-content {
+  flex: 1 1 auto !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  overflow: hidden !important;
+  min-height: 0 !important;
+  padding: 0.08rem 0 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.admission-dashboard-page .accountant-ticket-card .tickets-header-and-tabs {
+  gap: 0.5rem !important;
+  margin-bottom: 0.12rem !important;
+}
+
+.admission-dashboard-page .accountant-ticket-card .tickets-left {
+  gap: 0.5rem !important;
+}
+
+.admission-dashboard-page .accountant-ticket-card .tickets-student-panel-shell {
+  min-height: 0 !important;
+  height: 200px !important;
+  flex: 1 1 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.admission-dashboard-page .accountant-ticket-card .tickets-student-grid-shell {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  height: 200px !important;
+  max-height: 100% !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.admission-dashboard-page .accountant-ticket-card .tc-teacherGrid,
+.admission-dashboard-page .accountant-ticket-card .tickets-student-grid {
+  min-height: 0 !important;
+  max-height: 100% !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+.admission-dashboard-page .accountant-ticket-card .tickets-student-grid {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0.08rem 0.28rem !important;
+  align-content: start !important;
+  padding-top: 0.08rem !important;
+  width: 100% !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+.admission-dashboard-page .accountant-ticket-card .tickets-student-grid .tc-teacherRow {
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  width: 100% !important;
+}
+
+.admission-dashboard-page .accountant-ticket-card .tc-teacherRow {
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  column-gap: 0.18rem !important;
+  align-content: start !important;
+}
+
+.admission-dashboard-page .accountant-ticket-card .tc-teacherCard {
+  background: transparent !important;
+  padding: 0 !important;
+  min-height: auto !important;
+  border-radius: 0 !important;
+  margin-bottom: 0.58rem !important;
+}
+
+.admission-dashboard-page .accountant-ticket-card .tickets-student-card {
+  background: transparent !important;
+  padding: 0 !important;
+  min-height: auto !important;
+  border-radius: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.admission-dashboard-page .accountant-ticket-card .tc-teacherAvatar,
+.admission-dashboard-page .accountant-ticket-card .tickets-student-photo-placeholder,
+.admission-dashboard-page .accountant-ticket-card .tickets-student-photo {
+  width: 3.1rem !important;
+  height: 3.1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.admission-dashboard-page .accountant-ticket-card .tc-teacherName,
+.admission-dashboard-page .accountant-ticket-card .tickets-student-name {
+  font-size: 0.52rem !important;
+  font-weight: 700 !important;
+  color: #000000 !important;
+  line-height: 1.04 !important;
+}
+
+.admission-dashboard-page .accountant-ticket-card .tickets-student-id {
+  font-size: 0.44rem !important;
+  color: #7f7f7f !important;
+  line-height: 1.02 !important;
+}
+/* responsive for adminDashboard */
+@media (max-width:1800px){
+  .accountant-grid{
+    display: grid;
+    height:auto;
+    grid-template-rows: 1fr 3fr auto;
+    gap:10px
+
+  }
+  .accountant-row-middle{
+  height:300px;
+  }.accountant-row-bottom{
+    margin-top:80px
+  }
+
+}
+div.dashboard-shell.accountant-dashboard-shell>div>div.accountant-grid>div.accountant-row.accountant-row-bottom>div.accountant-ticket-card.accountant-card {
+  height:300px !important;
+}
+.admin-events-assistant-posters{
+  cursor: pointer;
+}
+
+/* Download ID Card Modal Layout */
+.admin-events-download-id-modal {
+  display: flex;
+  flex-direction: column;
+  max-width: 850px;
+  width: 95%;
+  max-height: 90vh;
+}
+
+.admin-events-download-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  background: #fcfcfc;
+}
+
+.admin-events-download-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-events-download-section > label:first-child {
+  font-weight: 600;
+  color: #222;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 4px;
+}
+
+.admin-events-radio-group, 
+.admin-events-checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 4px;
+}
+
+.admin-events-radio-group label, 
+.admin-events-checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #444;
+  cursor: pointer;
+  background: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #eee;
+  transition: all 0.2s;
+}
+
+.admin-events-radio-group label:hover, 
+.admin-events-checkbox-group label:hover {
+  border-color: #3b82f6;
+  background: #f0f7ff;
+}
+
+.admin-events-download-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.admin-events-download-section select, 
+.admin-events-download-section input[type="text"] {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 13px;
+  background: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Print Standards Note Box */
+.admin-events-download-note {
+  background: #fff8e1;
+  border: 1px solid #ffe082;
+  border-radius: 8px;
+  padding: 15px 20px;
+  font-size: 12px;
+  color: #5d4037;
+  line-height: 1.6;
+}
+
+.admin-events-download-note strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #3e2723;
+  font-size: 13px;
+}
+
+.admin-events-download-note ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* Footer Buttons */
+.admin-events-download-footer {
+  padding: 15px 25px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  background: #fff;
+}
+
+.admin-events-modal-cancel-btn {
+  padding: 8px 16px;
+  background: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #555;
+}
+
+.admin-events-modal-preview-btn {
+  padding: 8px 16px;
+  background: #fff;
+  border: 1px solid #f9b1b8;
+  color: #f9b1b8;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.admin-events-modal-download-btn {
+  padding: 8px 20px;
+  background: #f9b1b8;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: 0 2px 4px #f9b1b8;
+}
+
+/* .admin-events-modal-download-btn:hover {
+  background: #059669;
+} */
