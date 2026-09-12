@@ -1,0 +1,18 @@
+.AdminDashboard-outercontainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #6b7983ff;
+}
+
+.AdminDashboard-container{
+    font-family: font;
+    background-color: "#fff";
+    border-radius: "16px";
+    box-sizing: "border-box";
+    width: "100%";
+    min-width: "300px";
+}
