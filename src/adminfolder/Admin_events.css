@@ -1,0 +1,568 @@
+/* EventStyles.css */
+
+/* General Layout */
+.event-container {
+  padding: 15px;
+  font-family: Arial;
+  background-color: #fff;
+  height: 85vh;
+}
+
+.Card-rightContainer .event-table {
+  border: none;
+}
+
+.Card-rightContainer .event-table-row {
+  border: none !important;
+  background-color: transparent;
+  padding: 8px 0;
+}
+
+.Card-rightContainer .event-table td {
+  border: none;
+  padding: 8px 0;
+}
+
+.Card-rightContainer .event-table tr {
+  border: none;
+}
+
+.Card-rightContainer .event-modal {
+  border: none;
+}
+
+.Card-rightContainer .event-modal-content {
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.event-header {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.store-reminder-input-group input[type=number] {
+    width: 100px !important;    /* bumping priority */
+}
+.event-flex-row {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+.event-flex-row-final
+{
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+@media (max-width: 1430px) {
+  .event-flex-row-final {
+    flex-direction: column;   /* 🔥 Stack vertically */
+  }
+
+  
+}
+/* 🔽 Below 1440px */
+@media (max-width: 1430px) {
+  .event-flex-row {
+    flex-wrap: nowrap;  
+   /* ✅ This makes equal space left & right */      /* not needed but safe */
+  }
+}
+
+.event-flex-row1  {
+   display: flex;
+  gap: 5px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.event-card-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap; /* makes it responsive */
+}
+.event-cards-row {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* Optional: responsive */
+@media (max-width: 768px) {
+  .event-cards-row {
+    flex-direction: column;
+  }
+}
+
+.event-right-container {
+  width: 35%;
+  height: 85vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.event-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.event-circle-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #bcc2b1ff;
+  border-radius: 50%;
+}
+
+.event-section-title {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+}
+
+/* Dropdowns and Inputs */
+.event-dropdown {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  font-size: 14px;
+  color: #333;
+    width: 70px;
+
+    -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff; /* keep existing background if needed */
+  /* small SVG arrow (dark gray). Adjust background-size to change arrow size */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'><path fill='%23333' d='M0 0l5 6 5-6z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 8px center; /* position from right */
+  background-size: 8px 5px; /* <-- change these to make the arrow smaller/larger */
+}
+
+.event-input {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #333;
+  width:100px;
+  background-color: #fff;
+}
+.event-input1 {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: #333;
+  width:220px;
+  background-color: #fff;
+}
+.select-like-textarea {
+  width: 150px;
+  padding: 8px 12px;
+height:40px;
+  font-size: 14px;
+  font-family: inherit;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+
+  resize: vertical;
+  line-height: 1.4;
+
+  /* Remove textarea default look */
+  outline: none;
+}
+
+/* Focus like select */
+.select-like-textarea:focus {
+  border-color: #2684ff;
+  box-shadow: 0 0 0 1px #2684ff;
+}
+
+/* Optional: fake dropdown arrow */
+.select-like-textarea {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  padding-right: 36px;
+}
+
+/* Buttons */
+.event-btn-solid {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #1E90FF;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.event-btn-outline {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #1E90FF;
+  background-color: transparent;
+  color: #1E90FF;
+  cursor: pointer;
+}
+
+/* Tables */
+.event-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+.event-table-row {
+  background-color: transparent;
+  margin-bottom: 1px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 1px solid #ffcc00;
+  text-align: left;
+}
+
+/* Modal */
+.event-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.event-left-container {
+  width: 65%;
+  max-height: 85vh;
+  gap: 20px;
+  overflow-y: auto;
+  overflow-x: auto;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  padding: 0 10px;
+
+  position: relative;
+}
+
+/* 🔽 Below 1440px */
+@media (max-width: 1430px) {
+  .event-left-container {
+    width: 90%;
+  }
+}/* utility class for dropdowns that need a fixed smaller width */
+.small-dropdown {
+  width: 100px !important;
+}
+
+/* Actions panel (Admin Events & Meetings) */
+.event-actions-panel {
+  border: 1px solid #e5e9f0;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.event-actions-header {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.event-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.event-action-card {
+  border: 1px solid #e8edf4;
+  border-radius: 8px;
+  padding: 8px;
+  text-align: left;
+}
+
+.event-action-title {
+  font-size: 11px;
+  color: #5f6f82;
+}
+
+.event-action-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #223349;
+}
+
+.event-actions-quick {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.event-actions-recent {
+  margin-top: 10px;
+}
+
+.event-actions-subheader {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.event-actions-empty {
+  font-size: 12px;
+  color: #77879a;
+  text-align: left;
+}
+
+.event-recent-card {
+  border: 1px solid #e8edf4;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.event-recent-title {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.event-recent-detail {
+  font-size: 11px;
+  color: #4f6177;
+}
+
+.event-recent-time {
+  font-size: 10px;
+  color: #8a98a8;
+  margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .event-actions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Button alignment fix for Admin Events & Meetings */
+.event-card .event-flex-row {
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  overflow: visible;
+}
+
+.event-card .btn-solid,
+.event-card .btn-outline {
+  width: 120px;
+  min-width: 120px;
+  height: 34px;
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  box-sizing: border-box;
+  margin-top: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .event-card .btn-solid,
+  .event-card .btn-outline {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+/* Individual & Group chat alignment */
+.event-chat-row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(110px, 1fr));
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.event-chat-actions-row {
+  grid-template-columns: repeat(2, minmax(110px, 1fr)) 120px;
+  justify-content: start;
+}
+
+.event-chat-actions-row-individual {
+  grid-template-columns: minmax(110px, 1fr) minmax(140px, 1fr) minmax(110px, 1fr) 120px;
+}
+
+.event-chat-row .expense-input-field {
+  width: 100%;
+  min-width: 0;
+}
+
+.event-chat-row .btn-dropdown-FeesManagement {
+  width: 100%;
+  min-width: 0;
+  height: 34px;
+  box-sizing: border-box;
+}
+
+.event-chat-row input.btn-dropdown-FeesManagement {
+  width: 100%;
+  min-width: 0;
+  height: 34px;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+.event-chat-row input[type="date"].btn-dropdown-FeesManagement,
+.event-chat-row input[type="time"].btn-dropdown-FeesManagement {
+  font-size: 12px;
+  border-radius: 8px;
+  background-color: #fff;
+    border:'1px solid black';
+width:110px;
+  color: #2f3542;
+  padding: 4px 10px;
+  box-shadow: none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  margin-left: -2%;
+}
+
+.event-chat-row input[type="date"].btn-dropdown-FeesManagement:focus,
+.event-chat-row input[type="time"].btn-dropdown-FeesManagement:focus {
+  border-color: #c6ceda;
+}
+
+.event-chat-actions-row .btn-solid {
+  width: 120px;
+  min-width: 120px;
+  height: 34px;
+}
+
+@media (max-width: 1200px) {
+  .event-chat-row {
+    grid-template-columns: repeat(3, minmax(110px, 1fr));
+  }
+
+  .event-chat-actions-row {
+    grid-template-columns: repeat(2, minmax(110px, 1fr)) 120px;
+  }
+
+  .event-chat-actions-row-individual {
+    grid-template-columns: repeat(2, minmax(110px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .event-chat-row,
+  .event-chat-actions-row {
+    grid-template-columns: 1fr;
+  }
+
+  .event-chat-actions-row .btn-solid {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+/* keep a little vertical breathing room between rows without breaking the
+   right-hand border of the container */
+.event-left-container .event-row {
+  margin-bottom: 20px;
+  /* allow the row itself to shrink when inside a flex parent */
+  min-width: 0;
+}
+
+/* second-section uses event-row1 for some rows; make them behave the same */
+.event-left-container .event-row1 {
+  margin-bottom: 20px;
+  min-width: 0;
+}
+
+/* make sure each card in the row can shrink rather than overflow its parent */
+.event-left-container .event-row .event-card {
+  min-width: 0;
+}
+
+/* utility class for dropdowns that need a fixed smaller width */
+.small-dropdown {
+  width: 100px !important;
+}
+
+/* draw a continuous vertical divider between the two columns inside the left
+   container. using a pseudo-element allows the line to span the gap between
+   multiple rows so it appears as one straight line. */
+.event-left-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;   /* center of the container (cards share space equally) */
+  width: 2px;                /* make it a bit more visible */
+  background: #ccc;
+  pointer-events: none;
+  transform: translateX(-50%); /* ensure exact centering even if width changes */
+  z-index: 10;               /* float above cards so it never gets hidden */
+}
+
+.event-right-container {
+  width: 35%;
+  height: 85vh;
+  overflow-y: auto;
+  position: relative;
+}
+.event-modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  width: 30%;
+  max-height: 70%;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+.event-flex-row div,
+.event-complaint-title {
+  text-align: left;
+  font-size: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1440px) {
+  .event-container {
+    height: 85vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .event-container {
+    height: 45vh;
+  }
+}

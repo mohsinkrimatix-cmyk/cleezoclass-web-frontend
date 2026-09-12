@@ -1,0 +1,649 @@
+/* General container */
+.tc-container {
+  font-family: 'Arial, sans-serif';
+  padding: 5px;
+  background-color: #f5f5f5;
+}
+
+/* Heading at top */
+.tc-processHeading {
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+  letter-spacing: 1px;
+}
+
+/* Main grid container */
+.tc-mainGrid {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Row with 2 columns */
+.tc-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Right column grid */
+.tc-rightColumn {
+  display: grid;
+  height: 100%;
+}
+
+/* Equal box layout */
+.tc-equalBox {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header inside sections */
+.tc-header {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 8px;
+}
+
+/* Section containers */
+.tc-sectionContainer {
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 15px;
+  border: 4px solid #ddd;
+  height: 30vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.tc-sectionContainer1 {
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  overflow-y: auto;
+  height: 28vh;
+}
+
+/* Section title */
+.tc-sectionTitle {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #404040;
+  padding-bottom: 4px;
+  text-align: left;
+}
+
+/* Input group container */
+.tc-inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+/* Label inside input group */
+.tc-label {
+  font-size: 10px;
+  color: #555;
+  margin-bottom: 1px;
+  text-align: left;
+}
+
+/* Input field styling */
+.tc-input {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 12px;
+  width: 150px;
+  height: 25px;
+}
+.tc-leadItem {
+  position: relative;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 4px;
+  background-color: transparent;
+  transition: background-color 0.tc-2s ease;
+
+}
+
+.tc-leadItem.tc-selected {
+  background-color: #eaf2fb;
+}
+
+.tc-leadConnectorLine {
+  position: absolute;
+  left: 103px;
+  top: 45px;          /* roughly 20 + (30-22)/2 = 24px */
+  width: 5px;
+  height: calc(100% + 9px); /* you can tweak +9px to make it reach the next element nicely */
+  background-color: #ccc;
+}
+
+.tc-leadItemContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0 0; /* smaller vertical gap */
+
+}
+
+
+/* DATE */
+.tc-leadDate {
+  text-align: left;
+  margin-right: 12px;
+  min-width: 70px;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.tc-leadDateValue {
+  font-weight: bold;
+}
+
+.tc-leadTime {
+  color: #555;
+}
+
+/* USER ICON */
+.tc-leadAvatar {
+   width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 5px solid #adadad;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  font-weight: bold;
+  margin-right: 20px;
+  background: #fff;
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.12),
+    0 0 8px rgba(1, 1, 1, 0.5);
+}
+
+
+/* DETAILS */
+.tc-leadDetails {
+  flex: 1;
+  text-align: left;
+  font-size: 10px;
+  line-height: 13px;
+}
+
+.tc-leadName {
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.tc-leadEmail {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.tc-leadsSection {
+ 
+    background-color: #a91818; /* ensure it doesn't become transparent over content */
+
+
+  
+}
+/* HEADER WITH DATE FILTER */
+.tc-leadsHeader {
+   display: flex;
+  justify-content: space-between; /* Heading on left, count on right */
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: #f5f5f5; /* ensure it doesn't become transparent over content */
+  z-index: 10; /* stays above other content */
+  margin-bottom: 10px;
+  padding-top: 10px;
+
+  
+}
+
+.tc-leadsTitle {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.tc-dateFilterInput {
+  font-size: 11px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+/* NO LEADS MESSAGE */
+.tc-noLeadsMessage {
+  font-size: 12px;
+  color: #555;
+  margin-top: 8px;
+}
+
+/* LEAD ITEM (from previous conversion) */
+.tc-leadItem {
+  position: relative;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 4px;
+  background-color: transparent;
+  transition: background-color 0.tc-2s ease;
+}
+
+.tc-leadItem.tc-selected {
+  background-color: #eaf2fb;
+}
+
+
+
+
+
+/* DATE */
+.tc-leadDate {
+  text-align: left;
+  margin-right: 12px;
+  min-width: 70px;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.tc-leadDateValue {
+  font-weight: bold;
+}
+
+.tc-leadTime {
+  color: #555;
+}
+
+
+/* DETAILS */
+.tc-leadDetails {
+  flex: 1;
+  text-align: left;
+  font-size: 10px;
+  line-height: 13px;
+}
+
+.tc-leadName {
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.tc-leadEmail {
+  color: #007bff;
+  text-decoration: underline;
+}
+.tc-leadDetailsCard {
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 10px;
+  color: #555;
+  border: 4px solid #ccc;
+  padding: 15px 15px;
+  padding-bottom: 0;
+  padding-top: 0;
+  border-radius: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto; /* ✅ add this */
+  box-sizing: border-box; /* ✅ ensures padding is included in height */
+  background-color: #fff;
+}
+
+/* Top Row */
+.tc-leadDetailsTopRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tc-leadDetailsTitle {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.tc-leadShortlisted {
+  text-align: right;
+}
+
+.tc-shortlistedTitle {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.tc-shortlistedDate {
+  font-size: 12px;
+  color: #555;
+}
+
+/* Name Row */
+.tc-leadNameRow {
+  margin-bottom: 6px;
+  font-size: 20px;
+}
+
+.tc-leadNameValue {
+  font-size: 20px;
+  color: #000;
+}
+
+/* Contact Row */
+.tc-leadContactRow {
+  margin-bottom: 6px;
+  font-size: 10px;
+}
+
+/* Generic Row for Columns */
+.tc-leadRow {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 6px;
+}
+
+/* Column */
+.tc-leadCol {
+  flex: 1;
+}
+
+.tc-leadColFull {
+  flex: 1;
+}
+
+/* Column Title */
+.tc-leadColTitle {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+/* Column Content */
+.tc-leadColContent {
+  text-align: left;
+}
+.tc-leadItem {
+  position: relative;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 4px;
+  background: transparent;
+  transition: background 0.2s;
+}
+
+.tc-leadItem.tc-selected {
+  background: #b5b6b940;
+    border-radius: 10px;
+
+}
+
+
+
+
+/* Date */
+.tc-leadDate {
+  text-align: left;
+  margin-right: 12px;
+  min-width: 70px;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.tc-leadDateValue {
+  font-weight: bold;
+}
+
+.tc-leadTime {
+  color: #555;
+}
+
+/* User Icon */
+
+
+/* Details */
+.tc-leadDetails {
+  flex: 1;
+  text-align: left;
+  font-size: 10px;
+  line-height: 13px;
+}
+
+.tc-leadHeading {
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.tc-leadHeading.tc-approved {
+  color: #0f5132;
+}
+
+.tc-leadHeading.tc-pending {
+  color: #856404;
+}
+
+.tc-leadName {
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.tc-leadEmail {
+  color: #007bff;
+  text-decoration: underline;
+}
+/* Header */
+.tc-timelineHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  flex-wrap: nowrap;
+}
+
+.tc-timelineTitle {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Status Filter */
+.tc-statusFilterWrapper {
+  margin-bottom: 10px;
+}
+
+.tc-statusFilterSelect {
+  font-size: 11px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  border: 1px solid #000;
+  cursor: pointer;
+  background: #fff;
+  min-width: 130px;
+}
+
+/* Date Filter */
+.tc-dateFilterInput {
+  font-size: 11px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+/* Empty state */
+.tc-noLeadsText {
+  font-size: 12px;
+  color: #555;
+}
+/* Section */
+.tc-staffAssignSection{
+  position: relative;
+  background: #fff;
+height: 100%;
+padding: 10px;
+border-radius: 15px;
+border: 4px solid #ddd;
+
+}
+
+/* Header */
+.tc-staffHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.tc-staffTitle {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.tc-staffDateTime {
+  display: flex;
+  gap: 10px;
+}
+
+.tc-staffInput {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Teachers */
+.tc-teacherGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tc-teacherRow {
+  display: flex;
+  gap: 15px;
+}
+
+.tc-teacherCard {
+  flex: 1;
+  cursor: pointer;
+  text-align: center;
+}
+
+.tc-teacherAvatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #eef4ff;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tc-teacherName {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.tc-teacherPhone {
+  font-size: 9px;
+}
+
+/* Popup */
+.tc-assignPopupWrapper {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+
+.tc-assignPopup {
+  width: 280px;
+  background: #ccc;
+  border-radius: 40px;
+  padding: 20px;
+  border: 4px solid #ff5050;
+}
+
+/* Tabs */
+.tc-popupTabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.tc-popupTab {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #888;
+  padding-bottom: 2px;
+}
+
+.tc-popupTab.tc-active {
+  color: #000;
+  border-bottom: 2px solid #000;
+}
+
+/* Popup Content */
+.tc-popupContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tc-popupRow {
+  display: flex;
+  gap: 10px;
+}
+
+.tc-popupInput {
+  flex: 1;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Buttons */
+.tc-assignBtn {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-weight: bold;
+  color: #fff;
+}
+
+.tc-assignBtn.tc-active {
+  background: #ff5050;
+  cursor: pointer;
+}
+
+.tc-assignBtn.tc-disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.tc-assignBtn.tc-fullWidth {
+  width: 100%;
+  margin-top: 12px;
+}
+
+/* Checkbox */
+.tc-checkboxLabel {
+  font-size: 12px;
+}

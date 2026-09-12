@@ -1,0 +1,120 @@
+/* ErrorPopup.css */
+.error-popup-overlay {
+  position: fixed;
+  top: 20px;       
+  right: 40px;       /* flush to the right edge */
+  width: auto;
+  height: auto;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column; /* stack multiple popups vertically */
+  align-items: flex-end;  
+  pointer-events: none;  
+}
+.error-popup-container.error {
+  border-left: 5px solid #d32f2f;
+}
+.popup-message {
+  white-space: pre-line;
+}
+
+.error-popup-container.success {
+  border-left: 5px solid #2e7d32;
+}
+
+.error-popup-container.success .error-popup-message {
+  color: #2e7d32;
+}
+
+.error-popup-container.error .error-popup-message {
+  color: #d32f2f;
+}
+
+/* Container with animations */
+.error-popup-container {
+  position: relative;
+  background-color: #fff;
+  border-radius: 12px 0 0 12px; 
+  padding: 18px 30px 12px 16px;
+  min-width: 250px;
+  max-width: 350px;
+  margin-bottom: 10px;  
+  box-shadow: -4px 4px 16px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  pointer-events: auto;  
+  animation: slideInBounce 0.5s ease forwards;
+}
+
+/* Header */
+.error-popup-header {
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Message */
+.error-popup-message {
+  font-size: 14px;
+  color: #d32f2f;
+  word-wrap: break-word;
+    white-space: pre-line;
+
+}
+
+.error-popup-close {
+  position: absolute;
+  top: -12px;
+  right: 4px;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #d32f2f;
+  font-size: 18px;
+  line-height: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-popup-close:hover {
+  color: #b71c1c;
+}
+
+/* Slide-in with slight bounce */
+@keyframes slideInBounce {
+  0% {
+    opacity: 0;
+    transform: translateX(100%) scaleX(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-10%) scaleX(1.05);
+  }
+  80% {
+    transform: translateX(5%) scaleX(0.95);
+  }
+  100% {
+    transform: translateX(0) scaleX(1);
+  }
+}
+
+/* Optional fade-out for closing (if needed) */
+.error-popup-container.fadeOut {
+  animation: fadeOutRight 0.4s forwards;
+}
+
+@keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}

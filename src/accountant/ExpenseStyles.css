@@ -1,0 +1,1325 @@
+/* ExpenseStyles.css */
+
+/* Common Styles */
+.expense-label {
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.expense-section-header {
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.expense-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.expense-main-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.expense-mobile-main-content {
+    display: block;
+}
+
+.expense-header-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f3e7b0ff;
+    display: inline-block;
+}
+
+.expense-select {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.expense-button {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+/* Chart and Summary */
+.expense-chart-container {
+    height: 150px;
+    text-align: center;
+}
+
+.expense-chart-mobile {
+    height: 100px;
+}
+
+.expense-summary {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px dashed #ccc;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.expense-summary-item {
+    flex: 1;
+    text-align: center;
+    border-right: 1px dashed #ccc;
+    padding: 0 5px;
+}
+
+.expense-summary-data {
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+}
+
+.expense-summary-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Table Styles */
+.expense-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.expense-table-header {
+    padding: 8px;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.expense-table-cell {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Popup/Modal */
+.expense-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.expense-modal {
+    width: 60%;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    max-height: 80vh;
+    overflow-y: auto;
+    animation: popupFade 0.3s ease;
+}
+
+.expense-modal-mobile {
+    width: 90%;
+}
+
+.expense-modal-close {
+    margin-top: 20px;
+    padding: 6px 12px;
+    background-color: #6b7983;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Inputs */
+.expense-input {
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Buttons */
+.expense-btn-solid {
+    background-color: #6b7983ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 5px;
+}
+
+.expense-btn-outline {
+    background-color: transparent;
+    color: #6b7983ff;
+    border: 1px solid #6b7983ff;
+    border-radius: 4px;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .expense-label {
+        font-size: 10px;
+    }
+
+    .expense-section-header {
+        font-size: 14px;
+    }
+
+    .expense-chart-container {
+        height: 100px;
+    }
+
+    .expense-summary-value {
+        font-size: 14px;
+    }
+
+    .expense-input {
+        font-size: 12px;
+    }
+
+    .expense-btn-solid, .expense-btn-outline {
+        font-size: 10px;
+    }
+}
+/* SalaryManagement Styles */
+
+/* Chart */
+.expense-chart-container {
+    height: 150px;
+    text-align: center;
+}
+
+.expense-chart-mobile {
+    height: 100px;
+}
+
+/* Summary */
+.expense-summary {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px dashed #ccc;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.expense-summary-item {
+    flex: 1;
+    text-align: center;
+    border-right: 1px dashed #ccc;
+    padding: 0 5px;
+}
+
+.expense-summary-data {
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+}
+
+.expense-summary-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Month Filter */
+.expense-month-filter {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+        flex-direction: column;
+
+}
+
+.expense-month-select {
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+/* Buttons */
+.expense-btn-group {
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+/* Popup */
+.expense-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.expense-popup {
+    width: 60%;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    max-height: 80vh;
+    overflow-y: auto;
+    animation: popupFade 0.3s ease;
+}
+
+.expense-popup-mobile {
+    width: 90%;
+}
+
+.expense-popup-title {
+    margin-top: 0;
+}
+
+.expense-popup-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin-top: 15px;
+}
+
+.expense-popup-table-header {
+    padding: 8px;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.expense-popup-table-cell {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 12px;
+    text-align: center;
+}
+
+.expense-popup-close {
+    margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .expense-chart-container {
+        height: 100px;
+    }
+
+    .expense-summary-value {
+        font-size: 14px;
+    }
+
+    .expense-month-select {
+        font-size: 12px;
+    }
+}
+.expense-records-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.expense-records-header-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f3e7b0ff;
+    display: inline-block;
+}
+
+/* Filter Section */
+.expense-filter-section {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.expense-filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.expense-filter-label {
+    font-size: 10px;
+    margin-bottom: 2px;
+    display: block;
+    text-align: left;
+}
+
+.expense-filter-input {
+    width: 100px;
+    margin-bottom: 10px;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* Modal */
+.expense-records-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.expense-records-modal {
+    width: 60%;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    max-height: 60vh;
+    overflow-y: auto;
+    animation: popupFade 0.3s ease;
+}
+
+.expense-records-modal-mobile {
+    width: 90%;
+}
+
+.expense-records-modal-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #000;
+    margin-bottom: 15px;
+}
+
+.expense-records-modal-table-header {
+    border: 1px solid #000;
+    padding: 6px;
+    background: #f0f0f0;
+}
+
+.expense-records-modal-table-cell {
+    border: 1px solid #000;
+    padding: 6px;
+}
+
+.expense-records-modal-close {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: #6b7983;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .expense-filter-label {
+        font-size: 10px;
+    }
+
+    .expense-filter-input {
+        width: 100%;
+    }
+}
+.expense-recurring-header {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.expense-recurring-header-mobile {
+    font-size: 14px;
+}
+
+/* Chart */
+.expense-recurring-chart {
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.expense-recurring-chart-mobile {
+    height: 100px;
+}
+
+/* Summary */
+.expense-recurring-summary {
+    display: flex;
+    justify-content: space-around;
+    border-top: 1px dashed #ccc;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.expense-recurring-summary-item {
+    flex: 1;
+    text-align: center;
+    border-right: 1px dashed #ccc;
+    padding: 0 5px;
+}
+
+.expense-recurring-summary-data {
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+}
+
+.expense-recurring-summary-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Buttons */
+.expense-recurring-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .expense-recurring-header {
+        font-size: 14px;
+    }
+
+    .expense-recurring-chart {
+        height: 100px;
+    }
+
+    .expense-recurring-summary-value {
+        font-size: 14px;
+    }
+}/* Expense Management Dashboard Styles */
+
+/* Outer Container */
+.expense-outer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    height: 100vh;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+    transform-origin: top left;
+    overflow-y: auto;
+}
+
+.expense-outer-container-mobile {
+    gap: 20px;
+}
+
+/* Section Header */
+.expense-section-header {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #444;
+    padding-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.expense-section-header-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f3e7b0ff;
+    display: inline-block;
+    margin-left: 5%;
+}
+
+/* Section Wrapper */
+.expense-section-wrapper {
+    padding: 5px 0;
+    margin-top: 0;
+}
+
+/* Two Column Layout */
+.expense-two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    align-items: start;
+    height: 60vh;
+}
+
+.expense-two-column-layout-laptop {
+    height: 63vh;
+}
+
+.expense-two-column-layout-desktop {
+    height: 42vh;
+}
+
+/* Fees Management Grid */
+.expense-fees-management-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: stretch;
+    background-color: transparent;
+}
+
+.expense-fees-management-grid-desktop {
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Left Container */
+.expense-left-container {
+    border-right: 1px solid #d0d0d0;
+    padding-right: 20px;
+}
+
+/* Scroll Buttons */
+.expense-scroll-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.expense-scroll-btn-top {
+    position: absolute;
+    top: -12px;
+    right: 0;
+}
+
+/* Second Section */
+.expense-second-section {
+    position: relative;
+}
+
+.expense-second-section-visible {
+    visibility: visible;
+}
+
+.expense-vertical-line {
+    width: 1px;
+    background-color: #ccc; /* makes it visible */
+    height: 100%; /* stretch full height of parent */
+}
+
+
+/* Custom Card */
+.expense-custom-card {
+    height: 100%;
+}
+
+/* Footprints Inner */
+.expense-footprints-inner {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* Grid Layout for Expense Activities */
+.expense-activities-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 80px;
+}
+
+.expense-activities-grid-desktop {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Scroll Buttons Container */
+.expense-scroll-buttons {
+    position: relative;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .expense-outer-container {
+        gap: 20px;
+    }
+
+    .expense-two-column-layout {
+        height: 60vh;
+    }
+
+    .expense-fees-management-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .expense-activities-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .expense-two-column-layout {
+        height: 63vh;
+    }
+}
+
+@media (min-width: 1025px) {
+    .expense-two-column-layout {
+        height: 42vh;
+    }
+
+    .expense-fees-management-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .expense-activities-grid {
+        grid-template-columns: 1fr  1fr;
+    }
+}
+/* CustomModal Styles */
+.expense-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.expense-modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+    max-height: 95vh;
+    overflow-y: auto;
+    text-align: center;
+    position: relative;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0,0,0,0) transparent;
+}
+
+.expense-modal-content-content {
+    padding: 20px;
+    max-width: 80vw;
+}
+
+.expense-modal-header {
+    padding-bottom: 10px;
+}
+
+.expense-modal-close-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.expense-modal-button-group {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.expense-modal-button-group-confirm {
+    justify-content: space-around;
+}
+
+.expense-modal-base-btn {
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.expense-modal-confirm-btn {
+    background-color: #945f4aff;
+    color: white;
+}
+
+.expense-modal-cancel-btn {
+    background-color: #ccc;
+    color: #333;
+}
+
+/* CustomCard Styles */
+.expense-card {
+    background-color: transparent;
+    border-radius: 16px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 320px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0,0,0,0) transparent;
+}
+
+.expense-card-mobile {
+    height: 50vh;
+}
+
+.expense-card-laptop {
+    height: 63vh;
+}
+
+.expense-card-desktop {
+    height: 42vh;
+}
+
+.expense-card-header {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #444;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.expense-card-header-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f3e7b0ff;
+    display: inline-block;
+    margin-right: 5%;
+}
+
+.expense-card-radio {
+    margin-right: 8px;
+    color: #945f4aff;
+}
+
+/* CustomCardRight Styles */
+.expense-card-right {
+    background-color: transparent;
+    border-radius: 16px;
+    overflow-y: auto;
+    width: 800px;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0,0,0,0) transparent;
+}
+
+.expense-card-right-mobile {
+    height: 50vh;
+}
+
+.expense-card-right-laptop {
+    height: 68vh;
+}
+
+.expense-card-right-desktop {
+    height: 42vh;
+}
+
+.expense-card-right-header {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .expense-card {
+        height: 50vh;
+    }
+
+    .expense-card-right {
+        height: 50vh;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 2040px) {
+    .expense-card {
+        height: 63vh;
+    }
+
+    .expense-card-right {
+        height: 68vh;
+    }
+}
+
+@media (min-width: 20401px) {
+    .expense-card {
+        height: 65vh;
+    }
+
+    .expense-card-right {
+        height: 42vh;
+    }
+}/* Expense Management UI Styles */
+
+/* Container */
+.expense-container {
+    flex: 6;
+}
+
+.expense-container-mobile {
+    flex: 1 1 100%;
+}
+
+/* Date Filters */
+.expense-date-filters {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.expense-date-filter-group {
+    flex: 3;
+}
+
+.expense-date-filter-group-mobile {
+    flex: 1 1 100%;
+}
+
+.expense-chart-container {
+    width: 100%;
+    height: 170px;
+}
+
+.expense-chart-container-mobile {
+    height: 200px;
+}
+
+/* Filter Controls */
+.expense-filter-controls {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.expense-filter-controls-mobile {
+    flex: 1 1 100%;
+}
+
+.expense-filter-label {
+    font-size: 10px;
+    margin-bottom: 2px;
+    display: block;
+    text-align: left;
+    margin-left: 80px;
+}
+
+.expense-filter-input {
+    width: 100%;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+
+
+/* Total Spent */
+.expense-total-spent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.expense-total-spent-text {
+    font-size: 14px;
+}
+
+.expense-total-spent-text-mobile {
+    font-size: 12px;
+}
+
+.expense-view-list-btn {
+    border: none;
+    color: blue;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* Expense Filters */
+.expense-expense-filters {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Modal */
+.expense-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.expense-modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-height: 80%;
+    overflow-y: auto;
+    width: 60%;
+}
+
+.expense-modal-content-mobile {
+    width: 90%;
+}
+
+.expense-modal-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.expense-modal-table-header {
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+.expense-modal-table-cell {
+    border: 1px solid #000;
+    padding: 5px;
+}
+
+/* Buttons */
+.expense-btn-solid {
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .expense-total-spent-text {
+        font-size: 12px;
+    }
+
+    .expense-filter-select {
+        width: 100%;
+    }
+}
+/* Expense Management UI Styles */
+
+/* Container */
+.expense-form-container {
+    text-align: left;
+}
+
+/* Row */
+.expense-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: nowrap;
+}
+
+.expense-row-wrap {
+    flex-wrap: nowrap;
+    margin-bottom: 20px;
+
+}
+.expense-left,
+.expense-right {
+  flex: 1;              /* Equal width */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.assign-wrapper {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.assign-left,
+.assign-right {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+}
+.assign-left {
+  border-right: 1px solid #ddd;
+}
+@media screen and (min-width: 730px) and (max-width: 1020px) {
+  .assign-student-btn {
+    margin-left: -1%;
+  }
+}
+/* Label */
+.expense-label {
+    font-size: 10px;
+    margin-bottom: 2px;
+    display: block;
+    text-align: left;
+}
+
+/* Dropdown and Input */
+.expense-dropdown {
+    width: 120px;
+}
+
+.expense-input {
+    width: 120px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Button */
+.expense-btn-solid {
+    width: 110px;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.expense-btn-upload {
+    width: 120px;
+    background-color: #f1f2f6;
+    border: 1px solid #ccc;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Expense Category Manager */
+.expense-manager-header {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Expense Inputs Stacked */
+.expense-inputs-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.expense-input-group {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.expense-input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Buttons Row */
+.expense-buttons-row {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+/* File Upload */
+.expense-file-upload {
+    display: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .expense-dropdown,
+    .expense-input,
+    .expense-btn-solid,
+    .expense-btn-upload {
+        width: 100%;
+    }
+}
+/* Actions Component Styles */
+
+.expense-actions-container {
+    text-align: left;
+}
+
+.expense-action-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.expense-action-item-mobile {
+    font-size: 12px;
+}
+
+.expense-action-text {
+    flex: 1;
+    text-align: left;
+    font-size: 10px;
+}
+
+.expense-action-arrow {
+    margin-right: 5px;
+    color: #945f4aff;
+}
+
+.expense-status-badge {
+    background-color: #B97FA5;
+    border: none;
+    border-radius: 8px;
+    padding: 2px 5px;
+    cursor: default;
+    font-size: 10px;
+    font-weight: 500;
+    color: #fff;
+    min-width: 40px;
+    text-align: center;
+}
+
+.expense-status-ok {
+    background-color: #92D09B;
+}
+
+.expense-status-rejected {
+    background-color: #E57373;
+}
+
+.expense-status-badge-mobile {
+    font-size: 9px;
+}
+
+/* Match Actions look with Accountant_FeesManagement_Income */
+.action-container {
+    text-align: left;
+}
+
+.action-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.action-arrow {
+    margin-right: 5px;
+    color: #945f4aff;
+}
+
+.action-text {
+    flex: 1;
+    text-align: left;
+    font-size: 12px;
+}
+
+.status-badge {
+    border: none;
+    border-radius: 8px;
+    padding: 2px 5px;
+    cursor: default;
+    font-weight: 500;
+    color: #fff;
+    min-width: 40px;
+    text-align: center;
+    font-size: 10px;
+}
+
+.status-ok {
+    background-color: #92D09B;
+}
+
+.status-rejected {
+    background-color: #E57373;
+}
+
+.status-pending {
+    background-color: #B97FA5;
+}
+
+@media (max-width: 768px) {
+    .action-item {
+        font-size: 12px;
+    }
+
+    .status-badge {
+        font-size: 9px;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .expense-action-item {
+        font-size: 12px;
+    }
+
+    .expense-status-badge {
+        font-size: 9px;
+    }
+}

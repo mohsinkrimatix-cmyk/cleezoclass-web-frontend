@@ -1,0 +1,81 @@
+.admin-store-manager-card {
+  padding: 1rem;
+}
+
+.admin-store-manager-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.admin-store-small-btn {
+  height: 2rem;
+  min-width: 10rem;
+  padding: 0 0.8rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.admin-store-list-wrap {
+  margin-top: 0.85rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.admin-store-list-wrap small {
+  color: #666;
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.admin-store-order-tabs {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.admin-store-order-tab {
+  border: none;
+  background: transparent;
+  padding: 0;
+  color: #9ca3af;
+  font-size: 0.66rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.admin-store-order-tab.active {
+  color: #111;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: #ef6574;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.25rem;
+}
+
+.admin-store-order-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.7rem;
+  margin-top: 0.2rem;
+}
+
+.admin-store-order-action-row {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 1200px) {
+  .admin-store-manager-grid,
+  .admin-store-order-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .admin-store-manager-grid,
+  .admin-store-order-grid {
+    grid-template-columns: 1fr;
+  }
+}

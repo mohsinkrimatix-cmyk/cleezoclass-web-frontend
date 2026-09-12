@@ -1,0 +1,2162 @@
+.fees-item-amount1 {
+  font-size: 14px;
+  font-weight: 100;
+  color: #333;
+}
+/* TrackFees Component Styles */
+
+/* Container */
+.track-container {
+    flex: 6;
+}
+
+.track-container-mobile {
+    flex: 1 1 100%;
+}
+
+/* Card */
+.track-card {
+    padding: 20px;
+    cursor: pointer;
+    height: 338px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid #ccc;
+}
+/* OtherIncome Component Styles */
+
+/* Container */
+.other-income-container {
+    padding: 10px;
+}
+
+/* Date Filters */
+.other-income-date-filters {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+/* Chart Container */
+.other-income-chart-container {
+    width: 100%;
+    height: 200px;
+    margin-left: -40px;
+}
+
+.other-income-chart-container-mobile {
+    height: 250px;
+}
+
+/* Date Input Group */
+.other-income-date-input-group {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.other-income-date-input {
+    width: 100px;
+}
+
+/* Total Amount */
+.other-income-total {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: -10%;
+}
+
+.other-income-amount {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Buttons */
+.other-income-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 15px;
+    flex-wrap: nowrap;
+}
+
+.other-income-btn {
+    width: 80px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .other-income-chart-container {
+        height: 250px;
+    }
+}
+
+/* Section Header */
+.track-section-header {
+    font-size: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.track-section-header-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f3e7b0ff;
+    display: inline-block;
+    margin-left: -1%;
+}
+
+/* Chart Container */
+.track-chart-container {
+    width: 100%;
+    height: 240px;
+    margin-top: 30px;
+}
+
+.track-chart-container-mobile {
+    height: 200px;
+}
+
+/* Totals */
+.track-totals {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.track-totals-mobile {
+    font-size: 10px;
+}
+
+.track-totals-row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    margin-top: 0;
+    text-align: left;
+    margin-left: 15%;
+}
+
+.track-totals-paid {
+    color: rgb(146, 208, 155);
+}
+
+.track-totals-unpaid {
+    color: rgb(229, 155, 115);
+}
+
+/* View List Buttons */
+.track-view-list-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.track-view-list-btn {
+    border: none;
+    background: #fff;
+    color: #3595e4ff;
+    cursor: pointer;
+    padding-left: 12%;
+    padding-right: 12%;
+}
+
+/* Send Buttons */
+.track-send-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: -10px;
+    position: relative;
+}
+
+.track-send-btn-group {
+    text-align: center;
+}
+.track-send-btn-label {
+  font-size: 10px;
+  font-weight: 100;
+  width: 100px;
+  text-align: center;   /* ✅ centers text horizontally */
+  margin-left: 14%;
+}
+
+.track-send-btn {
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+/* Date and Filter Controls */
+.track-controls {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-top: 10px;
+    padding-top: 0%;
+}
+
+.track-control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+        padding-top: 0%;
+
+}
+
+.track-control-label {
+    text-align: left;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .track-totals {
+        font-size: 10px;
+    }
+
+    .track-chart-container {
+        height: 200px;
+    }
+}
+
+.btn-style {
+  background-color: #6b7983ff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 12px;        /* default for desktop */
+  font-weight: 500;
+  margin: 5px;
+  font-family: var(--app-font); /* we’ll handle font via variable */
+}
+
+/* Mobile override */
+@media (max-width: 600px) {
+  .btn-style {
+    font-size: 10px;
+  }
+}
+/* Outer container */
+.outer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;              /* default for desktop */
+  width: 100%;
+  padding: 20px;        /* default for desktop */
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+/* Mobile override */
+@media (max-width: 600px) {
+  .outer-container {
+    gap: 20px;
+    padding: 10px;
+  }
+}
+
+/* Scroll buttons container */
+.scroll-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Individual scroll button */
+.scroll-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+.scroll-area {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  overflow-y: auto;
+
+  /* Default (large monitor / fallback) */
+  height: 55vh;
+  padding: 20px;
+  gap: 0px;
+}
+
+/* Laptop screens */
+@media (min-width: 601px) and (max-width: 2040px) {
+  .scroll-area {
+    height: 76vh;
+        padding-right: 27px;
+        padding-left: 0;
+
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  .scroll-area {
+    height: 50vh;
+    padding: 10px;
+    gap: 20px;
+  }
+}
+/* Modal overlay */
+.income-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content - base */
+.income-modal-content {
+  background-color: #fff;
+  padding: 30px;                
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 400px;            
+  width: 90%;
+height: 65vh;
+  overflow-y: auto;
+  text-align: center;
+  position: relative;
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0) transparent;
+}
+
+/* Content type override */
+.income-modal-content.content {
+  padding: 20px;
+  max-width: 80vw;
+}
+
+/* Button group */
+.income-modal-button-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Confirm type override */
+.income-modal-button-group.confirm {
+  justify-content: space-around;
+}
+
+/* Base button */
+.income-modal-btn {
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Confirm button */
+.income-modal-btn.confirm {
+  background-color: #945f4aff;
+  color: white;
+}
+
+/* Non-confirm success (green case) */
+.income-modal-btn.confirm.success {
+  background-color: #38761D;
+}
+
+/* Cancel button */
+.income-modal-btn.cancel {
+  background-color: #ccc;
+  color: #333;
+}
+/* ------------------ LEFT CARD ------------------ */
+
+.custom-card {
+  background-color: transparent;
+  border-radius: 16px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 320px;
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0) transparent;
+
+  /* Default (large monitor) */
+  height: 42vh;
+}
+
+/* Laptop */
+@media (min-width: 601px) and (max-width: 2040px) {
+  .custom-card {
+    height: 63vh;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .custom-card {
+    height: 50vh;
+  }
+}
+
+/* Card header */
+.custom-card-header {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #444;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Header icon circle */
+.custom-card-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f3e7b0ff;
+  display: inline-block;
+  margin-right: 2%;
+}
+
+/* ------------------ RIGHT CARD ------------------ */
+
+.custom-card-right {
+  background-color: transparent;
+  border-radius: 16px;
+  overflow-y: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0) transparent;
+
+  /* Default (large monitor) */
+  height: 42vh;
+}
+
+/* Laptop */
+@media (min-width: 601px) and (max-width: 2040px) {
+  .custom-card-right {
+    height: 68vh;
+  }
+}
+@media (min-width: 2040px)  {
+  .custom-card-right {
+    height: 38vh;
+  }
+}
+/* Mobile */
+@media (max-width: 600px) {
+  .custom-card-right {
+    height: 50vh;
+  }
+}
+
+/* Right card header */
+.custom-card-right-header {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Radio input spacing */
+.custom-card-radio {
+  margin-right: 8px;
+  accent-color: #945f4aff;
+}
+
+/* ------------------ SECTIONS ------------------ */
+
+.reminders-container {
+  margin-top: 10px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+.discounts-row {
+  display: flex;
+  align-items: flex-end;
+}
+.discounts-list-header {
+  display: flex;
+  align-items: center;
+  margin-left: -2%;
+}
+
+.discounts-list-header .btn-solid {
+  margin-left: auto;
+}
+
+.collections-pay-btn,
+.collections-edit-btn {
+  margin-left: auto;   /* 👈 moves buttons completely right */
+}
+
+.section-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f3e7b0ff;
+  margin-left: 2%;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-row {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.form-row.second {
+  margin-top: -10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+}
+
+.label-text {
+  font-size: 10px;
+  font-weight: 100;
+  margin-bottom: 2px;
+  text-align: left;
+}
+
+.label-left {
+  margin-left: 10px;
+}
+
+.dropdown-small {
+  width: 100px;
+}
+
+.margin-left-10 {
+  margin-left: 10px;
+}
+
+.cutoff-button {
+  width: 90px;
+  margin-left: 2%;
+  margin-top: -3%;
+}
+
+.section-wrapper {
+  padding: 5px 0;
+  margin-right: 20px;
+}
+
+
+.two-column-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: start;
+}
+/* ----------- COMMON ----------- */
+
+
+.collections-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  width: 100%;
+  margin-top: 3%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.collections-select-wrapper {
+  margin-top: 0%;
+  display: flex;
+  flex-direction: column;
+}
+
+.collections-label {
+  font-size: 12px;
+  font-weight: 100;
+  margin-bottom: 6px;
+  display: block;
+  text-align: left;
+  width: 70%;
+}
+.collections-label1 {
+  font-size: 12px;
+  font-weight: 100;
+  margin-bottom: 6px;
+  display: block;
+  text-align: left;
+  width: 60%;
+  margin-left: 10px;
+}
+
+/* Mobile override */
+@media (max-width: 600px) {
+  .collections-label {
+    font-size: 10px;
+  }
+}
+
+.collections-select {
+  width: 100px;
+  margin-left: 8px;
+}
+
+.collections-pay-btn {
+  margin-left: 22%;
+  width: 100px;
+}
+
+.collections-message-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  gap: 15px;
+  align-items: flex-end;
+}
+
+.collections-message {
+  color: red;
+  font-size: 10px;
+  text-align: left;
+  margin-left: 15px;
+  margin-top: -15%;
+}
+
+.collections-edit-btn {
+  width: 100px;
+  margin-right: 13%;
+}
+
+/* Disabled / highlight state */
+.collections-disabled {
+  opacity: 0.4;
+  background-color: gray !important;
+  cursor: not-allowed;
+}
+
+/* ----------- DISCOUNTS HEADER ----------- */
+
+.discounts-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.discounts-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f3e7b0ff;
+  display: inline-block;
+  margin-left: 2%;
+  margin-top: 6%;
+}
+
+.discounts-title {
+  font-weight: bold;
+  margin-top: 6%;
+}
+
+/* ----------- ADD FEE ROW ----------- */
+
+.discounts-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 18%;
+  margin-top:4%
+}
+
+.discounts-select-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 10px;
+  margin-top: -6%;
+}
+
+.discounts-error {
+  height: 14px;
+  margin-left: 10px;
+  margin-top: 6px;
+  font-size: 9px;
+  color: #c0392b;
+}
+.action-summary {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #f5f5f5;
+  border-radius: 5px;
+}
+
+.action-summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.action-summary-label {
+  font-weight: bold;
+}
+
+.action-summary-value {
+  color: #2c7be5;
+}
+
+.action-unpaid-list,
+.action-no-fee-classes {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+
+.action-unpaid-list h4,
+.action-no-fee-classes h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.action-unpaid-list ul,
+.action-no-fee-classes ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.action-unpaid-list li,
+.action-no-fee-classes li {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* ----------- POPUPS ----------- */
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.popup-box {
+  padding: 20px;
+  border-radius: 10px;
+  width: 60vw;
+  min-width: 750px;
+  height: 70vh;
+  overflow-y: auto;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  position: relative;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+.popup-box-income {
+  
+  padding: 20px;
+  border-radius: 10px;
+  width: 60vw;
+  height: 95vh;
+  overflow-y: auto;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  position: relative;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+.popup-box1 {
+  padding: 20px;
+  border-radius: 10px;
+  width: 35vw !important;
+  height: 60vh !important;
+  overflow-y: auto;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  position: relative;
+  border: 1px solid #ccc;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1800px) {
+  .popup-box-income
+  .popup-box1
+  .popup-box{
+      width: 90vw;
+margin-top: -10px;
+    height: 70vh;
+  }
+}
+.popup-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  color: red;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* ----------- BLUR ----------- */
+
+.blur-background-active {
+  filter: blur(3px);
+  pointer-events: none;
+}
+.reportcomplain-container {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.reportcomplain-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.reportcomplain-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f3e7b0ff;
+  display: inline-block;
+  margin-left: 2%;
+}
+
+.reportcomplain-row {
+  display: flex;
+  align-items: center;   /* ✅ vertical center */
+  gap: 2px;
+  flex-wrap: nowrap;
+  margin-bottom: 5px;
+}
+.reportcomplain-row-tight {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  flex-wrap: wrap;
+}
+
+.reportcomplain-group {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.reportcomplain-label {
+  font-size: 10px;
+  font-weight: 100;
+  margin-bottom: 2px;
+  text-align: left;
+}
+
+.reportcomplain-select {
+  width: 100px;
+}
+
+.reportcomplain-upload-btn {
+  width: 100px;
+  background-color: #f1f2f6;
+  border: 1px solid #ccc;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reportcomplain-send-btn {
+  width: 100px;
+  margin-left: 1%;
+  margin-top: 2%;
+}
+/* Container */
+.previousrecord-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Top section */
+.previousrecord-top {
+  display: flex;
+  gap: 10px;
+}
+
+/* Graph wrapper */
+.previousrecord-graph {
+  width: 100%;
+  height: 200px;
+}
+
+/* Sidebar */
+.previousrecord-sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Filter group */
+.previousrecord-filter-group {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+/* Labels */
+.previousrecord-label {
+  font-size: 10px;
+  font-weight: 100;
+  margin-bottom: 2px;
+  text-align: left;
+}
+
+/* Values row */
+.previousrecord-values {
+  display: flex;
+  justify-content: left;
+  gap: 0;
+  margin-top: -65px;
+  margin-left: 15%;
+}
+
+.previousrecord-paid {
+  font-size: 14px;
+  font-weight: 100;
+  color: rgb(146, 208, 155);
+  margin-right: 10px;
+}
+
+.previousrecord-unpaid {
+  font-size: 14px;
+  font-weight: 100;
+  color: rgb(229, 155, 115);
+}
+
+/* Buttons */
+.previousrecord-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.previousrecord-button-group {
+  flex: 1;
+  text-align: center;
+}
+
+/* ================= POPUP ================= */
+
+.previousrecord-popup-overlay {
+  position: fixed;
+  inset: 0; /* replaces top, left, width, height */
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.previousrecord-popup {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-height: 80vh;
+  overflow-y: auto;
+  width: 60%;
+  max-width: 700px;     /* optional: prevents too wide */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .previousrecord-popup {
+    width: 95%;
+  }
+}
+
+
+.previousrecord-popup-title {
+  margin-bottom: 15px;
+  text-align: center;
+  color: #333;
+}
+
+.previousrecord-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+}
+
+.previousrecord-th {
+  text-align: left;
+  padding: 10px;
+  font-weight: bold;
+  color: #555;
+  border-bottom: 2px solid #ddd;
+}
+
+.previousrecord-td {
+  padding: 10px;
+  color: #333;
+  text-align: left;
+}
+
+.previousrecord-row-even {
+  background-color: #f9f9f9;
+}
+
+.previousrecord-row-odd {
+  background-color: #fff;
+}
+
+.previousrecord-close-btn {
+  margin-top: 20px;
+  align-self: center;
+  padding: 8px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+/* IncomeManagement.css */
+
+
+/* Left container inside second section */
+.left-container {
+  display: flex;
+  gap: 15px; /* You can override with media queries if needed */
+  position: relative;
+  
+}
+.left-container.desktop {
+  height: 42vh;
+  border:4px solid #ccc;
+}
+.left-container.laptop {
+  height: 63vh;
+}
+.left-container.mobile {
+  height: 60vh;
+}
+
+/* Vertical line */
+.vertical-line {
+  width: 1px;
+  background-color: #ccc;
+  margin-right: 2%;
+}
+
+/* Scroll buttons */
+.scroll-btn {
+  position: absolute;
+  bottom: 10px;
+}
+.scroll-btn.second-section {
+  right: -50px;
+}
+.scroll-btn.first-section {
+  right: 10px;
+}
+
+/* Dot in Collections */
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f3e7b0ff;
+  display: inline-block;
+  margin-left: -2%;
+}
+
+/* Blur effect when modal is open */
+.blur-background-active {
+  filter: blur(5px);
+}
+
+/* Container */
+.actions-container {
+  text-align: left;
+}
+
+/* Each row */
+.action-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Arrow icon */
+.action-arrow {
+  margin-right: 5px;
+  color: #945f4a;
+}
+
+/* Action text */
+.action-text {
+  flex: 1;
+  text-align: left;
+  font-size: 12px;
+}
+
+/* Status badge base */
+.status-badge {
+  border: none;
+  border-radius: 8px;
+  padding: 2px 5px;
+  cursor: default;
+  font-weight: 500;
+  color: #fff;
+  min-width: 40px;
+  text-align: center;
+}
+
+/* Status colors */
+.status-ok {
+  background-color: #92d09b;
+}
+
+.status-rejected {
+  background-color: #e57373;
+}
+
+.status-pending {
+  background-color: #b97fa5;
+}
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+/* Overlay */
+.fee-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  z-index: 2000;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Popup content */
+.fee-popup-content {
+  width: 90%;
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+
+  /* Scrollbar (Firefox) */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0) transparent;
+}
+
+.fee-popup-content-receipt {
+  width: 90vw;
+  height: 90vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+
+  /* Scrollbar (Firefox) */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0) transparent;
+}
+@media screen and (min-width: 768px) and (max-width: 1800px) {
+  .fee-popup-content-receipt{
+
+    height: 91vh;
+  }
+
+}
+/* Header */
+.fee-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.fee-popup-title {
+  margin: 0;
+  font-size: 18px;
+  flex: 1;
+}
+@media (max-width: 1200px) {
+  .fee-filters {
+    flex-wrap: wrap;
+  }
+  .fee-filters > * {
+    flex: 1 1 150px; /* Allow items to grow and shrink, but not below 150px */
+  }
+}
+.fee-popup-content-receipt {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.fee-filters > * {
+  margin-bottom: 10px; /* Add spacing between wrapped items */
+}
+
+.fee-table-section table {
+  min-width: 100%;
+  width: max-content;
+}
+
+/* Close button */
+.fee-popup-close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+}
+
+/* Date range text */
+.fee-popup-date {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Messages */
+.fee-popup-message {
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Table */
+.fee-popup-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Table head row */
+.fee-popup-thead-row {
+  background: rgba(141, 171, 182, 255);
+  color: #fff;
+}
+.fee-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 60px;
+  align-items: center;     /* vertical alignment */
+  flex-wrap: nowrap;       /* 🚀 NO WRAP */
+  overflow-x: auto;        /* scroll if screen small */
+}
+
+
+/* Header cells */
+.fee-popup-th {
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  border-bottom: 2px solid #ccc;
+}
+
+/* Enforce same header height for all popup tables, even when th has no fee-popup-th class */
+.fee-popup-table thead th {
+  padding: 8px;
+  height: 48px;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  box-sizing: border-box;
+  border-bottom: 2px solid #ccc;
+}
+.fee-popup-td {
+  padding: 6px;
+  font-size: 14px;
+  border-bottom: 1px solid #e0e0e0;
+}
+@media screen and (min-width: 768px) and (max-width: 1800px) {
+  .fee-popup-th,
+  .fee-popup-table thead th,
+  .fee-popup-td{
+font-size: 10px; 
+
+}
+}
+/* Buttons container */
+.fee-popup-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* Common button style */
+.fee-popup-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background-color: #0a3d62; /* Dark Blue */
+  color: #fff;
+}
+
+.fee-popup-btn:hover {
+  background-color: #5014f7ff; /* Purple on hover */
+  transform: translateY(-1px);
+}
+
+.fee-popup-btn:active {
+  transform: translateY(0px);
+  background-color: #062b45;
+}
+
+/* Optional: icon size */
+.fee-popup-btn svg {
+  font-size: 16px;
+}
+
+/* Data cells */
+
+
+/* Zebra rows */
+.fee-row-even {
+  background-color: #fafafa;
+}
+
+.fee-row-odd {
+  background-color: #f1f6fa;
+}
+.trackfees-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Right column – Discounts + Collections stacked */
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+}
+
+
+/* Section header styling */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.section-header .dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f3e7b0ff;
+  display: inline-block;
+}
+/* ==================== FeesManagement.css ==================== */
+
+/* MAIN CONTAINERS */
+.FeesManagement-dashboardContainer {
+  position: relative;
+  width: 70%;
+  height: 70%;
+  margin-top:5%;
+}
+@media screen and (min-width: 1024px) and (max-width: 1800px) {
+  
+  .FeesManagement-dashboardContainer  {
+width: 99%;
+  height: 99%; 
+max-width: 1024px; }
+}
+.FeesManagement-formContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(780px, 96vw);
+  max-width: 96vw;
+  transition: none;
+}
+
+/* FORM INNER CONTAINERS */
+.FeesManagement-innerPadding {
+    margin-top: 10%;
+
+  padding: 0 10px;
+}
+
+.FeesManagement-fullWidthText {
+  width: 100%;
+  text-align: left;
+}
+
+.FeesManagement-rowFlex {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.FeesManagement-leftRightFlex {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  gap: 20px;
+}
+
+.FeesManagement-leftBlock {
+  min-width: 200px;
+}
+
+.FeesManagement-rightBlock {
+  margin-left: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.FeesManagement-labelInputFlex {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.FeesManagement-inputField {
+  cursor: pointer;
+  background-color: #f3f3f3;
+  padding: 5px;
+  
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 120px;
+  text-align: left;
+}
+
+.FeesManagement-dropdown {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: transparent;
+  padding: 20px;
+  z-index: 999;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  min-width: 320px;
+}
+
+.FeesManagement-dropdown-static {
+  position: static;
+  top: auto;
+  right: auto;
+  z-index: auto;
+  margin-top: 0;
+}
+
+.FeesManagement-btn {
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.FeesManagement-btnSolid {
+  background-color: #5a7488;
+  color: white;
+}
+
+.FeesManagement-sectionContainer {
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.FeesManagement-sectionHeader {
+  margin-top: 0;
+  color: #5a7488;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.FeesManagement-feeRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.FeesManagement-feeLabel {
+  font-weight: 500;
+  min-width: 120px;
+  font-size: 10px;
+}
+
+.FeesManagement-feeInput {
+  width: 100px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  text-align: right;
+}
+
+.FeesManagement-totalRow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 2px solid #5a7488;
+  font-weight: 700;
+  font-size: 18px;
+  color: #333;
+}
+
+.FeesManagement-bottomBtns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+/* INSTALLMENT MODAL */
+.FeesManagement-installmentModalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.56);
+  z-index: 3200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
+.FeesManagement-installmentModal {
+  width: min(860px, 94vw);
+  max-height: 88vh;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 22px 24px 20px;
+  box-shadow: 0 28px 70px rgba(15, 23, 42, 0.28);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.FeesManagement-installmentHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+.FeesManagement-installmentKicker {
+  display: inline-flex;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #fee4e7;
+  color: #b4233d;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.FeesManagement-installmentSubtitle {
+  margin: 6px 0 0;
+  color: #667085;
+  font-size: 13px;
+  line-height: 1.45;
+  max-width: 54ch;
+}
+
+.FeesManagement-installmentClose {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #fff;
+  color: #b4233d;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  flex: 0 0 auto;
+  margin-top: -3px;
+}
+
+.FeesManagement-installmentBody {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+}
+
+.FeesManagement-installmentsTableCard {
+  border: 1px solid #d1d5db;
+  border-radius: 16px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.FeesManagement-installmentsTableTitle {
+  padding: 12px 16px 8px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.FeesManagement-installmentsTable {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.FeesManagement-installmentsTable thead th {
+  padding: 12px 10px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 800;
+  color: #475569;
+  background: #ffffff;
+  border-bottom: 1px solid #d1d5db;
+  border-right: 1px solid #d1d5db;
+}
+
+.FeesManagement-installmentsTable thead th:last-child {
+  border-right: none;
+}
+
+.FeesManagement-installmentsTable tbody td {
+  padding: 10px 12px;
+  border-right: 1px solid #d1d5db;
+  border-bottom: 1px solid #d1d5db;
+  background: #fff;
+  vertical-align: middle;
+}
+
+.FeesManagement-installmentsTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.FeesManagement-installmentsTable tbody td:last-child {
+  border-right: none;
+}
+
+.FeesManagement-installmentIndex {
+  text-align: center;
+  font-weight: 800;
+  color: #1d4ed8;
+}
+
+.FeesManagement-installmentName {
+  font-weight: 700;
+  color: #0f172a;
+  white-space: nowrap;
+}
+
+.FeesManagement-installmentsTable tbody td .FeesManagement-installmentInput,
+.FeesManagement-installmentsTable tbody td .FeesManagement-installmentDateInput {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.FeesManagement-installmentInput {
+  width: 100px;
+  padding: 5px;
+  text-align: right;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.FeesManagement-installmentInput::-webkit-outer-spin-button,
+.FeesManagement-installmentInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.FeesManagement-installmentDateInput {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.FeesManagement-installmentsList {
+  max-height: 38vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.FeesManagement-installmentRow {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  margin-bottom: 2px;
+  justify-content: space-between;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* BUS FEE POPUPS */
+.FeesManagement-popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.FeesManagement-popupContent {
+  width: min(90%, 800px);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  position: relative;
+  max-height: 65vh;
+  overflow-y: auto;
+}
+
+.FeesManagement-popupCloseBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.FeesManagement-popupTitle {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.FeesManagement-studentGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.FeesManagement-studentCard {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: background-color 0.2s;
+}
+
+.FeesManagement-studentCard:hover {
+  background-color: #e6e8eb;
+}
+
+.FeesManagement-studentCard-selected {
+  background-color: #e8f5ff;
+  border-color: #6bb8ff;
+  box-shadow: 0 0 0 1px rgba(107, 184, 255, 0.35);
+}
+
+.FeesManagement-studentAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #5a7488;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.FeesManagement-noSpinner {
+  -moz-appearance: textfield;
+}
+
+.FeesManagement-noSpinner::-webkit-outer-spin-button,
+.FeesManagement-noSpinner::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* ===================== Discount.css ===================== */
+
+/* MAIN CONTAINERS */
+.Discount-mainContainer {
+  display: flex;
+  width: 100vw;
+  padding: 5px;
+  font-family: sans-serif;
+}
+
+.Discount-sideContainer {
+  border-radius: 16px;
+  background-color: #fff;
+  height: 50vh;
+  width: 65%;
+  max-width: 47%;
+  border: 1px solid #ccc;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Discount-header {
+  color: #333;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* CONTROLS ROW */
+.Discount-controlsRow {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.Discount-input,
+.Discount-select {
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  padding: 0 8px;
+}
+
+.Discount-button {
+  font-size: 11px;
+  padding: 8px 10px;
+  white-space: nowrap;
+  background-color: #0a3d62;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 2%;
+}
+
+.Discount-search {
+  width: 100px;
+  padding: 8px 10px;
+  font-size: 11px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* STUDENT GRID */
+.Discount-studentGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+  gap: 12px;
+}
+
+.Discount-studentCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid #eef2f3;
+  background-color: #fdfdfd;
+  transition: transform 0.2s;
+}
+
+.Discount-studentName {
+  font-size: 11px;
+  margin-top: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* STUDENT TABLE */
+.Discount-tableContainer {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.Discount-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  table-layout: fixed;
+}
+
+.Discount-table th,
+.Discount-table td {
+  padding: 8px;
+  text-align: left;
+}
+
+.Discount-table th {
+  background-color: #f8f9fa;
+  position: sticky;
+  top: 0;
+}
+
+.Discount-table td {
+  border-bottom: 1px solid #f1f1f1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Discount-discountAmount {
+  font-weight: bold;
+  color: #2ecc71;
+  text-align: right;
+}
+
+.Discount-removeButton {
+  background-color: #fff5f5;
+  color: #e74c3c;
+  border: 1px solid #fed7d7;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* MODAL */
+.Discount-modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.Discount-modalContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  height: 40vh;
+  overflow-y: auto;
+  text-align: center;
+  position: relative;
+}
+
+.Discount-closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  background-color: #5a7488;
+  color: white;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  line-height: 26px;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.Discount-modalHeader {
+  margin-bottom: 12px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.Discount-modalStudentName {
+  margin-left: auto;
+  width: 120px;
+  text-align: left;
+}
+
+.Discount-totalBox {
+  font-size: 18px;
+  color: black;
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.Discount-totalRow {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-bottom: 15px;
+}
+
+.Discount-totalValue {
+  font-weight: bold;
+  color: green;
+}
+
+/* MODAL FEE ENTRIES */
+.Discount-modalFeeEntry {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.Discount-removeRowButton {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: red;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.Discount-modalInput,
+.Discount-modalSelect {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.Discount-modalActions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+/* Ledger table: allow fee type wrapping */
+.ledger-table .fee-type-cell {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}

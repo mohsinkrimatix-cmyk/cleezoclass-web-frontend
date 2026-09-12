@@ -1,0 +1,68 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Inter,sans-serif;
+}
+
+.dashboard{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f3f7fc;
+    gap:20px;
+}
+.dot{
+    width: 15px;
+    height: 15px;
+    background-color: rgb(47, 223, 47);
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.login-card{
+    width:420px;
+    border-radius:22px;
+    background:white;
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.08);
+    overflow:hidden;
+}
+
+.card-header{
+    /* background:linear-gradient(135deg,#2563eb,#3b82f6); */
+    background-color: #f9b1b8;
+    color:white;
+    padding:22px;
+    text-align:center;
+    font-size:22px;
+    font-weight:600;
+}
+
+.count{
+    margin-top:40px;
+    text-align:center;
+    font-size:64px;
+    font-weight:700;
+    color:#1e3a8a;
+}
+
+.subtitle{
+    margin-top:10px;
+    text-align:center;
+    color:#64748b;
+    font-size:18px;
+}
+
+.date-box{
+    margin:40px auto 30px;
+    width:220px;
+    text-align:center;
+    padding:12px;
+    border-radius:12px;
+    background:#eef4ff;
+    color:#2563eb;
+    font-size:16px;
+    font-weight:600;
+}

@@ -1,0 +1,571 @@
+.accountant-expenses-page .accountant-main-area {
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 0.46rem;
+  padding: 0.82rem 1.95rem 0.34rem 2.95rem;
+  overflow: hidden;
+}
+
+.accountant-expenses-grid {
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 0.48rem;
+  overflow: hidden;
+}
+
+.accountant-expenses-inline-card {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.accountant-expenses-empty {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #7a8794;
+}
+
+.accountant-expense-ledger-card {
+  min-height: 0;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 0.8rem;
+  overflow: hidden;
+}
+
+.accountant-expense-ledger-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.accountant-expense-ledger-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.accountant-expense-ledger-filter input {
+  height: 2.2rem;
+  border: 1px solid #cfd7e2;
+  border-radius: 0.45rem;
+  padding: 0 0.65rem;
+  font: inherit;
+}
+
+.accountant-expense-ledger-reset {
+  height: 2.2rem;
+  border: 1px solid #cfd7e2;
+  border-radius: 0.45rem;
+  background: #f7f9fb;
+  color: #31455b;
+  padding: 0 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.accountant-expense-ledger-table-wrap {
+  min-height: 0;
+  overflow: auto;
+  border: 1px solid #d7dce2;
+  border-radius: 0.95rem;
+  background: #fff;
+}
+
+.accountant-expense-ledger-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 940px;
+}
+
+.accountant-expense-ledger-table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #16558a;
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-align: left;
+  padding: 0.78rem 0.8rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.22);
+  white-space: nowrap;
+}
+
+.accountant-expense-ledger-table td {
+  font-size: 0.82rem;
+  color: #213547;
+  padding: 0.78rem 0.8rem;
+  border-right: 1px solid #d7dce2;
+  border-bottom: 1px solid #d7dce2;
+  vertical-align: top;
+}
+
+.accountant-expense-ledger-table tbody tr:nth-child(even) {
+  background: #f5f9fc;
+}
+
+.accountant-expense-ledger-table tfoot td {
+  position: sticky;
+  bottom: 0;
+  background: #eef8ef;
+  font-weight: 700;
+}
+
+.accountant-expense-ledger-empty {
+  text-align: center;
+  color: #6f7d8c;
+  padding: 1.3rem !important;
+}
+
+.accountant-quick-card > img {
+  width: 70%;
+  height: 70%;
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.accountant-quick-card > div {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.accountant-quick-card > div > img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.accountant-expenses-page .accountant-feetype-edit {
+  border: 1px solid #f3c3ca;
+  border-radius: 999px;
+  background: #fff5f7;
+  color: #d95b6f;
+  padding: 0.2rem 0.55rem;
+}
+
+.accountant-expense-category-popup {
+  width: min(720px, 88vw);
+  border-radius: 1.8rem;
+  overflow: hidden;
+  box-shadow: 0 22px 48px rgba(102, 75, 82, 0.18);
+  background:
+    radial-gradient(circle at top right, rgba(233, 160, 165, 0.18), transparent 28%),
+    #ffffff;
+}
+
+.accountant-expense-transaction-popup {
+  width: min(640px, 88vw);
+  max-height: 88vh;
+  overflow: auto;
+  position: relative;
+  border-radius: 1.6rem;
+  margin: 0 auto;
+  padding: 0.9rem 1rem 1rem;
+}
+
+.accountant-expense-transaction-popup .globalpopup-close-btn {
+  position: sticky;
+  top: 0.8rem;
+  margin-left: auto;
+  display: block;
+  z-index: 2;
+}
+
+.accountant-expense-popup-body {
+  display: block;
+}
+
+.accountant-expense-popup-panel {
+  min-height: 0;
+  border: 0;
+  border-radius: 1.2rem;
+  background: #fff;
+  padding: 0.75rem 0.65rem 0.35rem;
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr);
+  gap: 0.7rem;
+}
+
+.accountant-expense-popup-panel-actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
+.accountant-expense-popup-action {
+  height: 2rem;
+  border: 0;
+  border-radius: 0.72rem;
+  background: #eef5ff;
+  color: #18486b;
+  border: 1px solid #cfdceb;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.accountant-expense-popup-action-active {
+  background: #e9a0a5;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.accountant-expense-popup-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem 0.75rem;
+}
+
+.accountant-expense-span-two {
+  grid-column: 1 / -1;
+}
+
+.accountant-expense-actions-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.accountant-expense-assistant-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.action-container {
+  text-align: left;
+}
+
+.action-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.action-arrow {
+  margin-right: 5px;
+  color: #945f4aff;
+}
+
+.action-text {
+  flex: 1;
+  text-align: left;
+  font-size: 12px;
+}
+
+.status-badge {
+  border: none;
+  border-radius: 8px;
+  padding: 2px 5px;
+  cursor: default;
+  font-weight: 500;
+  color: #fff;
+  min-width: 40px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.status-ok {
+  background-color: #92d09b;
+}
+
+.status-rejected {
+  background-color: #e57373;
+}
+
+.status-pending {
+  background-color: #b97fa5;
+}
+
+.accountant-expense-assistant-section {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.accountant-expense-assistant-header h4 {
+  margin: 0;
+  font-size: 0.96rem;
+  color: #142b40;
+}
+
+.accountant-expense-action-card {
+  border: 1px solid #f6d4d8;
+  border-radius: 0.95rem;
+  background: linear-gradient(180deg, #fff7f8 0%, #ffffff 100%);
+  padding: 0.9rem 1rem;
+}
+
+.accountant-expense-action-card h4 {
+  margin: 0 0 0.3rem;
+  font-size: 0.84rem;
+  color: #d95b6f;
+}
+
+.accountant-expense-action-card p {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: #66727f;
+}
+
+.accountant-expense-action-card ol {
+  margin: 0.55rem 0 0;
+  padding-left: 1rem;
+  font-size: 0.74rem;
+  line-height: 1.5;
+  color: #33414f;
+}
+
+.accountant-expense-action-card li {
+  margin-bottom: 0.28rem;
+}
+
+.accountant-expense-popup-form textarea,
+.accountant-expense-popup-form input,
+.accountant-expense-popup-form select {
+  width: 100%;
+  border: 1px solid #dbe3ea;
+  border-radius: 0.7rem;
+  padding: 0.56rem 0.72rem;
+  font: inherit;
+  background: #fcfeff;
+  color: #17324d;
+  font-size: 0.88rem;
+}
+
+.accountant-expense-transaction-popup {
+  box-shadow: 0 16px 36px rgba(24, 72, 107, 0.12);
+}
+
+.accountant-expenses-page .accountant-create-fee-label {
+  color: #17324d;
+  font-weight: 700;
+}
+
+.accountant-expenses-page .accountant-create-fee-label input::placeholder,
+.accountant-expenses-page .accountant-create-fee-label textarea::placeholder {
+  color: #8a97a6;
+}
+
+.accountant-expenses-page .accountant-create-new-btn {
+  border-color: #f3c3ca;
+  background: #fff5f7;
+  color: #d95b6f;
+}
+
+.accountant-expenses-page .accountant-feetype-count strong {
+  color: #f36b79;
+}
+
+.accountant-expenses-page .accountant-feetype-count span {
+  color: #8a97a6;
+}
+
+.accountant-expense-popup-form textarea {
+  resize: vertical;
+  min-height: 2.55rem;
+}
+
+.accountant-expense-category-form {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem 1.15rem 1.15rem;
+}
+
+.accountant-expense-master-embed {
+  padding: 0.9rem 1rem 1rem;
+}
+
+.accountant-expense-master-embed > div {
+  margin: 0 auto !important;
+  max-width: 100% !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.accountant-expense-category-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto;
+  gap: 0.9rem;
+  align-items: end;
+}
+
+.accountant-expense-category-row-top .accountant-expense-create-btn {
+  min-height: 2.8rem;
+  border-radius: 999px;
+}
+
+.accountant-expense-category-stack {
+  display: grid;
+  gap: 0.85rem;
+  max-height: 18rem;
+  overflow: auto;
+  padding-right: 0.2rem;
+}
+
+.accountant-expense-category-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  padding-top: 0.15rem;
+}
+
+.accountant-expenses-page .accountant-expense-category-popup .accountant-create-fee-popup-header {
+  padding: 1.15rem 1.35rem 0.9rem;
+  border-bottom: 1px solid #f1d8dc;
+}
+
+.accountant-expenses-page .accountant-expense-category-popup .accountant-create-fee-kicker {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background: #fdf0f2;
+  color: #c85f6b;
+  padding: 0.2rem 0.7rem;
+  letter-spacing: 0.12em;
+}
+
+.accountant-expenses-page .accountant-expense-category-popup .accountant-create-fee-popup-title {
+  color: #2a2a2a;
+}
+
+.accountant-expenses-page .accountant-expense-category-popup .accountant-create-fee-popup-subtitle {
+  max-width: 28rem;
+  color: #6f6f6f;
+  line-height: 1.45;
+}
+
+.accountant-expenses-page .accountant-expense-category-popup .globalpopup-close-btn {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  background: #fff7f8;
+  color: #d85f6d;
+}
+
+.accountant-expense-remove-btn {
+  width: 2.8rem;
+  height: 2.8rem;
+  border: 1px solid #f1c7cd;
+  border-radius: 0.8rem;
+  background: #fff5f7;
+  color: #d95b6f;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.accountant-expense-remove-spacer {
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.accountant-expenses-page .accountant-fees-collection-card,
+.accountant-expenses-page .accountant-feetype-list-card {
+  height: 100%;
+}
+
+.accountant-expenses-page .accountant-feetype-scroll,
+.accountant-expenses-page .accountant-expense-transaction-popup,
+.accountant-expenses-page .action-container > .action-item > div,
+.accountant-expenses-page .accountant-expense-category-stack,
+.accountant-expenses-page .accountant-expense-ledger-table-wrap {
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+}
+
+.accountant-expenses-page .accountant-feetype-scroll::-webkit-scrollbar,
+.accountant-expenses-page .accountant-expense-transaction-popup::-webkit-scrollbar,
+.accountant-expenses-page .action-container > .action-item > div::-webkit-scrollbar,
+.accountant-expenses-page .accountant-expense-category-stack::-webkit-scrollbar,
+.accountant-expenses-page .accountant-expense-ledger-table-wrap::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.accountant-expenses-page .accountant-feetype-scroll::-webkit-scrollbar-track,
+.accountant-expenses-page .accountant-expense-transaction-popup::-webkit-scrollbar-track,
+.accountant-expenses-page .action-container > .action-item > div::-webkit-scrollbar-track,
+.accountant-expenses-page .accountant-expense-category-stack::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 999px;
+}
+
+.accountant-expenses-page .accountant-feetype-scroll::-webkit-scrollbar-thumb,
+.accountant-expenses-page .accountant-expense-transaction-popup::-webkit-scrollbar-thumb,
+.accountant-expenses-page .action-container > .action-item > div::-webkit-scrollbar-thumb,
+.accountant-expenses-page .accountant-expense-category-stack::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 999px;
+}
+
+.accountant-expenses-page .accountant-feetype-scroll::-webkit-scrollbar-thumb:hover,
+.accountant-expenses-page .accountant-expense-transaction-popup::-webkit-scrollbar-thumb:hover,
+.accountant-expenses-page .action-container > .action-item > div::-webkit-scrollbar-thumb:hover,
+.accountant-expenses-page .accountant-expense-category-stack::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.14);
+}
+
+@media (max-width: 1200px) {
+  .accountant-expenses-page .accountant-main-area {
+    padding-left: 1.3rem;
+  }
+
+  .accountant-expense-transaction-popup {
+    margin-left: 0;
+  }
+
+  .accountant-expenses-placeholder-card {
+    grid-template-columns: 1fr;
+  }
+
+  .accountant-expense-category-row {
+    grid-template-columns: 1fr;
+  }
+
+  .accountant-expense-popup-body,
+  .accountant-expense-popup-form,
+  .accountant-expense-popup-panel-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .accountant-expense-actions-list {
+    grid-template-columns: 1fr;
+  }
+
+  .accountant-expense-remove-btn,
+  .accountant-expense-remove-spacer {
+    width: 100%;
+  }
+
+  .action-item {
+    font-size: 12px;
+  }
+
+  .status-badge {
+    font-size: 9px;
+  }
+}

@@ -1,0 +1,197 @@
+/* ===== GENERAL ===== */
+.ledger-container {
+  padding: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f9;
+}
+
+.ledger-print-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ledger-print-header h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.ledger-print-header p {
+  margin: 3px 0;
+  font-size: 14px;
+}
+
+/* ===== FILTERS ===== */
+.ledger-filters {
+  margin-bottom: 20px;
+}
+
+.ledger-filters button {
+  padding: 6px 12px;
+  margin-right: 8px;
+  background: #2563eb;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ledger-filters input {
+  padding: 6px;
+  margin-right: 8px;
+}
+
+.ledger-filters button:hover {
+  background: #fff;
+}
+
+/* ===== TABLE ===== */
+.ledger-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.ledger-table th {
+  background: #fff;
+  color: black;
+  padding: 6px;
+  font-size: 12px;
+  border: 1px solid #ddd;
+}
+
+.ledger-table td {
+  padding: 6px;
+  font-size: 11px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.ledger-remarks-cell {
+  height: 35px;
+}
+
+.ledger-amount-cell {
+  text-align: right;
+  font-weight: 100;
+    font-size: 8px;
+
+}
+
+/* ===== TOTAL TABLE ===== */
+.ledger-total-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 5px;
+  background: white;
+}
+
+.ledger-total-table td {
+  border: 1px solid #ddd;
+  padding: 6px;
+  font-size: 12px;
+}
+
+.ledger-total-label {
+  font-weight: bold;
+  text-align: right;
+  background: #f3f4f6;
+}
+
+.ledger-total-value {
+  font-weight: bold;
+  text-align: right;
+}
+
+.ledger-grand-row td {
+  font-size: 14px;
+  background: #e6f4ea;
+}
+
+.ledger-grand-row .ledger-total-value {
+  color: #16a34a;
+}
+
+/* ===== PRINT (A4) ===== */
+@media print {
+
+  body {
+    background: white;
+        font-size: 9px; /* general smaller font */
+
+  }
+
+  .no-print,
+  .ledger-filters {
+    display: none;
+  }
+
+  .ledger-container {
+    padding: 10mm;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
+  }
+
+  .ledger-table th,
+  .ledger-table td {
+    font-size: 10px;
+  }
+}
+.no-print {
+  display: inline-block;
+}
+
+@media print {
+  body {
+    background: white;
+    font-size: 9px;
+  }
+
+  .no-print,
+  .ledger-filters {
+    display: none;
+  }
+
+  .ledger-container {
+    padding: 10mm;
+    font-size: 9px;
+  }
+
+  .ledger-header {
+    text-align: center;
+    margin-bottom: 8px;
+    font-size: 10px;
+  }
+
+  .ledger-header h2 {
+    font-size: 14px;
+  }
+
+  .ledger-header p {
+    font-size: 10px;
+  }
+
+  .ledger-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* allow columns to adjust width automatically */
+  }
+
+  .ledger-table th,
+  .ledger-table td {
+    font-size: 8px;    /* smaller font for print */
+    padding: 2px;
+    border: 1px solid black;
+    white-space: nowrap; /* prevent wrapping for all cells */
+  }
+
+  /* Specific amount and transaction columns */
+  .ledger-amount-cell,
+  .ledger-table td:nth-child(10) { /* Transaction ID column */
+    white-space: nowrap;
+    text-align: right; /* amount right-aligned */
+    font-size: 8px;
+  }
+}

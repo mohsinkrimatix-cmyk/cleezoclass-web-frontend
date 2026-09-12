@@ -1,0 +1,2875 @@
+.accountant-dashboard-page {
+  position: relative;
+  height: 100vh;
+  padding: 1.2rem;
+  background: #66615d;
+  font-family: "Century Gothic", "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+
+.accountant-dashboard-page,
+.accountant-dashboard-page *,
+.accountant-dashboard-page *::before,
+.accountant-dashboard-page *::after {
+  box-sizing: border-box;
+}
+
+
+
+
+.accountant-sidebar-item {
+  position: relative;
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  gap: 0;
+  margin: 0;
+  color: #000000;
+}
+
+.accountant-sidebar-item span {
+  position: absolute;
+  left: calc(100% + 0.55rem);
+  top: 50%;
+  transform: translateY(-50%) translateX(-0.2rem);
+  opacity: 0;
+  pointer-events: none;
+  padding: 0.34rem 0.6rem;
+  border: 1px solid rgba(124, 124, 124, 0.35);
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 1px 1px 2px rgba(144, 144, 144, 0.2);
+  white-space: nowrap;
+  font-size: 0.68rem;
+  line-height: 1;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  z-index: 6;
+}
+
+.accountant-sidebar-item:hover span,
+.accountant-sidebar-item:focus-within span {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+.accountant-dashboard-shell {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 5.65rem minmax(0, 1fr);
+  background: #f5f5f5;
+  border: 1px solid #7c7c7c;
+  border-radius: 1.55rem;
+  overflow: hidden;
+
+}
+
+.accountant-sidebar-strip {
+  align-self: center;
+  width: 4.7rem;
+  height: 31rem;
+  background: #f9b1b8;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1.1rem 0.55rem;
+}
+@media (min-width: 921px) and (max-width: 1100px) {
+  .accountant-sidebar-strip {
+    align-self: start;
+    margin-top: 7.2rem;
+  }
+}
+@media (min-width: 749px) and (max-width: 1024px) {
+  .accountant-main-area {
+    padding: 0.6rem 8.8rem 0.3rem 1.2rem;
+  }
+}
+
+
+.accountant-sidebar-menu {
+  display: none;
+}
+
+.accountant-sidebar-item-icon {
+  width: 3rem !important;
+  height: 3rem !important;
+  border-radius: 50% !important;
+  display: grid;
+  place-items: center;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+  flex: 0 0 3rem;
+}
+
+.accountant-sidebar-item-active .accountant-sidebar-item-icon {
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(243, 107, 121, 0.25);
+}
+
+.accountant-sidebar-item-icon img {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+
+
+
+
+
+.accountant-topbar-tab {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1d1d1d;
+  cursor: pointer;
+  line-height: 1.2 !important;
+  padding-bottom: 0.2rem !important;
+  border-bottom: 3px solid transparent !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  min-height: 1.8rem !important;
+  flex: 0 0 auto !important;
+  white-space: nowrap !important;
+}
+
+.accountant-topbar-tab-button {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  line-height: inherit;
+  text-decoration: none;
+}
+
+.accountant-topbar-tab-active {
+  font-weight: 600 !important;
+  color: #000000;
+  border-bottom: 3px solid #f36b79 !important;
+}
+
+.accountant-topbar-center {
+  display: flex;
+  justify-content: center;
+  min-height: 4.5rem;
+  align-items: center;
+}
+
+.accountant-school-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+
+
+.accountant-topbar-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 4.5rem;
+}
+
+.accountant-branch-btn {
+  height: 1.95rem;
+  padding: 0 0.9rem;
+  border: 1px solid #7c7c7c;
+  border-radius: 0.78rem;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  font-size: 0.86rem;
+  color: #141414;
+  box-shadow: 1px 1px 2px rgba(144, 144, 144, 0.28);
+}
+
+.accountant-branch-caret {
+  font-size: 0.66rem;
+}
+
+/* NEW CSS */
+.accountant-user-btn {
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  border: 1px solid #7c7c7c;
+  background: #ffffff;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  box-shadow: 1px 1px 2px rgba(144, 144, 144, 0.28);
+}
+
+.accountant-user-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  object-fit: contain;
+  display: block;
+}
+
+
+.accountant-main-area {
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 0.46rem;
+  padding: 0.82rem 1.95rem 0.34rem 2.95rem;
+  overflow: hidden;
+}
+
+.accountant-outgoing-students-popup {
+  width: min(1080px, 92vw);
+  max-height: 84vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.accountant-outgoing-students-summary {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0 1.5rem 1rem;
+  flex-wrap: wrap;
+}
+
+.accountant-outgoing-students-pill {
+  min-width: 10rem;
+  border: 1px solid rgba(124, 124, 124, 0.22);
+  border-radius: 1rem;
+  background: #fff7f8;
+  padding: 0.8rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.accountant-outgoing-students-pill span {
+  font-size: 0.82rem;
+  color: #6b6470;
+}
+
+.accountant-outgoing-students-pill strong {
+  font-size: 1rem;
+  color: #121212;
+}
+
+.accountant-outgoing-students-table-wrap {
+  padding: 0 1.5rem 1.5rem;
+  overflow: auto;
+}
+
+.accountant-outgoing-students-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+  background: #ffffff;
+}
+
+.accountant-outgoing-students-table th,
+.accountant-outgoing-students-table td {
+  padding: 0.8rem 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(124, 124, 124, 0.15);
+  font-size: 0.88rem;
+}
+
+.accountant-outgoing-students-table th {
+  position: sticky;
+  top: 0;
+  background: #fff1f3;
+  color: #1d1d1d;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.accountant-outgoing-students-table tbody tr:hover {
+  background: #fff8f9;
+}
+
+
+
+
+.accountant-topbar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 0.46rem;
+}
+
+.accountant-topbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1.12rem;
+}
+
+.accountant-school-logo {
+  width: 6.2rem;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.accountant-school-name {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #1f2937;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.05;
+  white-space: normal;
+  overflow: hidden;
+  max-width: 220px;
+}
+
+.accountant-school-name-line {
+  display: block;
+  min-width: 0;
+}
+
+.accountant-school-name-line-primary {
+  font-size: 0.65rem;
+  font-weight: 700;
+}
+
+.accountant-school-name-line-secondary {
+  font-size: 0.58rem;
+  font-weight: 600;
+}
+
+.accountant-grid {
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) minmax(0, 0.82fr);
+  gap: 0.48rem;
+  overflow: hidden;
+}
+
+
+.accountant-row-top,
+.accountant-row-middle,
+.accountant-row-bottom,
+.accountant-bottom-right {
+  min-width: 0;
+  min-height: 0;
+}
+
+
+
+
+
+.accountant-row-middle {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.48rem;
+  align-items: stretch;
+}
+
+.accountant-row-bottom {
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr 1fr;
+  gap: 0.48rem;
+  align-items: stretch;
+}
+
+
+.accountant-bottom-right {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: minmax(0, 0.86fr) auto;
+  gap: 0.34rem;
+
+  height: 200px;
+  align-content: stretch;
+}
+
+
+
+
+
+.accountant-card {
+  background: #ffffff;
+  border: 1px solid rgba(124, 124, 124, 0.35);
+  border-radius: 1.08rem;
+  box-shadow:
+    1px 1px 2px rgba(144, 144, 144, 0.6),
+    3px 0 8px rgba(144, 144, 144, 0.18);
+  padding: 0.5rem 0.58rem;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+/* syam */
+
+
+
+
+.accountant-welcome-block {
+  align-self: start;
+  justify-self: start;
+  width: 100%;
+  max-width: 14rem;
+  padding: 0.72rem 0 0 0.08rem;
+  text-align: left;
+}
+
+.accountant-welcome-block h2 {
+  margin: 0 0 0.42rem;
+  font-size: 1.34rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.accountant-welcome-block p {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.16;
+  color: #111111;
+}
+
+
+
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-list {
+  display: grid;
+  justify-items: start;
+  align-content: start;
+  width: 100%;
+  gap: 0.14rem;
+  margin-top: 0.22rem;
+  padding-left: 0.04rem;
+  text-align: left;
+}
+
+/* NEW */
+.accountant-row-top {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.48rem;
+  align-items: stretch;
+}
+
+.accountant-mini-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.48rem;
+  min-width: 0;
+  height: 100%;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.accountant-task-card {
+  min-height: 0;
+  height: 100%;
+  padding: 0.5rem 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.accountant-quick-card {
+  min-height: 0;
+  height: 100%;
+  padding: 0.5rem 0.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.05rem;
+  text-align: center;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.accountant-quick-card > img {
+  width: 70%;
+  height: 70%;
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.accountant-quick-card-clickable {
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.accountant-quick-card-clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(27, 27, 27, 0.08);
+  border-color: rgba(243, 107, 121, 0.35);
+}
+
+.accountant-quick-card-clickable:focus-visible {
+  outline: 2px solid rgba(243, 107, 121, 0.6);
+  outline-offset: 2px;
+}
+
+@media (min-width: 921px) and (max-width: 1280px) {
+  .accountant-mini-cards {
+    gap: 0.3rem;
+  }
+  .accountant-quick-card {
+    padding: 0.35rem 0.25rem;
+    overflow: hidden;
+  }
+  .quick-icon {
+    height: 10.5rem;
+    width: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .quick-icon img {
+    width: 3.5rem;
+    height: 3.5rem;
+    max-height: 3.5rem;
+    object-fit: contain;
+  }
+  .accountant-quick-card h4 {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  .accountant-quick-card p {
+    font-size: 0.6rem;
+    margin: 0;
+  }
+}
+
+
+
+.quick-icon {
+  height: 4.3rem;
+  width: 4.3rem;
+  border-radius: 50%;
+  background: #f1f2f4;
+  border: 1px solid rgba(124, 124, 124, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.quick-icon img {
+  width: auto;
+  height: auto;
+  max-width: 2.35rem;
+  max-height: 2.35rem;
+  object-fit: contain;
+}
+
+.task-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.task-plus {
+  min-width: 2.1rem;
+  height: 0.98rem;
+  padding: 0 0.45rem;
+  border-radius: 999px;
+  background: #f9b1b8;
+  color: #000000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.task-list p {
+  margin: 0;
+  font-size: 0.68rem;
+  line-height: 1.18;
+  color: #7f7f7f;
+}
+
+.accountant-quick-card h4 {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1;
+  font-weight: 700;
+  color: #000000;
+  white-space: nowrap;
+}
+
+
+.accountant-quick-card p {
+  margin: 0;
+  font-size: 0.66rem;
+  line-height: 1.15;
+  color: #7f7f7f;
+}
+
+
+.accountant-collect-card,
+.accountant-outstanding-card,
+.accountant-feetype-card,
+.accountant-ticket-card,
+.accountant-premium-card,
+.accountant-income-card,
+.accountant-prevdue-card {
+  height: 100%;
+}
+
+.accountant-total-strip {
+  height: auto;
+}
+
+
+
+.accountant-outstanding-card {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  min-height: 0;
+}
+
+.accountant-feetype-card {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  min-height: 0;
+}
+
+.accountant-assistant-panel {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0.2rem 0.1rem 0.3rem;
+}
+
+.accountant-assistant-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.accountant-assistant-summary-card {
+  border-radius: 0.85rem;
+  padding: 0.75rem 0.85rem;
+  display: grid;
+  gap: 0.2rem;
+  border: 1px solid rgba(124, 124, 124, 0.2);
+  background: #faf6f6;
+}
+
+.accountant-assistant-summary-card span {
+  font-size: 0.74rem;
+  color: #6a6a6a;
+}
+
+.accountant-assistant-summary-card strong {
+  font-size: 1rem;
+  color: #1c1c1c;
+}
+
+.accountant-assistant-summary-card.is-paid strong {
+  color: #15803d;
+}
+
+.accountant-assistant-summary-card.is-balance strong {
+  color: #c2410c;
+}
+
+.accountant-assistant-inline-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.accountant-assistant-inline-section {
+  min-width: 0;
+  border: 1px solid rgba(124, 124, 124, 0.18);
+  border-radius: 0.95rem;
+  padding: 0.75rem;
+  background: #ffffff;
+}
+
+.accountant-assistant-inline-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+}
+
+.accountant-assistant-inline-header h4 {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #191919;
+}
+
+.accountant-assistant-inline-header span {
+  min-width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 999px;
+  background: #f4d5d8;
+  color: #5b4749;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.accountant-assistant-inline-list {
+  display: grid;
+  gap: 0.45rem;
+  max-height: 10.5rem;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.accountant-assistant-inline-item {
+  border: 1px solid rgba(124, 124, 124, 0.14);
+  border-radius: 0.75rem;
+  padding: 0.55rem 0.65rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  background: #fbfbfb;
+}
+
+.accountant-assistant-inline-item strong,
+.accountant-assistant-inline-item span {
+  font-size: 0.76rem;
+}
+
+.accountant-assistant-inline-item strong {
+  color: #202020;
+}
+
+.accountant-assistant-inline-item span {
+  color: #666;
+  white-space: nowrap;
+}
+
+.accountant-assistant-inline-section-actions {
+  padding-bottom: 0.4rem;
+}
+
+.accountant-assistant-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+  max-height: 14.5rem;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.accountant-assistant-action-card {
+  border: 1px solid rgba(124, 124, 124, 0.16);
+  border-radius: 0.9rem;
+  background: #fcfcfc;
+  padding: 0.75rem 0.8rem;
+}
+
+.accountant-assistant-action-card h5 {
+  margin: 0;
+  font-size: 0.84rem;
+  color: #1f1f1f;
+}
+
+.accountant-assistant-action-card p {
+  margin: 0.3rem 0 0.45rem;
+  font-size: 0.73rem;
+  line-height: 1.35;
+  color: #616161;
+}
+
+.accountant-assistant-action-card ol {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.accountant-assistant-action-card li {
+  margin-bottom: 0.22rem;
+  font-size: 0.72rem;
+  line-height: 1.35;
+  color: #2e2e2e;
+}
+
+.accountant-assistant-empty {
+  color: #777;
+  font-size: 0.76rem;
+  font-style: italic;
+}
+
+.accountant-assistant-inline-list::-webkit-scrollbar,
+.accountant-assistant-actions::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.accountant-ticket-card {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  min-height: 0;
+}
+
+.accountant-premium-card {
+  min-height: 0;
+}
+
+.accountant-income-card,
+.accountant-prevdue-card {
+  min-height: 0;
+}
+
+
+
+
+
+
+
+.collect-title-block h3,
+.accountant-card-header h3,
+.accountant-ticket-head-left h3 {
+  margin: 0;
+  line-height: 1;
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.accountant-inline-plus {
+  width: 2.65rem;
+  height: 1.08rem;
+  border: none;
+  border-radius: 999px;
+  background: #f9b1b8;
+  color: #000000;
+  font-size: 0.94rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.collect-title-block {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.collect-title-block h3 {
+  white-space: nowrap;
+}
+
+.collect-filter,
+.accountant-card-filter {
+  min-width: 6.15rem;
+  height: 1.9rem;
+  padding: 0 0.72rem;
+  border: 1px solid #7c7c7c;
+  border-radius: 0.62rem;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.38rem;
+  line-height: 1;
+  font-size: 0.72rem;
+  color: #7f7f7f;
+  flex-shrink: 0;
+  white-space: nowrap;
+  position: relative;
+  top: -0.62rem;
+}
+
+.accountant-outstanding-card .accountant-card-filters .accountant-card-filter {
+  top: 0;
+}
+
+.collect-filter {
+  margin-left: auto;
+}
+
+
+
+
+.collect-stats strong {
+  text-align: left;
+  color: #101010;
+  font-weight: 700;
+
+}
+
+
+
+
+
+
+
+
+.accountant-total-due span {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.accountant-total-due p {
+  margin: 0;
+  font-size: 1.04rem;
+  font-weight: 700;
+  color: #f36b79;
+  border-bottom: 0.16rem solid #f36b79;
+  padding-bottom: 0.05rem;
+}
+
+
+.accountant-card-filters {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  position: relative;
+  top: -0.62rem;
+}
+.accountant-outstanding-card .accountant-card-filters {
+  top: 0;
+}
+
+
+
+
+.accountant-student-mini,
+.accountant-ticket-user {
+  display: grid;
+  justify-items: center;
+  gap: 0.14rem;
+  text-align: center;
+}
+
+
+
+.accountant-student-avatar-wrap img,
+.accountant-ticket-avatar-wrap img {
+  display: block;
+  width: 1.9rem;
+  height: 1.9rem;
+  object-fit: contain;
+}
+
+.accountant-student-avatar-wrap::before,
+.accountant-ticket-avatar-wrap::before,
+.accountant-student-avatar-wrap::after,
+.accountant-ticket-avatar-wrap::after {
+  content: none;
+}
+
+.accountant-student-mini.is-active .accountant-student-avatar-wrap,
+.accountant-ticket-user.active .accountant-ticket-avatar-wrap {
+  background: #f6a5ab;
+}
+
+
+.accountant-feetype-header {
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.accountant-feetype-header h3 {
+  white-space: nowrap;
+}
+
+.accountant-feetype-meta {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  margin-left: auto;
+  flex-shrink: 0;
+  padding-top: 0.02rem;
+}
+
+.accountant-create-new-btn {
+  height: 1.4rem;
+  padding: 0 0.68rem;
+  border: 1px solid rgba(124, 124, 124, 0.3);
+  border-radius: 999px;
+  background: #ffffff;
+  color: #000000;
+  font-size: 0.66rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  flex-shrink: 0;
+  position: relative;
+  top: -0.6rem;
+}
+
+
+.accountant-feetype-count {
+  display: flex;
+  align-items: baseline;
+  margin-top: 8px;
+  gap: 0.12rem;
+  white-space: nowrap;
+}
+
+
+.accountant-feetype-count strong {
+  font-size: 1.56rem;
+  line-height: 1;
+  color: #f36b79;
+}
+
+.accountant-feetype-count span {
+  padding-bottom: 0;
+  font-size: 0.66rem;
+  line-height: 1;
+  color: #7f7f7f;
+}
+
+
+.accountant-feetype-table-wrap {
+  min-height: 0;
+  overflow: auto;
+  margin-top: 0.6rem;
+}
+
+.accountant-feetype-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.accountant-feetype-table th,
+.accountant-feetype-table td {
+  border: 1px solid #7c7c7c;
+  text-align: center;
+  word-break: break-word;
+}
+
+
+
+.accountant-ticket-tab.active {
+  color: #000000;
+  font-weight: 700;
+  border-bottom: 2px solid #f36b79;
+}
+
+.collect-header,
+.accountant-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 0.7rem; */
+}
+
+.accountant-ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.accountant-ticket-head-left {
+  display: flex;
+  align-items: center;
+  gap: 0.88rem;
+  position: relative;
+  top: -0.62rem;
+}
+
+.accountant-ticket-tabs {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+
+.accountant-feetype-table th {
+  background: #f9b1b8;
+  color: #000000;
+  font-size: 0.62rem;
+  font-weight: 700;
+  line-height: 1.12;
+  padding: 0.42rem 0.2rem;
+}
+
+.accountant-feetype-table td {
+  color: #000000;
+  font-size: 0.6rem;
+  padding: 0.42rem 0.2rem;
+}
+
+.accountant-create-fee-popup-title {
+  margin: 0;
+  font-size: 1.42rem;
+  font-weight: 800;
+  color: #1d1d1d;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.accountant-create-fee-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 0.15rem 0.1rem 0.15rem;
+}
+
+.accountant-create-fee-popup {
+  width: 95%;
+  max-width: 720px;
+  height: auto;
+  max-height: 90vh;
+  min-height: auto;
+  overflow: visible;
+  border-radius: 26px;
+  border: 1px solid rgba(241, 107, 121, 0.18);
+  box-shadow:
+    0 26px 60px rgba(16, 24, 40, 0.28),
+    0 8px 20px rgba(243, 107, 121, 0.12);
+  background:
+    #fff;
+}
+
+.accountant-create-fee-popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(225, 225, 225, 0.95);
+  margin-top: 0;
+  padding: 0.25rem 0 0.8rem;
+  margin-bottom: 0.65rem;
+  position: relative;
+}
+
+.accountant-create-fee-popup-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.26rem;
+  min-width: 0;
+}
+
+.accountant-create-fee-kicker {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(243, 107, 121, 0.12), rgba(241, 176, 184, 0.28));
+  color: #b23b4c;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.accountant-create-fee-popup-subtitle {
+  margin: 0;
+  color: #666;
+  font-size: 0.88rem;
+  font-weight: 500;
+  max-width: 42ch;
+  line-height: 1.45;
+}
+
+.accountant-create-fee-popup .globalpopup-close-btn {
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 50%;
+  border: 1px solid rgba(243, 107, 121, 0.18);
+  background: #fff;
+  font-size: 1.05rem;
+  line-height: 1;
+  color: #a63e4d;
+  margin-left: 0;
+  margin-top: 0;
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(243, 107, 121, 0.12);
+}
+
+.accountant-create-fee-intro {
+  margin: 0 0 0.9rem;
+  padding: 0.95rem 1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(243, 107, 121, 0.12);
+  background:
+    #fff;
+}
+
+.accountant-create-fee-intro-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.24rem 0.58rem;
+  border-radius: 999px;
+  background: rgba(243, 107, 121, 0.12);
+  color: #b23b4c;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.accountant-create-fee-intro-text {
+  margin: 0.55rem 0 0.7rem;
+  color: #3c3c3c;
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.accountant-create-fee-intro-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.accountant-create-fee-intro-tags span {
+  padding: 0.34rem 0.6rem;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid rgba(243, 107, 121, 0.15);
+  color: #5d5d5d;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.accountant-create-fee-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.accountant-create-fee-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.28rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #343434;
+}
+
+.accountant-create-fee-label-full {
+  grid-column: 1 / -1;
+}
+
+.accountant-create-fee-input {
+  width: 100%;
+  height: 2.6rem;
+  border: 1px solid #d8d8d8;
+  border-radius: 14px;
+  padding: 0 0.9rem;
+  font-size: 0.92rem;
+  color: #1f1f1f;
+  background:
+    linear-gradient(180deg, #ffffff 0%, #fffefc 100%);
+  box-shadow: inset 0 1px 2px rgba(16, 24, 40, 0.03);
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.accountant-create-fee-input:focus {
+  outline: none;
+  border-color: #f36b79;
+  box-shadow:
+    0 0 0 4px rgba(243, 107, 121, 0.12),
+    0 10px 24px rgba(243, 107, 121, 0.08);
+  transform: translateY(-1px);
+}
+
+.accountant-create-fee-error {
+  margin: 0;
+  color: #b42318;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.78rem 0.95rem;
+  border-radius: 14px;
+  background: #fff1f1;
+  border: 1px solid rgba(180, 35, 24, 0.14);
+}
+
+.accountant-create-fee-note {
+  padding: 0.8rem 0.95rem;
+  border-radius: 14px;
+  background:#fff;
+  border: 1px dashed rgba(243, 107, 121, 0.22);
+  color: #5d4b4d;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.accountant-create-fee-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.65rem;
+  margin-top: 0.1rem;
+  padding-top: 0.35rem;
+}
+
+.accountant-create-fee-cancel,
+.accountant-create-fee-submit {
+  height: 2.45rem;
+  border-radius: 999px;
+  padding: 0 1.15rem;
+  font-size: 0.84rem;
+  font-weight: 800;
+  border: 1px solid transparent;
+  min-width: 7.6rem;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.accountant-create-fee-cancel {
+  background: #ffffff;
+  color: #4b4b4b;
+  border-color: #d9d9d9;
+}
+
+.accountant-create-fee-submit {
+  background: linear-gradient(135deg, #f36b79 0%, #ea5164 100%);
+  color: #ffffff;
+  box-shadow: 0 14px 24px rgba(243, 107, 121, 0.22);
+}
+
+.accountant-create-fee-cancel:hover,
+.accountant-create-fee-submit:hover {
+  transform: translateY(-1px);
+}
+
+.accountant-create-fee-cancel:hover {
+  box-shadow: 0 10px 18px rgba(16, 24, 40, 0.08);
+}
+
+.accountant-create-fee-submit:hover {
+  box-shadow: 0 16px 28px rgba(243, 107, 121, 0.28);
+}
+
+.accountant-create-fee-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.accountant-add-fee-popup {
+  padding: 1rem 1.15rem 1.15rem;
+  border-radius: 22px;
+}
+
+.accountant-add-fee-popup .FeesManagement-dashboardContainer {
+  width: 100% !important;
+  height: auto !important;
+  max-width: none !important;
+  margin-top: 0 !important;
+  position: relative !important;
+}
+
+.accountant-add-fee-popup .FeesManagement-formContainer {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+  width: 100% !important;
+  max-width: none !important;
+}
+
+.accountant-add-fee-popup .FeesManagement-innerPadding {
+  margin-top: 0 !important;
+  padding: 0 !important;
+}
+.accountant-add-fee-popup .FeesManagement-leftRightFlex {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.accountant-add-fee-popup .FeesManagement-leftBlock {
+  flex: 1;
+}
+
+.accountant-add-fee-popup .FeesManagement-rightBlock {
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+.accountant-add-fee-popup .FeesManagement-bottomBtns {
+  display: flex;
+  align-items: flex-end;
+}
+
+.accountant-add-fee-popup .FeesManagement-leftBlock {
+  min-width: 0;
+  width: auto;
+}
+
+.accountant-add-fee-popup .FeesManagement-rightBlock {
+  margin-left: 0;
+  align-items: flex-start;
+  justify-self: end;
+  width: 100%;
+  max-width: 360px;
+  flex-direction: row!important;
+}
+
+.accountant-add-fee-popup .FeesManagement-sectionContainer {
+  background: #ffffff;
+  border: 1px solid rgba(90, 116, 136, 0.14);
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
+  max-width: none;
+}
+
+.accountant-add-fee-popup .FeesManagement-sectionHeader {
+  font-size: 0.98rem;
+  padding-bottom: 0.85rem;
+}
+
+.accountant-add-fee-popup .FeesManagement-feeRow {
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.accountant-add-fee-popup .FeesManagement-feeLabel {
+  min-width: 180px;
+  font-size: 0.83rem;
+}
+
+.accountant-add-fee-popup .FeesManagement-totalRow {
+  font-size: 1rem;
+}
+
+.accountant-add-fee-popup .FeesManagement-bottomBtns {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.accountant-add-fee-popup .FeesManagement-bottomBtns .btn-solid {
+  min-width: 180px;
+}
+
+.accountant-ticket-tab {
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin-top: 0.2rem;
+  font-size: 0.72rem;
+  line-height: 1;
+  color: #7f7f7f;
+}
+
+
+
+
+
+.accountant-premium-gift {
+  position: absolute;
+  inset: 0;
+}
+
+.accountant-premium-gift::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 1.15rem;
+  width: 1.75rem;
+  height: 1.38rem;
+  transform: translateX(-50%);
+  border: 2px solid #1d1d1d;
+  border-radius: 0.2rem;
+}
+
+.accountant-premium-gift::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0.42rem;
+  width: 0.14rem;
+  height: 2.25rem;
+  transform: translateX(-50%);
+  background: #1d1d1d;
+}
+
+.accountant-premium-ribbon::before,
+.accountant-premium-ribbon::after {
+  content: "";
+  position: absolute;
+  top: 0.36rem;
+  width: 0.74rem;
+  height: 0.74rem;
+  border: 2px solid #1d1d1d;
+  border-radius: 60% 60% 60% 0;
+}
+
+.accountant-premium-ribbon::before {
+  left: 0.95rem;
+  transform: rotate(-40deg);
+}
+
+.accountant-premium-ribbon::after {
+  right: 0.95rem;
+  transform: scaleX(-1) rotate(-40deg);
+}
+
+
+.accountant-collect-card {
+  display: grid;
+  grid-template-rows: auto auto minmax(0, 1fr) auto;
+  min-height: 0;
+}
+
+.accountant-inline-plus-below {
+  grid-row: 2;
+  justify-self: start;
+  align-self: start;
+  margin: -0.5rem 0 0 0.08rem;
+}
+
+
+.accountant-collect-content {
+  grid-row: 3;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  width: 100%;
+  gap: 0.95rem;
+  margin-top: 0;
+}
+
+.accountant-total-due {
+  grid-row: 4;
+  display: grid;
+  justify-items: center;
+  gap: 0.08rem;
+  margin-top: auto;
+  padding-top: 0.36rem;
+}
+
+.accountant-progress-panel {
+  position: relative;
+  width: 6.35rem;
+  height: 4.6rem;
+  display: grid;
+  place-items: center;
+  justify-self: center;
+}
+
+
+.accountant-progress-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0.22rem 0.5rem 0.32rem 0.5rem;
+  border-radius: 0.34rem;
+  transform: skew(-10deg);
+}
+.accountant-progress-ring {
+  --size: 2.55rem;
+  /* --thickness: 4px; */
+
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: conic-gradient(
+    #e9a0a5 var(--admission-progress, 0deg),
+    #efefef 0deg
+  );
+}
+.FeesManagement-rightBlock {
+  display: flex;
+  gap: 12px; /* space between Class & Section */
+  align-items: flex-end;
+}
+
+.FeesManagement-labelInputFlex {
+  flex: 1; /* both take equal width */
+}
+/* Inner white circle (creates border thickness) */
+.accountant-progress-ring::before {
+  content: "";
+  position: absolute;
+
+  background: #fff; /* match your card */
+  border-radius: 50%;
+}
+
+/* Percentage text */
+.accountant-progress-ring-inner {
+  position: relative;
+  z-index: 2;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #000;
+}
+.collect-stats {
+  display: grid;
+  gap: 0.18rem;
+  justify-self: start;
+}
+
+.collect-stats p {
+  justify-content: space-between;
+
+  margin: 0;
+  display: flex;
+  gap: 0.22rem;
+  flex-wrap: wrap;
+  font-size: 0.6rem;
+  line-height: 1.18;
+  color: #7f7f7f;
+}
+
+/* Collect Fees - larger sizing */
+.accountant-collect-card .collect-title-block h3 {
+  font-size: 18px;
+}
+
+.accountant-collect-card .collect-filter {
+  min-width: 7.2rem;
+  height: 2.15rem;
+  font-size: 0.84rem;
+}
+
+.accountant-collect-card .accountant-inline-plus {
+  width: 3.15rem;
+  height: 1.34rem;
+  font-size: 1.06rem;
+}
+
+.accountant-collect-card .accountant-progress-panel {
+  width: 7.7rem;
+  height: 5.5rem;
+}
+
+.accountant-collect-card .accountant-progress-ring {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-width: 0.22rem;
+}
+
+.accountant-collect-card .accountant-progress-ring-inner {
+  font-size: 0.9rem;
+}
+
+.accountant-collect-card .collect-stats p {
+  font-size: 0.76rem;
+  line-height: 1.28;
+}
+
+.accountant-collect-card .collect-stats strong {
+  font-size: 0.82rem;
+}
+
+.accountant-collect-card .accountant-total-due span {
+  font-size: 1.02rem;
+}
+
+.accountant-collect-card .accountant-total-due p {
+  font-size: 1.18rem;
+}
+
+
+.accountant-student-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.16rem;
+  margin-top: 0.28rem;
+  min-height: 0;
+  max-height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 0.2rem;
+  align-content: start;
+}
+
+
+
+.accountant-student-avatar-wrap,
+.accountant-ticket-avatar-wrap {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  position: relative;
+  display: grid;
+  place-items: center;
+  background: #f1f2f4;
+  overflow: hidden;
+}
+
+
+
+
+.accountant-add-student,
+.accountant-ticket-add {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.04rem;
+}
+
+.accountant-add-student-grid {
+  justify-self: center;
+  align-self: start;
+  margin-top: -0.04rem;
+}
+
+.accountant-add-circle {
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 50%;
+  background: #f9b1b8;
+  color: #7c7c7c;
+  font-size: 1.2rem;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+}
+
+.accountant-add-student span {
+  margin-left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.42rem;
+  color: #7f7f7f;
+}
+
+.accountant-ticket-users {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  column-gap: 0.16rem;
+  row-gap: 0.52rem;
+  margin-top: 0.35rem;
+  align-content: start;
+}
+
+.accountant-student-mini h4,
+.accountant-ticket-user h4 {
+  margin: 0;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.accountant-student-mini p,
+.accountant-ticket-user p {
+  margin: 0;
+  font-size: 0.5rem;
+  line-height: 1.08;
+  color: #7f7f7f;
+}
+
+.accountant-ticket-add {
+  grid-column: 1;
+  grid-row: 2;
+  justify-self: center;
+  align-self: start;
+  margin-top: 0.08rem;
+}
+
+
+
+.accountant-premium-card {
+  background: #f9b1b8;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 18rem;
+  padding: 0.42rem 0.38rem;
+  margin-left: 0;
+  justify-self: center;
+}
+
+
+
+.accountant-premium-icon {
+  width: 3.30rem;
+  height: 3.30rem;
+  object-fit: contain;
+  margin-bottom: 0.6rem;
+  background: transparent;
+  mix-blend-mode: multiply;
+}
+
+
+
+
+.accountant-income-card,
+.accountant-prevdue-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.34rem 0.42rem;
+}
+
+.accountant-income-ring {
+  width: 1.95rem;
+  height: 1.95rem;
+  margin-bottom: 0.02rem;
+}
+
+.accountant-premium-card h3 {
+  margin: 0.04rem 0 0.05rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.accountant-premium-card p {
+  margin: 0 0 0.22rem;
+  font-size: 0.58rem;
+  line-height: 1.18;
+  color: #444444;
+}
+
+.accountant-premium-card button {
+  height: 1.28rem;
+  padding: 0 0.58rem;
+  border: none;
+  border-radius: 999px;
+  background: #203864;
+  color: #f36b79;
+  font-size: 0.58rem;
+  font-weight: 700;
+}
+
+.accountant-income-card h3,
+.accountant-prevdue-card h3 {
+  margin: 0;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.accountant-income-card p,
+.accountant-prevdue-card p {
+  margin: 0.02rem 0 0;
+  font-size: 0.5rem;
+  color: #7f7f7f;
+}
+
+.accountant-prevdue-amount {
+  margin: 0 0 0.02rem !important;
+  font: size 1.5rem !important;
+  font-weight: 700;
+  color: #f36b79 !important;
+}
+
+
+.accountant-total-strip {
+  min-height: 4.82rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.16rem;
+  padding: 0.24rem 0.4rem;
+  grid-column: 1 / -1;
+  align-self: end;
+}
+
+
+.accountant-total-strip-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.12rem;
+}
+
+.accountant-total-strip-item {
+  text-align: center;
+}
+/* EXACT colors like reference */
+.accountant-total-strip-item:nth-child(1) span {
+  color: #f28c38; /* orange */
+}
+
+.accountant-total-strip-item:nth-child(2) span {
+  color: #2f80ed; /* blue */
+}
+
+.accountant-total-strip-item:nth-child(3) span {
+  color: #6c5ce7; /* purple */
+}
+
+
+
+.accountant-total-strip-right {
+  justify-self: end;
+  min-width: 5.9rem;
+  text-align: right;
+}
+
+
+.accountant-total-strip-item strong {
+  display: block;
+  font-size: 0.62rem;
+  color: #000000;
+}
+
+.accountant-total-strip-item span {
+  display: block;
+  margin-top: 0.01rem;
+  font-size: 0.46rem;
+}
+
+.accountant-total-strip-right span {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.accountant-total-strip-right h2 {
+  margin: 0;
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #f36b79;
+}
+
+.accountant-total-strip-right p {
+  margin: 0;
+  font-size: 0.46rem;
+  color: #7f7f7f;
+}
+
+
+
+
+
+.accountant-footer-brand {
+  position: absolute;
+  left: 50%;
+  bottom: -1.0rem;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.14rem;
+  font-size: 0.72rem;
+  color: #d9d9d9;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.accountant-footer-brand span {
+  color: #d9d9d9;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+}
+
+.accountant-footer-logo {
+  height: 3.00rem;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  position: relative;
+  top: 0.04rem;
+}
+
+
+@media (max-width: 1200px) {
+  .accountant-dashboard-page {
+    height: auto;
+    min-height: 100vh;
+    overflow: auto;
+  }
+
+  .accountant-dashboard-shell {
+    height: auto;
+  }
+
+  .accountant-main-area {
+    padding: 0.9rem 1.2rem 0.7rem;
+    overflow: visible;
+  }
+
+  .accountant-grid {
+    grid-template-rows: auto;
+    overflow: scroll;
+  }
+
+  .accountant-topbar {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 0.8rem;
+  }
+
+  .accountant-topbar-left,
+  .accountant-topbar-right {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .accountant-topbar-left {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .accountant-topbar-left::-webkit-scrollbar {
+    display: none;
+  }
+
+  .accountant-row-top {
+    grid-template-columns: 1fr;
+  }
+
+  .accountant-row-middle {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .accountant-feetype-card {
+    grid-column: 1 / -1;
+  }
+
+  .accountant-row-bottom {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .accountant-premium-card {
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
+  }
+
+  .accountant-bottom-right {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
+  }
+
+   .accountant-ticket-users {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 0.7rem;
+  }
+
+  .accountant-ticket-add {
+    margin-top: 0;
+    order: 99;
+    grid-column: auto;
+    grid-row: auto;
+    justify-self: center;
+    align-self: start;
+  }
+
+
+  .accountant-total-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .accountant-total-strip-right {
+    justify-self: center;
+    text-align: center;
+  }
+}
+
+/* syam */
+
+.accountant-outstanding-card {
+  padding: 8px;
+  border-radius: 14px;
+}
+
+
+.accountant-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+
+.accountant-card-header .Heading {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+
+.accountant-card-filters {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
+.accountant-outstanding-search,
+.accountant-card-filter {
+  height: 30px;
+  min-width: 70px;
+  font-size: 11px;
+  padding: 0 2px;
+  border-radius: 8px;
+}
+
+
+.accountant-student-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+.accountant-student-mini {
+  padding: 8px;
+  border-radius: 10px;
+  min-height: auto;
+}
+
+.accountant-student-avatar-wrap img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+
+
+.accountant-student-mini h4 {
+  font-size: 12px;
+  margin: 4px 0 2px;
+}
+
+
+.accountant-student-mini p {
+  font-size: 10px;
+  margin: 0;
+}
+
+
+.accountant-student-mini span {
+  font-size: 9px !important;
+  padding: 2px 5px !important;
+}
+
+
+.accountant-add-circle {
+  width: 34px;
+  height: 34px;
+  font-size: 18px;
+}
+
+.accountant-add-student span {
+  font-size: 10px;
+}
+
+
+
+/* syam */
+
+@media (min-width: 921px) and (max-width: 1200px) {
+    html.accountant-dashboard-scroll-lock,
+  body.accountant-dashboard-scroll-lock,
+  #root.accountant-dashboard-scroll-lock,
+  .App.accountant-dashboard-scroll-lock {
+    height: 100vh;
+    min-height: 100vh;
+    overflow: hidden !important;
+    overscroll-behavior: none;
+  }
+  .collect-title-block h3,
+  .accountant-card-header h3,
+  .accountant-ticket-head-left h3 {
+    font-size: 1rem;
+  }
+
+
+  .accountant-dashboard-home-page {
+    position: fixed;
+    inset: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    min-height: 100vh;
+    overflow: clip;
+    overscroll-behavior: none;
+  }
+
+  .accountant-dashboard-home-page .accountant-dashboard-shell {
+    height: 100%;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .accountant-dashboard-home-page .accountant-sidebar-strip {
+    align-self: center;
+    margin-top: 0;
+  }
+
+  .accountant-dashboard-home-page .accountant-main-area {
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto minmax(0, 1fr);
+    gap: 0.46rem;
+    padding: 0.82rem 0.95rem 0.34rem 0.35rem;
+    overflow: clip;
+  }
+
+  .accountant-dashboard-home-page .accountant-grid {
+    min-width: 0;
+    min-height: 0;
+    height: 100%;
+    max-height: 100%;
+    align-self: stretch;
+    align-content: start;
+    grid-template-rows: auto minmax(0, 1fr) minmax(0, 0.82fr);
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    padding-right: 0.35rem;
+  }
+
+
+
+
+
+  .accountant-dashboard-home-page .accountant-topbar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 0.46rem;
+  }
+
+  .accountant-dashboard-home-page .accountant-topbar-left {
+    display: flex;
+    width: auto;
+    justify-self: start;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.12rem;
+    flex-wrap: nowrap !important;
+    min-height: 2rem;
+  }
+
+  .accountant-dashboard-home-page .accountant-topbar-center {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .accountant-dashboard-home-page .accountant-topbar-right {
+    display: flex;
+    width: auto;
+    justify-self: end;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: nowrap;
+  }
+
+  .accountant-dashboard-home-page .accountant-school-logo {
+    width: 6.2rem;
+  }
+
+  .accountant-dashboard-home-page .accountant-topbar-tab,
+  .accountant-dashboard-home-page .accountant-branch-btn {
+    white-space: nowrap;
+  }
+
+  .accountant-dashboard-home-page .accountant-row-top {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .accountant-dashboard-home-page .accountant-row-middle {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .accountant-dashboard-home-page .accountant-feetype-card {
+    grid-column: auto;
+  }
+
+  .accountant-dashboard-home-page .accountant-row-bottom {
+    grid-template-columns: 1.5fr 0.5fr 1fr;
+  }
+
+  .accountant-dashboard-home-page .accountant-bottom-right {
+    grid-column: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: minmax(0, 0.86fr) auto;
+  }
+
+   .accountant-dashboard-home-page .accountant-outstanding-card {
+    overflow: visible;
+  }
+
+  .accountant-dashboard-home-page .accountant-outstanding-card .accountant-card-header {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.1rem;
+}
+.accountant-dashboard-home-page .accountant-outstanding-card .accountant-card-filters {
+  width: auto;
+  gap: 0.45rem;
+}
+
+  .accountant-dashboard-home-page .accountant-outstanding-card .accountant-card-filter {
+    min-width: 0;
+    flex: 1 1 0;
+    height: 1.7rem;
+    padding: 0 0.5rem;
+    font-size: 0.64rem;
+  }
+
+  .accountant-dashboard-home-page .accountant-student-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.32rem 0.22rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 100%;
+  }
+
+  .accountant-dashboard-home-page .accountant-student-mini {
+    overflow: visible;
+  }
+
+  .accountant-dashboard-home-page .accountant-outstanding-card .accountant-student-avatar-wrap {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+
+  .accountant-dashboard-home-page .accountant-outstanding-card .accountant-student-avatar-wrap img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .accountant-dashboard-home-page .accountant-student-mini h4 {
+    font-size: 0.56rem;
+    line-height: 1.08;
+  }
+
+  .accountant-dashboard-home-page .accountant-student-mini p {
+    font-size: 0.66rem;
+    line-height: 18;
+  
+  }
+
+  .accountant-dashboard-home-page .accountant-ticket-users {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    row-gap: 0.52rem;
+  }
+
+  .accountant-dashboard-home-page .accountant-ticket-add {
+    order: initial;
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: center;
+    align-self: start;
+    margin-top: 0.08rem;
+  }
+
+  .accountant-dashboard-home-page .accountant-total-strip {
+    grid-template-columns: 1fr;
+    gap: 0.32rem;
+    padding: 0.36rem 0.5rem;
+  }
+
+  .accountant-dashboard-home-page .accountant-total-strip-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.22rem;
+  }
+
+  .accountant-dashboard-home-page .accountant-total-strip-item strong {
+    font-size: 0.56rem;
+    white-space: nowrap;
+  }
+
+  .accountant-dashboard-home-page .accountant-total-strip-item span {
+    font-size: 0.42rem;
+  }
+
+  .accountant-dashboard-home-page .accountant-total-strip-right {
+    justify-self: end;
+    text-align: right;
+    min-width: 0;
+  }
+
+  .accountant-dashboard-home-page .accountant-total-strip-right h2 {
+    font-size: 0.88rem;
+  }
+}
+
+
+@media (min-width: 921px) and (max-width: 1280px) {
+  .accountant-mini-cards {
+    gap: 0.2rem;
+  }
+  .accountant-quick-card {
+    padding: 0.2rem 0.15rem;
+    overflow: hidden;
+    height: auto;
+    min-height: 0;
+  }
+  .quick-icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    flex-shrink: 0;
+  }
+  .quick-icon img {
+    width: 2.5rem;
+    height: 2.5rem;
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+  }
+  .accountant-quick-card h4 {
+    font-size: 0.72rem;
+    margin: 0;
+    line-height: 1;
+  }
+  .accountant-quick-card p {
+    font-size: 0.56rem;
+    margin: 0;
+    line-height: 1;
+  }
+}
+
+
+@media (min-width: 749px) and (max-width: 1024px) {
+  .accountant-outstanding-card {
+    min-height: 0;
+    overflow: visible;
+  }
+
+  .accountant-student-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 100%;
+    row-gap: 0.45rem;
+  }
+
+  .accountant-student-mini {
+    overflow: visible;
+  }
+}
+
+
+
+
+@media (max-width: 920px) {
+  .accountant-dashboard-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .accountant-sidebar-strip {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.85rem;
+    border-radius: 0;
+    padding: 0.75rem 1rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  .accountant-sidebar-item {
+    width: auto;
+    min-width: 3.1rem;
+    flex: 0 0 auto;
+  }
+
+  .accountant-sidebar-item span {
+    display: none;
+  }
+
+  .accountant-main-area {
+    padding: 0.9rem 1rem 0.65rem;
+  }
+
+  .accountant-row-middle,
+  .accountant-row-bottom,
+  .accountant-bottom-right {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+
+  .accountant-student-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .accountant-ticket-users {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .accountant-feetype-table {
+    min-width: 32rem;
+    table-layout: auto;
+  }
+
+  .accountant-feetype-table th,
+  .accountant-feetype-table td {
+    word-break: normal;
+    white-space: nowrap;
+  }
+
+  .accountant-total-strip-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .accountant-main-area {
+    padding: 0.9rem 0.85rem 0.45rem;
+  }
+
+  .accountant-topbar-left,
+  .accountant-topbar-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .accountant-mini-cards {
+    grid-template-columns: 1fr;
+  }
+
+   .collect-header,
+  .accountant-card-header,
+  .accountant-ticket-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+ 
+
+      .collect-header {
+    gap: 0.18rem;
+  }
+  .collect-title-block {
+    justify-content: center;
+  }
+
+
+  .accountant-ticket-head-left,
+  .accountant-card-filters,
+  .accountant-feetype-meta {
+    width: 100%;
+  }
+
+  .accountant-ticket-head-left {
+    top: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .accountant-card-filters {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .accountant-feetype-header {
+    align-items: stretch;
+  }
+
+  .accountant-feetype-meta {
+    margin-left: 0;
+    padding-top: 0;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .accountant-feetype-count {
+    margin-top: 0;
+  }
+
+  .collect-filter,
+  .accountant-card-filter {
+    width: 100%;
+    top: 0;
+  }
+
+  .collect-filter {
+    margin-left: 0;
+    top: -0.12rem;
+  }
+
+
+   .accountant-inline-plus-below {
+    margin: 0.22rem 0 0 0.08rem;
+  }
+
+
+  .accountant-create-new-btn {
+    top: 0;
+  }
+
+  .accountant-collect-content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .collect-stats {
+    justify-self: center;
+  }
+
+  .accountant-student-list,
+  .accountant-ticket-users {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .accountant-ticket-users {
+    row-gap: 0.7rem;
+  }
+
+   .accountant-ticket-add {
+    margin-top: 0;
+    order: 99;
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: center;
+    align-self: start;
+  }
+
+
+}
+
+
+
+@media (max-width: 480px) {
+  .accountant-create-fee-row {
+    grid-template-columns: 1fr;
+  }
+
+  .accountant-create-fee-popup {
+    max-width: 96vw;
+    border-radius: 20px;
+  }
+
+  .accountant-create-fee-popup-title {
+    font-size: 1.22rem;
+  }
+
+  .accountant-create-fee-intro {
+    padding: 0.85rem 0.85rem;
+  }
+
+  .accountant-create-fee-actions {
+    flex-direction: column-reverse;
+  }
+
+  .accountant-create-fee-cancel,
+  .accountant-create-fee-submit {
+    width: 100%;
+  }
+
+  .accountant-add-fee-popup {
+    padding: 0.9rem;
+    border-radius: 20px;
+  }
+
+  .accountant-add-fee-popup .FeesManagement-leftRightFlex {
+    grid-template-columns: 1fr;
+  }
+
+  .accountant-add-fee-popup .FeesManagement-leftBlock,
+  .accountant-add-fee-popup .FeesManagement-rightBlock {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+
+  .accountant-add-fee-popup .FeesManagement-feeRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .accountant-add-fee-popup .FeesManagement-feeLabel {
+    min-width: 0;
+  }
+
+  .accountant-student-list,
+  .accountant-ticket-users {
+    grid-template-columns: 1fr;
+  }
+
+  .accountant-ticket-add {
+    order: 99;
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: center;
+    align-self: start;
+  }
+}
+
+/* iPad landscape tab scrolling support */
+@media (min-width: 744px) and (max-width: 1180px) and (orientation: landscape) {
+  .accountant-dashboard-home-page {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .accountant-dashboard-home-page .accountant-topbar-left {
+    width: 100% !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+    scrollbar-width: none;
+  }
+
+  .accountant-dashboard-home-page .accountant-topbar-left::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Shared dashboard-style height + scrolling for all accountant screens */
+.accountant-dashboard-page.accountant-dashboard-home-page,
+.frontdesk-dashboard-page.accountant-dashboard-home-page {
+  height: 100vh !important;
+  min-height: 100vh !important;
+  overflow: hidden !important;
+  overscroll-behavior: none;
+}
+
+.accountant-dashboard-page.accountant-dashboard-home-page .accountant-dashboard-shell,
+.frontdesk-dashboard-page.accountant-dashboard-home-page .accountant-dashboard-shell {
+  height: 100% !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+.accountant-dashboard-page.accountant-dashboard-home-page .accountant-main-area,
+.frontdesk-dashboard-page.accountant-dashboard-home-page .accountant-main-area {
+  height: 100% !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+.accountant-dashboard-page.accountant-dashboard-home-page .accountant-grid,
+.frontdesk-dashboard-page.accountant-dashboard-home-page .accountant-grid {
+  height: 100% !important;
+  max-height: 100% !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  overscroll-behavior: contain;
+}
+
+@media (max-width: 920px) {
+  .accountant-dashboard-page.accountant-dashboard-home-page,
+  .frontdesk-dashboard-page.accountant-dashboard-home-page {
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow: auto !important;
+  }
+
+  .accountant-dashboard-page.accountant-dashboard-home-page .accountant-dashboard-shell,
+  .frontdesk-dashboard-page.accountant-dashboard-home-page .accountant-dashboard-shell,
+  .accountant-dashboard-page.accountant-dashboard-home-page .accountant-main-area,
+  .frontdesk-dashboard-page.accountant-dashboard-home-page .accountant-main-area,
+  .accountant-dashboard-page.accountant-dashboard-home-page .accountant-grid,
+  .frontdesk-dashboard-page.accountant-dashboard-home-page .accountant-grid {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
+
+/* Global content-scroll mode override (small/medium screens only) */
+@media (max-width: 992px) {
+  .accountant-dashboard-page,
+  .frontdesk-dashboard-page,
+  .accountant-dashboard-page.accountant-dashboard-home-page,
+  .frontdesk-dashboard-page.accountant-dashboard-home-page {
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow: auto !important;
+  }
+
+  .accountant-dashboard-page .accountant-dashboard-shell,
+  .frontdesk-dashboard-page .accountant-dashboard-shell {
+    height: auto !important;
+    min-height: 100vh !important;
+    overflow: visible !important;
+  }
+
+  .accountant-dashboard-page .accountant-main-area,
+  .frontdesk-dashboard-page .accountant-main-area,
+  .accountant-dashboard-page .accountant-grid,
+  .frontdesk-dashboard-page .accountant-grid {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+    .accountant-grid {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+}
+
+.accountant-student-management-popup {
+  width: min(96vw, 1420px);
+  height: min(92vh, 980px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.accountant-student-management-popup-header {
+  margin-top: 0;
+  padding: 1rem 1.1rem 0.6rem;
+  align-items: flex-start;
+}
+
+.accountant-student-management-close-btn {
+  margin-left: 0 !important;
+  margin-top: 0 !important;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.accountant-student-management-popup-body {
+  flex: 1;
+  min-height: 0;
+  padding: 0 1rem 1rem;
+}
+
+.accountant-student-management-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 1rem;
+  background: #fff;
+}

@@ -1,0 +1,186 @@
+/* StaffDashboard.css */
+
+/* Layout */
+.staff-page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0;
+  background-color: transparent;
+}
+
+.staff-main-container {
+  display: flex;
+  flex: 1;
+  background-color: transparent;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 0;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.staff-left-container {
+  flex: 0 0 50vw;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+
+.staff-right-container {
+  flex: 1;
+  padding: 20px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Header */
+.staff-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  margin-bottom: 25px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+
+.staff-logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.staff-logo {
+  width: 40px;
+  height: 40px;
+  background-color: #001F3F;
+  border-radius: 8px;
+}
+
+.staff-logo-text {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.staff-logo-sub {
+  font-size: 12px;
+  color: #777;
+}
+
+.staff-school-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  flex: 1;
+}
+
+.staff-button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.staff-btn {
+  background-color: #6b7983ff;
+  border: none;
+  border-radius: 16px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* Sections */
+.staff-question-paper-section {
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.staff-header-text {
+  text-align: left;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.staff-circle {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Dropdowns */
+.staff-dropdown-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.staff-dropdown {
+  padding: 8px 12px;
+  border-radius: 16px;
+  border: none;
+  font-size: 14px;
+  color: #fff;
+  background-color: #6b7983ff;
+}
+
+/* Buttons */
+.staff-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Modal */
+.staff-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.staff-modal-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Add more classes as needed */

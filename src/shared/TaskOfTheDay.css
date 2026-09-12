@@ -1,0 +1,283 @@
+.tod-container {
+background: transparent;
+  min-height: auto;
+ border-radius:20px;
+background:#ffffff;
+padding: 5px;
+}
+
+.tod-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.18);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 130px;
+}
+
+.tod-float-card {
+  width: min(360px, calc(100vw - 24px));
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.18);
+}
+
+.tod-float-card .tod-date {
+  width: 100%;
+  margin-top: 10px;
+}
+
+@media (max-width: 1100px) and (min-width: 769px) {
+  .frontdesk-campaigning-screen .tod-title {
+    font-size: 14px;
+  }
+
+  .frontdesk-campaigning-screen .tod-subtitle {
+    font-size: 10px;
+  }
+
+  .frontdesk-campaigning-screen .tod-plus {
+    width: 36px;
+    height: 20px;
+    font-size: 20px;
+  }
+
+  .frontdesk-campaigning-screen .tod-list {
+    max-height: none;
+    padding: 0 8px 8px;
+  }
+
+  .frontdesk-campaigning-screen .tod-item {
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .frontdesk-campaigning-screen .tod-item-text {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    overflow-wrap: anywhere;
+  }
+}
+
+
+
+.tod-float-card .tod-textarea {
+  margin-top: 10px;
+}
+
+.tod-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.tod-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.tod-date-filter {
+  width: 132px;
+}
+
+.tod-add-button {
+  height: 34px;
+  border: none;
+  border-radius: 8px;
+  padding: 0 12px;
+  background: #e9a0a5;
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tod-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2e2e2e;
+  line-height: 1.2;
+}
+
+.tod-subtitle {
+  font-size: 12px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.tod-plus {
+  width: 50px;
+  height: 25px;
+  border-radius: 10px;
+  border: none;
+  background: #e9a0a5;
+  color: #000;
+  font-size: 26px;
+  cursor: pointer;
+  line-height: 1;
+  align-items: flex-start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tod-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 14px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.tod-card-title {
+ font-size: 22px;
+  font-weight: 700;
+  color: #2e2e2e;
+}
+
+.tod-date {
+  height: 34px;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 12px;
+  outline: none;
+  background: #fff;
+}
+
+.tod-date-label {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.tod-textarea {
+  width: 100%;
+  min-height: 90px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 12px;
+  resize: vertical;
+}
+
+.tod-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tod-btn {
+  background: #e59143;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.tod-btn.ghost {
+  background: #f3f3f3;
+  color: #333;
+}
+
+.tod-list {
+  background: transparent;
+  border-radius: 0;
+  padding: 0 12px 12px;
+  max-height: 108px;
+  overflow-y: auto;
+}
+
+.tod-empty {
+  font-size: 12px;
+  color: #666;
+  display: flex;       /* needed for justify-content to work */
+  justify-content: flex-start !important; /* aligns items to the left */
+  align-items: center; /* optional: vertically center if needed */
+}
+
+.tod-item {
+  padding: 6px 0;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 8px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: flex-start;
+  text-align: left;
+  flex-wrap: nowrap;
+}
+
+.tod-item-bullet {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #f36b79;
+  flex: 0 0 7px;
+}
+
+.reminder-date-task {
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: transparent;
+  flex: 0 0 auto;
+  font-size: 10px;
+  line-height: 1;
+  color: #777;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-right: 2px;
+}
+
+.tod-item-separator {
+  font-size: 10px;
+  line-height: 1;
+  color: #aaa;
+  flex: 0 0 auto;
+}
+
+.tod-item-text {
+  font-size: 13px;
+  color: #333;
+  margin-bottom: 0;
+  flex: 1 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tod-success {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #059669;
+  font-weight: 600;
+}
+
+.tod-error {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.tc-staffAssignSection
+{
+border: none;}

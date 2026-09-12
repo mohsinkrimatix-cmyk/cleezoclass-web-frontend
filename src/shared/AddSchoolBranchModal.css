@@ -1,0 +1,248 @@
+.open-btn {
+  padding: 12px 20px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  width: 95%;
+  max-width: 1000px;
+  margin: 4% auto;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.school-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.school-row input {
+  flex: 1;
+  padding: 10px;
+}
+
+.branches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.branch-card {
+  width: 48%;
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+.branch-card h4 {
+  margin-bottom: 8px;
+}
+
+.branch-card input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+.save-btn {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  background: #16a34a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Slightly darker overlay for focus */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-container {
+  background: white;
+  width: 90%;
+  max-width: 850px;
+  /* FIXED HEIGHT SETTINGS */
+  height: 600px; 
+  display: flex;
+  flex-direction: column; /* Stacks header, body, and footer */
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background-color: #fcfcfc;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-header h3 {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+  font-weight: 700;
+}
+
+/* THE SCROLLABLE SECTION */
+.modal-body {
+  padding: 25px;
+  flex: 1; /* Takes up all remaining space between header and footer */
+  overflow-y: auto; /* Adds scrollbar if content exceeds fixed height */
+  background-color: #fff;
+}
+
+.top-inputs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.main-input {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  flex: 2;
+  font-size: 13px;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0 10px;
+  gap: 15px;
+  flex: 1;
+  background: #f9f9f9;
+}
+
+.qty-control label { font-size: 11px; color: #888; }
+
+.counter { display: flex; align-items: center; gap: 10px; }
+
+.branches-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns as seen in image */
+  gap: 15px;
+}
+
+.branch-card {
+  border: 1px solid #e0ebf5;
+  background: #f4f8fb;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.branch-card header {
+  color: #1a73e8;
+  font-weight: bold;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.branch-card input {
+  border: 1px solid #ccc;
+  padding: 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.add-loc {
+  background: none;
+  border: none;
+  color: #1a73e8;
+  font-size: 11px;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  font-weight: 600;
+}
+
+.modal-footer {
+  padding: 15px 25px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  background: #f9f9f9;
+}
+
+.save-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #d1d1d1;
+  color: #444;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.add-branch-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-branch {
+  margin-top: 5px;
+  padding: 4px 8px;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

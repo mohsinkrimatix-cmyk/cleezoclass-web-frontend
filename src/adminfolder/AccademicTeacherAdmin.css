@@ -1,0 +1,577 @@
+/* ========== SCROLL AREA ========== */
+
+.admin-scroll-area {
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.admin-scroll-area.mobile {
+  height: 50vh;
+}
+
+.admin-scroll-area.laptop {
+  height: 76vh;
+}
+
+.admin-scroll-area.desktop {
+  height: 55vh;
+}
+
+/* ========== SECTIONS ========== */
+
+.admin-section {
+  width: 100%;
+}
+.chart-main-wrapper {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.chart-left,
+.chart-right {
+  flex: 1;              /* ✅ Equal width */
+  width: 100vw;
+}
+
+/* Optional styling */
+.chart-left {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.chart-right {
+  background: #fff;
+  padding: 2px;
+  border-radius: 12px;
+  margin-left: -50px;
+}
+.admin-second-section {
+  margin-top: 30px;
+  transition: opacity 0.3s ease, height 0.3s ease;
+  overflow: hidden;
+}
+
+.admin-second-section.hidden {
+  opacity: 0;
+  height: 0;
+}
+
+.admin-second-section.visible {
+  opacity: 1;
+  height: auto;
+}
+
+/* ========== MAIN ROW LAYOUT ========== */
+
+.admin-main-row {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+
+.admin-main-row.row {
+  flex-direction: row;
+}
+
+.admin-main-row.column {
+  flex-direction: column;
+}
+
+/* ========== LEFT & RIGHT BLOCKS ========== */
+
+.admin-left-block {
+  flex: 2;
+  display: flex;
+  border: 4px solid #ccc;
+  border-radius: 16px;
+  margin-left: 6%;
+  height: 100%;
+  max-height:400px;
+    min-width: 600px;
+  max-width: 800px;
+}
+
+
+/* Each left column = 1/3 */
+.admin-left-column {
+  flex: 1;
+  padding: 10px;
+}
+
+.admin-left-block.full-width {
+  width: 100%;
+}
+
+.admin-left-block.wide {
+  width: 55vw;
+}
+
+.admin-right-block {
+  flex: 1;
+  border: 4px solid #ccc;
+  margin-left: 47%;
+  width:100%;
+  min-width: 100px;
+  max-width: 300px;
+  border-radius: 16px;
+  min-height:370px;
+  max-height: 400px;
+  height:100%
+}
+
+
+.admin-right-block.full-width {
+  width: 100%;
+}
+
+/* ========== LEFT CONTAINER (INNER) ========== */
+
+.admin-left-container {
+  display: flex;
+  flex: 1;
+  height: 100%;
+}
+
+.admin-panel {
+  flex: 1;             /* both take equal width */
+  padding: 12px;
+  box-sizing: border-box;
+  width:300px
+}
+
+/* Add left border only to the right panel */
+.coscholastic-panel {
+  border-left: 2px solid #ddd;   /* adjust color/thickness as needed */
+}
+
+
+.admin-scroll-area.mobile .admin-left-container {
+  height: 50vh;
+}
+
+.admin-scroll-area.laptop .admin-left-container {
+  height: 70vh;
+}
+
+/* ========== PANELS ========== */
+
+
+.admin-full-panel {
+  flex: 1;
+}
+
+/* Divider between panels */
+.admin-divider {
+  width: 2px;
+  background: #ccc;
+  height: 65%;
+  align-self: self-start;
+  margin-top: 2%;
+}
+
+
+/* ========== ACTIONS PANEL ========== */
+
+.admin-actions-container {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  overflow-y: auto;
+  width: 100%;
+  height: 55vh;
+}
+
+.admin-scroll-area.mobile .admin-actions-container {
+  height: 50vh;
+}
+
+.admin-scroll-area.laptop .admin-actions-container {
+  height: 70vh;
+}
+
+/* Actions Heading */
+.admin-actions-title {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #000;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Action Item */
+.admin-action-item {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+}
+
+/* ========== HEADINGS (INSIDE FILTER COMPONENT) ========== */
+
+.admin-filter-title {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  font-weight: 600;
+}
+/* ========== MAIN CONTAINER ========== */
+
+.admin-chart-container {
+  height: 100%;
+  padding: 5px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ========== CHART AREA ========== */
+
+.admin-chart-area {
+  flex-grow: 1;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========== FOOTER AREA ========== */
+
+.admin-chart-footer {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5px;
+  width: 100%;
+}
+
+/* ========== INFO TEXT ========== */
+
+.admin-chart-info-text {
+  margin-top: 5px;
+  font-size: 10px;
+  color: #7f8c8d;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+/* ========== REPORT BUTTON ROW ========== */
+
+.admin-report-buttons {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+  justify-content: flex-start;
+  width: 100%;
+}
+/* ========== MAIN CONTAINER ========== */
+
+.admin-filter-container {
+  flex-grow: 1;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== HEADING ========== */
+
+.admin-filter-heading {
+  color: #2c3e50;
+  font-size: 16px;
+  font-weight: 600;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: -15px;
+}
+
+.admin-filter-icon {
+  color: #27ae60;
+  font-size: 16px;
+}
+
+/* ========== DISPLAY AREA ========== */
+
+.admin-filter-display {
+  flex-grow: 1;
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Loading text */
+
+.admin-filter-loading {
+  text-align: center;
+  padding: 30px;
+  font-size: 12px;
+  color: #3498db;
+}
+
+/* ========== CONTROLS AREA ========== */
+
+.admin-filter-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* Each control wrapper */
+
+.admin-filter-control-item {
+  display: flex;
+  align-items: center;
+}
+/* ========== SCROLL AREA ========== */
+
+.admin-scroll-area {
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.admin-scroll-area.mobile {
+  height: 50vh;
+}
+
+.admin-scroll-area.laptop {
+  height: 76vh;
+}
+
+.admin-scroll-area.desktop {
+  height: 55vh;
+}
+
+/* ========== SECTIONS ========== */
+
+.admin-section {
+  width: 100%;
+}
+
+.admin-second-section {
+  margin-top: 30px;
+  transition: opacity 0.3s ease, height 0.3s ease;
+  overflow: hidden;
+}
+
+.admin-second-section.hidden {
+  opacity: 0;
+  height: 0;
+}
+
+.admin-second-section.visible {
+  opacity: 1;
+  height: auto;
+}
+
+/* ========== MAIN ROW LAYOUT ========== */
+
+
+/* ========== LEFT & RIGHT BLOCKS ========== */
+
+
+
+.admin-left-block.wide {
+  width: 55vw;
+}
+
+.admin-left-block.admin-full-width {
+  width: 100%;
+}
+
+
+
+/* ========== LEFT CONTAINER (INNER) ========== */
+
+.admin-left-container {
+  display: flex;
+  flex-direction: row;
+  height: 55vh;
+}
+
+.admin-scroll-area.mobile .admin-left-container {
+  height: 50vh;
+}
+
+.admin-scroll-area.laptop .admin-left-container {
+  height: 70vh;
+}
+
+/* ========== PANELS ========== */
+
+/* Divider */
+
+.admin-divider {
+  border-left: 1px dashed #ccc;
+}
+
+/* ========== ACTIONS PANEL ========== */
+
+.admin-actions-container {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  overflow-y: auto;
+  width: 100%;
+  height: 55vh;
+}
+
+.admin-scroll-area.mobile .admin-actions-container {
+  height: 50vh;
+}
+
+.admin-scroll-area.laptop .admin-actions-container {
+  height: 70vh;
+}
+
+.admin-actions-title {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #000;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.admin-action-item {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 13px;
+}
+
+/* ========== SCROLL BUTTONS ========== */
+
+.admin-scroll-down-wrapper,
+.admin-scroll-up-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.admin-scroll-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Standard width for dropdowns */
+
+.admin-filter-select {
+  width: 100px;
+}
+
+/* View button spacing */
+
+.admin-filter-view-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Icon inside button */
+
+.admin-filter-btn-icon {
+  margin-right: 5px;
+}
+
+/* ========== SCROLL BUTTONS ========== */
+
+.admin-scroll-down-wrapper,
+.admin-scroll-up-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.admin-scroll-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* ========== GENERIC UTILITY ========== */
+
+.admin-full-width {
+  width: 100%;
+}
+
+/* Dynamic Actions (Admin Academic Student) */
+.admin-actions-block {
+  margin-bottom: 12px;
+}
+
+.admin-actions-block-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin: 2px 0 8px;
+}
+
+.admin-action-card {
+  border: 1px solid #e6ebf1;
+  border-radius: 8px;
+  padding: 8px;
+  margin-bottom: 8px;
+  background: #fff;
+  text-align: left;
+}
+
+.admin-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.admin-action-card-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #2f3f52;
+  margin-bottom: 2px;
+}
+
+.admin-action-card-detail {
+  font-size: 11px;
+  color: #4f5f72;
+  line-height: 1.35;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.admin-action-card-time {
+  font-size: 10px;
+  color: #8a97a6;
+  margin-top: 3px;
+}
+
+.admin-action-status {
+  margin-left: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #5a7488;
+}
+
+@media (max-width: 768px) {
+  .admin-action-row {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}

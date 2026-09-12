@@ -1,0 +1,786 @@
+
+.tickets-container {
+  padding: 20px;
+  background: #f6f6f6;
+  min-height: 100vh;
+}
+
+.tickets-header {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2e2e2e;
+  margin-bottom: 16px;
+}
+
+.tickets-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.tickets-tab {
+  background: #ffffff;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 1px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  
+}
+
+.tickets-container .tickets-content {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  height: min(72vh, calc(100vh - 220px));
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0) transparent;
+}
+
+.tickets-container .bottomGrid .tickets-content {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  overflow: auto;
+}
+
+.tickets-student-panel {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.payment-panel-header {
+  padding-top: 40px;
+  padding-bottom: 0;
+    background: #ffffff;
+     display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex: 0 0 auto;
+
+}
+
+.tickets-student-panel .payment-student-grid {
+  flex: 1;
+  overflow: auto;
+  padding-top: 8px;
+   scrollbar-width: 'thin'; 
+  scrollbar-color: 'rgba(0,0,0,0) transparent'
+}
+
+.tickets-student-panel .payment-total-strength {
+  min-width: 140px;
+
+}
+
+.payment-class-section-dropdown select {
+ height: 34px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 10px 10px;
+  font-size: 12px;
+  outline: none;
+  background: #fff;
+
+}
+
+.tickets-student-panel .payment-search-box input {
+  height: 34px;
+  border-radius: 8px;
+}
+
+.tickets-container .tickets-content .tc-teacherRow {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: auto;
+}
+
+/* Large screens: show two more staff icons per row */
+@media (min-width: 1600px) {
+  .tickets-content .tc-teacherRow {
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+  }
+}
+
+.tickets-container .tickets-content .tc-teacherCard {
+   background: #ffffff; /* lighter card background for contrast */
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+.tickets-container .tickets-content .tc-teacherAvatar {
+ width: 68px;
+  height: 68px;       /* make it square for proper circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ffffff;
+
+}
+
+.tickets-container .tickets-content .tc-teacherAvatar [selected] {
+  background: #f6a5ab; /* your pink highlight */
+}
+
+.tickets-container .tickets-content .tc-teacherName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tickets-container .tickets-student-grid {
+  flex: 1;
+  min-height: 0;
+  max-height: 100%;
+  overflow: auto;
+  padding-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  align-content: start;
+  gap: 12px;
+
+    scrollbar-width: 'thin';
+    scrollbar-color: 'rgba(0,0,0,0) transparent';
+}
+
+.tickets-container .tickets-student-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  min-height: 110px;
+  justify-content: flex-start;
+}
+
+.tickets-container .tickets-student-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 6px;
+  flex: 0 0 auto;
+}
+
+.tickets-container .tickets-student-photo-placeholder {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: #f1f2f4;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-bottom: 6px;
+  flex: 0 0 auto;
+}
+
+.tickets-container .tickets-student-name {
+  font-size: 12px;
+  color: #333;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+.tickets-container .tickets-student-id {
+  font-size: 11px;
+  color: #666;
+}
+
+/* Hide scrollbar thickness and color in tickets panel */
+.tickets-container .tickets-student-panel .payment-student-grid,
+.tickets-container .tickets-student-grid,
+.tickets-container .tickets-table,
+.tickets-container .tickets-content .tc-staffAssignSection {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tickets-container .tickets-student-panel .payment-student-grid::-webkit-scrollbar,
+.tickets-container .tickets-student-grid::-webkit-scrollbar,
+.tickets-container .tickets-table::-webkit-scrollbar,
+.tickets-container .tickets-content .tc-staffAssignSection::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+.tickets-clickable {
+  cursor: pointer;
+}
+
+
+.tickets-table-wrap {
+  margin-top: 16px;
+}
+
+.tickets-table-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.tickets-table {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0) transparent;
+}
+
+.tickets-table-head,
+.tickets-table-row {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr 0.8fr 0.8fr 1.4fr 0.8fr 1fr;
+  gap: 8px;
+  padding: 10px 12px;
+  font-size: 12px;
+}
+
+.tickets-table-head {
+  background: #fafafa;
+  font-weight: 700;
+  color: #444;
+}
+
+.tickets-table-row {
+  border-top: 1px solid #f0f0f0;
+  color: #333;
+}
+
+.tickets-table-empty {
+  padding: 12px;
+  font-size: 12px;
+  color: #666;
+}
+
+.tickets-status {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.tickets-status.open {
+  color: #d97706;
+}
+
+.tickets-status.closed {
+  color: #059669;
+}
+
+.tickets-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.tickets-modal {
+  width: 360px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.tickets-modal-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.tickets-modal-subtitle {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.tickets-modal-student-photo-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.tickets-modal-student-photo {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #e5e7eb;
+}
+
+.tickets-modal-input,
+.tickets-modal-textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.tickets-modal-textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.tickets-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.tickets-btn {
+  background: #e59143;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.tickets-btn.ghost {
+  background: #f3f3f3;
+  color: #333;
+}
+
+.tickets-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.tickets-success {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #059669;
+  font-weight: 600;
+}
+
+.tickets-error {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .tickets-content {
+    padding: 12px;
+  }
+
+  .tickets-tab {
+    flex: 1;
+    text-align: center;
+  }
+}
+.payment-class-section-dropdown {
+  margin-left: auto;
+}
+
+/* FrontDesk dashboard has high-specificity legacy rules in FrontDesk.css/dashboardGlobal.css.
+   Re-assert fixed panel + internal scroll for Tickets -> Students in that context. */
+.frontdesk-dashboard-page .accountant-ticket-card .tickets-container .tickets-content {
+  overflow: hidden !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  min-height: 0 !important;
+}
+
+.frontdesk-dashboard-page .accountant-ticket-card .tickets-container .tickets-student-panel {
+  min-height: 0 !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+.frontdesk-dashboard-page .accountant-ticket-card .tickets-container .tickets-student-grid {
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  align-content: start;
+  flex: 1 1 auto;
+  min-height: 0 !important;
+  max-height: 100% !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+.frontdesk-dashboard-page .accountant-ticket-card .tickets-container {
+  min-height: 0 !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+/* Isolated ticket styles to avoid overrides from legacy/global classes */
+.fd-ticket-container {
+  padding: 20px;
+  background: #f6f6f6;
+  min-height: 100vh;
+}
+
+.fd-ticket-header {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2e2e2e;
+  margin-bottom: 16px;
+}
+
+.fd-ticket-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.fd-ticket-tab {
+  background: #ffffff;
+  color: #333;
+  padding: 8px 16px;
+  border-radius: 1px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+}
+
+.fd-ticket-tab.active {
+  color: #000;
+  border-bottom: 2px solid #f36b79;
+}
+
+.fd-ticket-content {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  height: min(72vh, calc(100vh - 220px));
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.fd-ticket-content .tc-teacherRow {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+@media (min-width: 1600px) {
+  .fd-ticket-content .tc-teacherRow {
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+  }
+}
+
+.fd-ticket-content .tc-teacherCard {
+  background: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.fd-ticket-content .tc-teacherAvatar {
+  width: 68px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.fd-ticket-content .tc-teacherName {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fd-ticket-student-panel {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.fd-ticket-panel-header {
+  padding-top: 40px;
+  padding-bottom: 0;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex: 0 0 auto;
+}
+
+.fd-ticket-total-strength {
+  min-width: 140px;
+  padding: 10px 15px;
+  background-color: #fff;
+  border-radius: 16px;
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.fd-ticket-total-strength span:first-child {
+  font-size: 38px;
+  font-weight: bold;
+  color: #5a7488;
+  line-height: 1;
+}
+
+.fd-ticket-total-strength span:last-child {
+  font-size: 12px;
+  color: #5a7488;
+  align-self: flex-end;
+}
+
+.fd-ticket-input-field {
+  display: flex;
+  align-items: center;
+}
+
+.fd-ticket-control {
+  height: 34px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 12px;
+  outline: none;
+  background: #fff;
+}
+
+.fd-ticket-class-section-dropdown {
+  margin-left: auto;
+}
+
+.fd-ticket-error-message {
+  color: red;
+  font-size: 10px;
+  margin-top: 4px;
+}
+
+.fd-ticket-student-grid {
+  flex: 1;
+  min-height: 0;
+  max-height: 100%;
+  overflow: auto;
+  padding-top: 8px;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  align-content: start;
+  gap: 12px;
+}
+
+.fd-ticket-no-students {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.fd-ticket-student-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  min-height: 110px;
+  justify-content: flex-start;
+}
+
+.fd-ticket-student-photo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 6px;
+  flex: 0 0 auto;
+}
+
+.fd-ticket-student-photo-placeholder {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: #f1f2f4;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  margin-bottom: 6px;
+  flex: 0 0 auto;
+}
+
+.fd-ticket-student-name {
+  font-size: 12px;
+  color: #333;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+.fd-ticket-student-id {
+  font-size: 11px;
+  color: #666;
+}
+
+.fd-ticket-student-grid,
+.fd-ticket-content .tc-staffAssignSection {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.fd-ticket-student-grid::-webkit-scrollbar,
+.fd-ticket-content .tc-staffAssignSection::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background: transparent;
+}
+
+.frontdesk-dashboard-page .accountant-ticket-card .fd-ticket-container {
+  min-height: 0 !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+.frontdesk-dashboard-page .accountant-ticket-card .fd-ticket-content {
+  overflow: hidden !important;
+  height: 100% !important;
+  max-height: 100% !important;
+  min-height: 0 !important;
+  padding: 0.08rem 0 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.frontdesk-dashboard-page .accountant-ticket-card .fd-ticket-student-panel {
+  min-height: 0 !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+.frontdesk-dashboard-page .accountant-ticket-card .fd-ticket-panel-header {
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  background: transparent;
+}
+
+.frontdesk-dashboard-page .accountant-ticket-card .fd-ticket-student-grid {
+  display: grid !important;
+  grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  align-content: start;
+  flex: 1 1 auto;
+  min-height: 0 !important;
+  max-height: 100% !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+/* FrontDeskDashboard ticket students panel (legacy markup) */
+/* syam */
+.frontdesk-dashboard-page .accountant-ticket-card .tickets-content {
+  flex: 1 1 auto !important;
+  height: 300px !important;
+  max-height: 100% !important;
+  overflow: hidden !important;
+  min-height: 0 !important;
+}
+
+.frontdesk-dashboard-page .accountant-ticket-card .campaignSection,
+.frontdesk-dashboard-page .accountant-ticket-card .fd-ticket-section-lock {
+  min-height: 0 !important;
+  height: 100% !important;
+  flex: 1 1 auto !important;
+  overflow: hidden !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.frontdesk-dashboard-page .accountant-ticket-card .tickets-student-panel-shell {
+  min-height: 0 !important;
+  height: 150px !important;
+  flex: 1 1 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+}
+
+.frontdesk-dashboard-page .accountant-ticket-card .tickets-student-grid-shell {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  height: auto !important;
+  max-height: 100% !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.frontdesk-dashboard-page .accountant-ticket-card {
+  min-height: 0 !important;
+  overflow: hidden !important;
+}
+
+.frontdesk-dashboard-page .accountant-ticket-card .tickets-student-grid-shell::-webkit-scrollbar,
+.frontdesk-dashboard-page .accountant-ticket-card .tickets-student-grid::-webkit-scrollbar,
+.frontdesk-dashboard-page .accountant-ticket-card .tc-teacherGrid::-webkit-scrollbar,
+.frontdesk-dashboard-page .accountant-ticket-card .tickets-content::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
+  background: transparent !important;
+}

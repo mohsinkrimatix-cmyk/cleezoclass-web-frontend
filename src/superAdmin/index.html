@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Super Admin Database Console</title>
+  <!-- Google Fonts - Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    /* Reset & Custom Variables */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border-color) var(--bg-main);
+    }
+
+    /* Custom Webkit scrollbar styling */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg-main);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--border-color);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--accent-color);
+    }
+
+    :root {
+      /* Dark Theme variables (default) */
+      --bg-main: #09090b;
+      --bg-sidebar: #0f0f12;
+      --bg-card: #18181b;
+      --bg-hover: #27272a;
+      --bg-input: #1b1b1f;
+      --border-color: #27272a;
+      --text-main: #f4f4f5;
+      --text-muted: #a1a1aa;
+      --accent-color: #6366f1;
+      --accent-hover: #4f46e5;
+      --accent-rgb: 99, 102, 241;
+      --success-color: #10b981;
+      --success-bg: rgba(16, 185, 129, 0.15);
+      --danger-color: #ef4444;
+      --danger-bg: rgba(239, 68, 68, 0.15);
+      --toast-bg: #1e1b4b;
+      --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+    }
+
+    body.light-theme {
+      /* Light Theme overrides */
+      --bg-main: #f8fafc;
+      --bg-sidebar: #f1f5f9;
+      --bg-card: #ffffff;
+      --bg-hover: #f1f5f9;
+      --bg-input: #ffffff;
+      --border-color: #e2e8f0;
+      --text-main: #0f172a;
+      --text-muted: #64748b;
+      --accent-color: #4f46e5;
+      --accent-hover: #3730a3;
+      --accent-rgb: 79, 70, 229;
+      --success-color: #059669;
+      --success-bg: rgba(5, 150, 105, 0.1);
+      --danger-color: #dc2626;
+      --danger-bg: rgba(220, 38, 38, 0.1);
+      --toast-bg: #ffffff;
+      --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+    }
+
+    html,
+    body {
+      height: 100vh;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg-main);
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Navigation Bar */
+    header {
+      background: var(--bg-sidebar);
+      border-bottom: 1px solid var(--border-color);
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      z-index: 50;
+      flex-shrink: 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand i {
+      font-size: 24px;
+      color: var(--accent-color);
+      filter: drop-shadow(0 0 8px rgba(var(--accent-rgb), 0.4));
+    }
+
+    .brand h1 {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, var(--text-main) 60%, var(--accent-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .key-input-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      background: var(--bg-input);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 2px 12px 2px 36px;
+      width: 320px;
+    }
+
+    .key-input-container i.key-icon {
+      position: absolute;
+      left: 12px;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .key-input-container input {
+      background: transparent;
+      border: none;
+      color: var(--text-main);
+      font-size: 14px;
+      padding: 8px 0;
+      width: 100%;
+      outline: none;
+    }
+
+    .key-input-container button.toggle-visibility {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 14px;
+      padding: 0 4px;
+    }
+
+    .key-input-container button.toggle-visibility:hover {
+      color: var(--text-main);
+    }
+
+    button.btn-connect {
+      background: var(--accent-color);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 18px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 2px 4px rgba(var(--accent-rgb), 0.2);
+    }
+
+    button.btn-connect:hover {
+      background: var(--accent-hover);
+    }
+
+    .status-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border-color);
+    }
+
+    .status-indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .status-badge.connected {
+      color: var(--success-color);
+      background: var(--success-bg);
+      border-color: rgba(16, 185, 129, 0.2);
+    }
+
+    .status-badge.connected .status-indicator {
+      background: var(--success-color);
+      box-shadow: 0 0 8px var(--success-color);
+    }
+
+    .status-badge.disconnected {
+      color: var(--danger-color);
+      background: var(--danger-bg);
+      border-color: rgba(239, 68, 68, 0.2);
+    }
+
+    .status-badge.disconnected .status-indicator {
+      background: var(--danger-color);
+      box-shadow: 0 0 8px var(--danger-color);
+    }
+
+    .theme-toggle-btn {
+      background: var(--bg-hover);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .theme-toggle-btn:hover {
+      background: var(--bg-input);
+      color: var(--accent-color);
+    }
+
+    /* Main Console Layout */
+    .console-container {
+      display: flex;
+      flex: 1;
+      height: calc(100vh - 70px);
+      overflow: hidden;
+    }
+
+    /* Sidebar - Database Tree Navigator */
+    aside {
+      width: 280px;
+      background: var(--bg-sidebar);
+      border-right: 1px solid var(--border-color);
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .sidebar-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .sidebar-header h2 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .search-databases-container {
+      position: relative;
+    }
+
+    .search-databases-container input {
+      width: 100%;
+      background: var(--bg-input);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 8px 12px 8px 32px;
+      font-size: 13px;
+      color: var(--text-main);
+      outline: none;
+    }
+
+    .search-databases-container i {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    /* Sidebar Accordion List */
+    .database-tree {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px 8px;
+    }
+
+    .db-node {
+      margin-bottom: 4px;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .db-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 12px;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--text-main);
+    }
+
+    .db-header:hover {
+      background: var(--bg-hover);
+    }
+
+    .db-header.active {
+      background: rgba(var(--accent-rgb), 0.08);
+      color: var(--accent-color);
+    }
+
+    .db-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .db-info i.fa-database {
+      color: var(--accent-color);
+      font-size: 14px;
+    }
+
+    .db-header i.caret {
+      font-size: 11px;
+      color: var(--text-muted);
+      transition: transform 0.2s ease;
+    }
+
+    .db-node.expanded i.caret {
+      transform: rotate(90deg);
+    }
+
+    .db-tables-list {
+      display: none;
+      padding-left: 20px;
+      margin: 2px 0 6px 0;
+      border-left: 1px dashed var(--border-color);
+      margin-left: 20px;
+    }
+
+    .db-node.expanded .db-tables-list {
+      display: block;
+    }
+
+    .table-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: 13px;
+      color: var(--text-muted);
+      border-radius: 4px;
+      margin-top: 2px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .table-item:hover {
+      background: var(--bg-hover);
+      color: var(--text-main);
+    }
+
+    .table-item.active {
+      background: var(--bg-hover);
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+
+    .table-item i {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .table-item.active i {
+      color: var(--accent-color);
+    }
+
+    /* Main Content Area */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Welcome / Empty State Page */
+    .welcome-state {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .welcome-card {
+      max-width: 540px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: var(--card-shadow);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .welcome-card i.main-icon {
+      font-size: 48px;
+      color: var(--accent-color);
+      margin-bottom: 24px;
+      opacity: 0.85;
+    }
+
+    .welcome-card h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .welcome-card p {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .welcome-card .steps {
+      text-align: left;
+      width: 100%;
+      background: var(--bg-main);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 16px 20px;
+      font-size: 13.5px;
+      color: var(--text-muted);
+    }
+
+    .welcome-card .steps div {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .welcome-card .steps div:last-child {
+      margin-bottom: 0;
+    }
+
+    .welcome-card .steps i {
+      color: var(--accent-color);
+      width: 16px;
+    }
+
+    /* Workspace Dashboard Layout */
+    .workspace-dashboard {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .workspace-dashboard.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Stats Banner */
+    .dashboard-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border-color);
+      background: var(--bg-card);
+      flex-shrink: 0;
+    }
+
+    .breadcrumbs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .breadcrumbs i {
+      font-size: 11px;
+    }
+
+    .breadcrumbs span.current-db {
+      font-weight: 500;
+    }
+
+    .breadcrumbs span.current-table {
+      color: var(--accent-color);
+      font-weight: 600;
+    }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .stat-card {
+      background: var(--bg-main);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .stat-info h4 {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .stat-info p {
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .stat-card i {
+      font-size: 24px;
+      color: var(--accent-color);
+      opacity: 0.8;
+    }
+
+    /* Toolbar Controls */
+    .toolbar {
+      padding: 12px 24px;
+      background: var(--bg-card);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+    }
+
+    .toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .search-rows-container {
+      position: relative;
+      width: 260px;
+    }
+
+    .search-rows-container input {
+      width: 100%;
+      background: var(--bg-main);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 8px 12px 8px 32px;
+      font-size: 13px;
+      color: var(--text-main);
+      outline: none;
+    }
+
+    .search-rows-container input:focus {
+      border-color: var(--accent-color);
+    }
+
+    .search-rows-container i {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .limit-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .limit-container select {
+      background: var(--bg-main);
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 7px 12px;
+      font-size: 13px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .limit-container select:focus {
+      border-color: var(--accent-color);
+    }
+
+    .view-mode-toggle {
+      background: var(--bg-main);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 2px;
+      display: flex;
+      align-items: center;
+    }
+
+    .view-mode-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 6px 12px;
+      font-size: 12.5px;
+      font-weight: 500;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .view-mode-btn.active {
+      background: var(--bg-hover);
+      color: var(--text-main);
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .toolbar-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-export {
+      background: var(--bg-main);
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-export:hover {
+      background: var(--bg-hover);
+      border-color: var(--text-muted);
+    }
+
+    .btn-export i {
+      color: var(--accent-color);
+    }
+
+    /* Data Visualization Area */
+    .data-viewer-container {
+      flex: 1;
+      overflow: hidden;
+      background: var(--bg-main);
+      position: relative;
+    }
+
+    /* Grid / Table Panel */
+    .table-view-panel {
+      width: 100%;
+      height: 100%;
+      display: none;
+      padding: 16px 24px;
+      overflow: hidden;
+    }
+
+    .table-view-panel.active {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .table-wrapper {
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      background: var(--bg-card);
+      box-shadow: var(--card-shadow);
+      flex: 1;
+      overflow: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      text-align: left;
+    }
+
+    thead {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    th {
+      position: sticky;
+      top: 0;
+      background: var(--bg-sidebar);
+      padding: 12px 16px;
+      font-weight: 600;
+      color: var(--text-main);
+      white-space: nowrap;
+      border-bottom: 2px solid var(--border-color);
+      z-index: 10;
+    }
+
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-muted);
+      max-width: 240px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    tbody tr:hover td {
+      background: var(--bg-hover);
+      color: var(--text-main);
+    }
+
+    tbody tr:nth-child(even) td {
+      background: rgba(var(--accent-rgb), 0.01);
+    }
+
+    .empty-rows-message {
+      padding: 40px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    /* JSON Panel */
+    .json-view-panel {
+      width: 100%;
+      height: 100%;
+      display: none;
+      padding: 16px 24px;
+      overflow: hidden;
+    }
+
+    .json-view-panel.active {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .json-wrapper {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: var(--card-shadow);
+      flex: 1;
+      overflow: auto;
+    }
+
+    pre {
+      font-family: 'JetBrains Mono', Courier, monospace;
+      font-size: 13px;
+      line-height: 1.5;
+      color: #9cdcfe;
+    }
+
+    /* Syntax Highlighting overrides if styling JSON */
+    .json-key {
+      color: #9cdcfe;
+    }
+
+    .json-value {
+      color: #ce9178;
+    }
+
+    .json-number {
+      color: #b5cea8;
+    }
+
+    .json-boolean {
+      color: #569cd6;
+    }
+
+    .json-null {
+      color: #569cd6;
+    }
+
+    /* Loading Overlay */
+    .loading-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(9, 9, 11, 0.7);
+      backdrop-filter: blur(2px);
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    body.light-theme .loading-overlay {
+      background: rgba(248, 250, 252, 0.7);
+    }
+
+    .loading-overlay.active {
+      display: flex;
+    }
+
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 4px solid var(--border-color);
+      border-top: 4px solid var(--accent-color);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .loading-text {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-main);
+    }
+
+    /* Toast Notification System */
+    .toast-container {
+      position: fixed;
+      top: 24px;
+      right: 24px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .toast {
+      background: var(--toast-bg);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 16px 20px;
+      border-radius: 8px;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 320px;
+      max-width: 400px;
+      transform: translateX(120%);
+      animation: slideIn 0.3s forwards ease-out;
+    }
+
+    @keyframes slideIn {
+      to {
+        transform: translateX(0);
+      }
+    }
+
+    .toast.success {
+      border-left: 4px solid var(--success-color);
+    }
+
+    .toast.error {
+      border-left: 4px solid var(--danger-color);
+    }
+
+    .toast i {
+      font-size: 18px;
+    }
+
+    .toast.success i {
+      color: var(--success-color);
+    }
+
+    .toast.error i {
+      color: var(--danger-color);
+    }
+
+    .toast-content {
+      flex: 1;
+      font-size: 13.5px;
+      line-height: 1.4;
+    }
+
+    .toast-close {
+      cursor: pointer;
+      color: var(--text-muted);
+    }
+
+    .toast-close:hover {
+      color: var(--text-main);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+      .console-container {
+        flex-direction: column;
+        overflow: auto;
+      }
+
+      aside {
+        width: 100%;
+        height: 250px;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      main {
+        height: calc(100vh - 320px);
+      }
+
+      .toolbar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .toolbar-right {
+        justify-content: flex-end;
+      }
+
+      .stats-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top bar -->
+  <header>
+    <div class="brand">
+      <i class="fa-solid fa-server"></i>
+      <h1>Super Admin Console</h1>
+    </div>
+
+    <div class="header-actions">
+      <!-- Connection key -->
+      <div class="key-input-container">
+        <i class="fa-solid fa-key key-icon"></i>
+        <input type="password" id="accessKey" placeholder="Enter security access key..." />
+        <button class="toggle-visibility" onclick="toggleKeyVisibility()" title="Toggle visibility">
+          <i class="fa-solid fa-eye" id="eye-icon"></i>
+        </button>
+      </div>
+
+      <!-- Connect Button -->
+      <button class="btn-connect" onclick="loadDatabases()">
+        <i class="fa-solid fa-plug"></i> Connect
+      </button>
+
+      <!-- Status Indicator -->
+      <div id="statusBadge" class="status-badge disconnected">
+        <span class="status-indicator"></span>
+        <span id="statusText">Disconnected</span>
+      </div>
+
+      <!-- Theme Switcher -->
+      <button class="theme-toggle-btn" onclick="toggleTheme()" title="Toggle Light/Dark Theme">
+        <i class="fa-solid fa-moon" id="theme-icon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Console container -->
+  <div class="console-container">
+    <!-- Sidebar: DB navigation -->
+    <aside>
+      <div class="sidebar-header">
+        <h2><i class="fa-solid fa-folder-tree"></i> Databases</h2>
+        <div class="search-databases-container">
+          <input type="text" id="dbSearch" placeholder="Filter databases..." oninput="filterDatabasesTree()" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      <div class="database-tree" id="databaseList">
+        <!-- DB accordion items will populate here -->
+        <div style="padding: 20px; text-align: center; color: var(--text-muted); font-size: 13px;">
+          Connect to populate databases
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Section: Data explorer -->
+    <main>
+      <!-- Loading Overlay -->
+      <div class="loading-overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <div class="loading-text" id="loadingText">Retrieving data...</div>
+      </div>
+
+      <!-- Welcome State -->
+      <div class="welcome-state" id="welcomeState">
+        <div class="welcome-card">
+          <i class="fa-solid fa-shield-halved main-icon"></i>
+          <h2>Database Analytics Explorer</h2>
+          <p>Provide your security access key above to load the main schema list. Navigate through school databases and
+            tables to inspect structured information in real-time.</p>
+          <div class="steps">
+            <div><i class="fa-solid fa-circle-info"></i> Provide access key above & click Connect</div>
+            <div><i class="fa-solid fa-database"></i> Expand target databases in the sidebar tree</div>
+            <div><i class="fa-solid fa-table"></i> Click on a table to render analytics preview</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Active Dashboard View -->
+      <div class="workspace-dashboard" id="workspaceDashboard">
+        <!-- Header Info -->
+        <div class="dashboard-header">
+          <div class="breadcrumbs">
+            <span class="current-db" id="breadcrumbDb">quality</span>
+            <i class="fa-solid fa-chevron-right"></i>
+            <span class="current-table" id="breadcrumbTable">FeesDetails</span>
+          </div>
+
+          <div class="stats-row">
+            <div class="stat-card">
+              <div class="stat-info">
+                <h4>Total Rows</h4>
+                <p id="statTotalRows">0</p>
+              </div>
+              <i class="fa-solid fa-hashtag"></i>
+            </div>
+            <div class="stat-card">
+              <div class="stat-info">
+                <h4>Columns Count</h4>
+                <p id="statColumns">0</p>
+              </div>
+              <i class="fa-solid fa-table-columns"></i>
+            </div>
+            <div class="stat-card">
+              <div class="stat-info">
+                <h4>Status</h4>
+                <p style="color: var(--success-color)">Online</p>
+              </div>
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controls Toolbar -->
+        <div class="toolbar">
+          <div class="toolbar-left">
+            <!-- Table Search -->
+            <div class="search-rows-container">
+              <input type="text" id="rowSearch" placeholder="Search rows in memory..." oninput="filterRows()" />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <!-- Page Row Limits -->
+            <div class="limit-container">
+              <label for="rowLimit">Row Limit:</label>
+              <select id="rowLimit" onchange="onLimitChange()">
+                <option value="50" selected>50 rows</option>
+                <option value="100">100 rows</option>
+                <option value="200">200 rows</option>
+                <option value="500">500 rows</option>
+              </select>
+            </div>
+
+            <!-- View switch -->
+            <div class="view-mode-toggle">
+              <button class="view-mode-btn active" id="btnTableView" onclick="setViewMode('table')">
+                <i class="fa-solid fa-table-cells"></i> Grid
+              </button>
+              <button class="view-mode-btn" id="btnJsonView" onclick="setViewMode('json')">
+                <i class="fa-solid fa-code"></i> JSON
+              </button>
+            </div>
+          </div>
+
+          <div class="toolbar-right">
+            <!-- Export operations -->
+            <button class="btn-export" onclick="exportToCSV()" title="Download visible grid rows as CSV">
+              <i class="fa-solid fa-file-csv"></i> Export CSV
+            </button>
+            <button class="btn-export" onclick="exportToJSON()" title="Download visible grid rows as JSON">
+              <i class="fa-solid fa-file-code"></i> Export JSON
+            </button>
+          </div>
+        </div>
+
+        <!-- Data Area -->
+        <div class="data-viewer-container">
+          <!-- View Mode: GRID -->
+          <div class="table-view-panel active" id="tableViewPanel">
+            <div class="table-wrapper">
+              <table id="dataTable">
+                <thead>
+                  <tr id="tableHeaderRow">
+                    <!-- Dynamic Headers -->
+                  </tr>
+                </thead>
+                <tbody id="tableBody">
+                  <!-- Dynamic Rows -->
+                </tbody>
+              </table>
+              <div id="emptyRowsMessage" class="empty-rows-message" style="display: none;">
+                No matching records found.
+              </div>
+            </div>
+          </div>
+
+          <!-- View Mode: JSON -->
+          <div class="json-view-panel" id="jsonViewPanel">
+            <div class="json-wrapper">
+              <pre id="jsonPre"></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Script Logic -->
+  <script>
+    // State Variables
+    let databasesList = [];
+    let selectedDatabase = '';
+    let selectedTable = '';
+    let currentColumns = [];
+    let currentRows = [];
+    let filteredRows = [];
+    let viewMode = 'table'; // 'table' or 'json'
+
+    // Initialize Page
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Load key from localStorage if exists
+      const savedKey = localStorage.getItem('super_admin_key');
+      if (savedKey) {
+        document.getElementById('accessKey').value = savedKey;
+        showToast('Restored access key from storage', 'success');
+        // Auto-connect if key is present
+        loadDatabases();
+      }
+
+      // 2. Load Theme Preference
+      const savedTheme = localStorage.getItem('theme_preference');
+      if (savedTheme === 'light') {
+        document.body.classList.add('light-theme');
+        const icon = document.getElementById('theme-icon');
+        icon.className = 'fa-solid fa-sun';
+      }
+    });
+
+    // Toggle Access Key Mask
+    function toggleKeyVisibility() {
+      const input = document.getElementById('accessKey');
+      const icon = document.getElementById('eye-icon');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.className = 'fa-solid fa-eye-slash';
+      } else {
+        input.type = 'password';
+        icon.className = 'fa-solid fa-eye';
+      }
+    }
+
+    // Toggle Dark/Light Theme
+    function toggleTheme() {
+      const isLight = document.body.classList.toggle('light-theme');
+      const icon = document.getElementById('theme-icon');
+      if (isLight) {
+        icon.className = 'fa-solid fa-sun';
+        localStorage.setItem('theme_preference', 'light');
+      } else {
+        icon.className = 'fa-solid fa-moon';
+        localStorage.setItem('theme_preference', 'dark');
+      }
+    }
+
+    // Set Loading state
+    function setLoading(show, text = 'Loading details...') {
+      const overlay = document.getElementById('loadingOverlay');
+      const label = document.getElementById('loadingText');
+      if (show) {
+        label.innerText = text;
+        overlay.classList.add('active');
+      } else {
+        overlay.classList.remove('active');
+      }
+    }
+
+    // Toast Alerts
+    function showToast(message, type = 'success') {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+      toast.className = `toast ${type}`;
+
+      const iconClass = type === 'success' ? 'fa-circle-check' : 'fa-circle-exclamation';
+
+      toast.innerHTML = `
+        <i class="fa-solid ${iconClass}"></i>
+        <div class="toast-content">${message}</div>
+        <i class="fa-solid fa-xmark toast-close" onclick="this.parentElement.remove()"></i>
+      `;
+
+      container.appendChild(toast);
+
+      // Auto dismiss
+      setTimeout(() => {
+        toast.style.animation = 'slideOut 0.3s forwards ease-in';
+        setTimeout(() => {
+          toast.remove();
+        }, 300);
+      }, 4000);
+    }
+
+    // API: Load Databases
+    async function loadDatabases() {
+      const key = document.getElementById('accessKey').value.trim();
+      if (!key) {
+        showToast('Please input a security access key', 'error');
+        return;
+      }
+
+      setLoading(true, 'Initializing database connections...');
+
+      try {
+        const res = await fetch(`https://cleezoclass.com:4000/api/superadmin/databases?key=${encodeURIComponent(key)}`);
+        const data = await res.json();
+
+        if (!data.success) {
+          showToast(data.message || 'Access authorization failed', 'error');
+          updateStatusIndicator(false);
+          setLoading(false);
+          return;
+        }
+
+        // Save key if success
+        localStorage.setItem('super_admin_key', key);
+        databasesList = data.data || [];
+        showToast('Successfully authenticated and loaded schemas', 'success');
+        updateStatusIndicator(true);
+        renderDatabases();
+      } catch (err) {
+        console.error(err);
+        showToast('Failed to contact the backend server', 'error');
+        updateStatusIndicator(false);
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    // Update connection status
+    function updateStatusIndicator(connected) {
+      const badge = document.getElementById('statusBadge');
+      const text = document.getElementById('statusText');
+      if (connected) {
+        badge.className = 'status-badge connected';
+        text.innerText = 'Connected';
+      } else {
+        badge.className = 'status-badge disconnected';
+        text.innerText = 'Disconnected';
+      }
+    }
+
+    // Render Databases Accordion tree in sidebar
+    function renderDatabases() {
+      const container = document.getElementById('databaseList');
+      if (!databasesList.length) {
+        container.innerHTML = '<div style="padding:20px; text-align:center; color:var(--text-muted);">No databases found.</div>';
+        return;
+      }
+
+      container.innerHTML = databasesList.map(db => `
+        <div class="db-node" id="node-${db}">
+          <div class="db-header" onclick="toggleDatabaseNode('${db}')">
+            <span class="db-info">
+              <i class="fa-solid fa-database"></i>
+              <span>${db}</span>
+            </span>
+            <i class="fa-solid fa-chevron-right caret"></i>
+          </div>
+          <div class="db-tables-list" id="tables-list-${db}">
+            <div style="padding: 6px 12px; font-size: 12px; color: var(--text-muted);"><i class="fa-solid fa-spinner fa-spin"></i> Loading...</div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // Sidebar tree filter
+    function filterDatabasesTree() {
+      const query = document.getElementById('dbSearch').value.toLowerCase().trim();
+      const nodes = document.querySelectorAll('.db-node');
+
+      nodes.forEach(node => {
+        const dbName = node.id.replace('node-', '');
+        if (dbName.toLowerCase().includes(query)) {
+          node.style.display = 'block';
+        } else {
+          node.style.display = 'none';
+        }
+      });
+    }
+
+    // Toggle Accordion db item
+    async function toggleDatabaseNode(db) {
+      const node = document.getElementById(`node-${db}`);
+      const isExpanded = node.classList.contains('expanded');
+
+      // De-active previous headers, active this header
+      document.querySelectorAll('.db-header').forEach(el => el.classList.remove('active'));
+      node.querySelector('.db-header').classList.add('active');
+      selectedDatabase = db;
+
+      if (isExpanded) {
+        node.classList.remove('expanded');
+      } else {
+        node.classList.add('expanded');
+        // Fetch tables if not loaded yet or refresh
+        await fetchDatabaseTables(db);
+      }
+    }
+
+    // Fetch Database Tables list
+    async function fetchDatabaseTables(db) {
+      const tablesContainer = document.getElementById(`tables-list-${db}`);
+      const key = document.getElementById('accessKey').value.trim();
+
+      try {
+        const res = await fetch(`https://cleezoclass.com:4000/api/superadmin/databases/${encodeURIComponent(db)}/tables?key=${encodeURIComponent(key)}`);
+        const data = await res.json();
+
+        if (!data.success) {
+          tablesContainer.innerHTML = `<div style="padding:6px 12px; color:var(--danger-color); font-size:12px;"><i class="fa-solid fa-triangle-exclamation"></i> Error</div>`;
+          return;
+        }
+
+        const tables = data.data || [];
+        if (!tables.length) {
+          tablesContainer.innerHTML = `<div style="padding:6px 12px; color:var(--text-muted); font-size:12px;">No tables found</div>`;
+          return;
+        }
+
+        tablesContainer.innerHTML = tables.map(table => `
+          <div class="table-item" id="table-item-${db}-${table}" onclick="selectAndLoadTable('${table}')">
+            <i class="fa-solid fa-table"></i>
+            <span>${table}</span>
+          </div>
+        `).join('');
+
+        // Re-apply active state if selected
+        if (selectedDatabase === db && selectedTable) {
+          const item = document.getElementById(`table-item-${db}-${selectedTable}`);
+          if (item) item.classList.add('active');
+        }
+      } catch (err) {
+        console.error(err);
+        tablesContainer.innerHTML = `<div style="padding:6px 12px; color:var(--danger-color); font-size:12px;">Failed to load</div>`;
+      }
+    }
+
+    // Handle Table Select & Fetch Data
+    async function selectAndLoadTable(table) {
+      // Manage Active table classes
+      document.querySelectorAll('.table-item').forEach(el => el.classList.remove('active'));
+      const activeEl = document.getElementById(`table-item-${selectedDatabase}-${table}`);
+      if (activeEl) activeEl.classList.add('active');
+
+      selectedTable = table;
+
+      // Update Breadcrumbs
+      document.getElementById('breadcrumbDb').innerText = selectedDatabase;
+      document.getElementById('breadcrumbTable').innerText = table;
+
+      // Hide Welcome State, Show Dashboard Workspace
+      document.getElementById('welcomeState').style.display = 'none';
+      document.getElementById('workspaceDashboard').style.display = 'flex';
+      // Force repaint/active transition
+      setTimeout(() => {
+        document.getElementById('workspaceDashboard').classList.add('active');
+      }, 50);
+
+      // Reset row search filter input value
+      document.getElementById('rowSearch').value = '';
+
+      // Load data
+      await loadTablePreviewData();
+    }
+
+    // Fetch Table Preview rows
+    async function loadTablePreviewData() {
+      if (!selectedDatabase || !selectedTable) return;
+
+      const key = document.getElementById('accessKey').value.trim();
+      const limit = document.getElementById('rowLimit').value;
+
+      setLoading(true, `Loading preview rows for ${selectedTable}...`);
+
+      try {
+        const res = await fetch(`https://cleezoclass.com:4000/api/superadmin/databases/${encodeURIComponent(selectedDatabase)}/tables/${encodeURIComponent(selectedTable)}?key=${encodeURIComponent(key)}&limit=${limit}`);
+        const data = await res.json();
+
+        if (!data.success) {
+          showToast(data.message || 'Failed to retrieve table data', 'error');
+          setLoading(false);
+          return;
+        }
+
+        const payload = data.data || { columns: [], rows: [], totalRows: 0 };
+        currentColumns = payload.columns || [];
+        currentRows = payload.rows || [];
+        filteredRows = [...currentRows];
+
+        // Update Stat Badges
+        document.getElementById('statTotalRows').innerText = payload.totalRows.toLocaleString();
+        document.getElementById('statColumns').innerText = currentColumns.length.toString();
+
+        // Render Views
+        renderTableHeader();
+        renderTableBody();
+        renderJsonPre();
+
+        showToast(`Loaded ${currentRows.length} rows successfully`, 'success');
+      } catch (err) {
+        console.error(err);
+        showToast('Error loading table preview rows', 'error');
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    // Limit selector trigger
+    function onLimitChange() {
+      loadTablePreviewData();
+    }
+
+    // Render Table Header
+    function renderTableHeader() {
+      const headerRow = document.getElementById('tableHeaderRow');
+      headerRow.innerHTML = currentColumns.map(col => `<th>${col}</th>`).join('');
+    }
+
+    // Render Table Body
+    function renderTableBody() {
+      const tbody = document.getElementById('tableBody');
+      const emptyMsg = document.getElementById('emptyRowsMessage');
+
+      if (!filteredRows.length) {
+        tbody.innerHTML = '';
+        emptyMsg.style.display = 'block';
+        return;
+      }
+
+      emptyMsg.style.display = 'none';
+
+      tbody.innerHTML = filteredRows.map(row => {
+        const cells = currentColumns.map(col => {
+          const val = row[col];
+          // Handle complex/null cells beautifully
+          let formattedVal = '';
+          if (val === null || val === undefined) {
+            formattedVal = '<em style="color:var(--text-muted); opacity: 0.5;">NULL</em>';
+          } else if (typeof val === 'object') {
+            formattedVal = `<span title="${escapeHtml(JSON.stringify(val))}" style="cursor:help; border-bottom: 1px dotted var(--text-muted);">${escapeHtml(JSON.stringify(val))}</span>`;
+          } else {
+            formattedVal = escapeHtml(String(val));
+          }
+          return `<td>${formattedVal}</td>`;
+        }).join('');
+        return `<tr>${cells}</tr>`;
+      }).join('');
+    }
+
+    // Format and syntax highlight JSON preview
+    function renderJsonPre() {
+      const pre = document.getElementById('jsonPre');
+      if (!filteredRows.length) {
+        pre.innerText = '[]';
+        return;
+      }
+
+      // Syntax highlight JSON output
+      const jsonString = JSON.stringify(filteredRows, null, 2);
+      pre.innerHTML = syntaxHighlightJson(jsonString);
+    }
+
+    // Toggle View modes
+    function setViewMode(mode) {
+      viewMode = mode;
+
+      const gridBtn = document.getElementById('btnTableView');
+      const jsonBtn = document.getElementById('btnJsonView');
+      const gridPanel = document.getElementById('tableViewPanel');
+      const jsonPanel = document.getElementById('jsonViewPanel');
+
+      if (mode === 'table') {
+        gridBtn.classList.add('active');
+        jsonBtn.classList.remove('active');
+        gridPanel.classList.add('active');
+        jsonPanel.classList.remove('active');
+      } else {
+        gridBtn.classList.remove('active');
+        jsonBtn.classList.add('active');
+        gridPanel.classList.remove('active');
+        jsonPanel.classList.add('active');
+      }
+    }
+
+    // Filter Rows in Memory
+    function filterRows() {
+      const query = document.getElementById('rowSearch').value.toLowerCase().trim();
+
+      if (!query) {
+        filteredRows = [...currentRows];
+      } else {
+        filteredRows = currentRows.filter(row => {
+          return Object.values(row).some(val => {
+            if (val === null || val === undefined) return false;
+            if (typeof val === 'object') {
+              return JSON.stringify(val).toLowerCase().includes(query);
+            }
+            return String(val).toLowerCase().includes(query);
+          });
+        });
+      }
+
+      renderTableBody();
+      renderJsonPre();
+    }
+
+    let lastDownloadUrl = null;
+
+    // Helper to safely trigger file downloads in various browser environments
+    function triggerDownload(content, fileName, contentType) {
+      // Clean up previous download URL to prevent memory leaks
+      if (lastDownloadUrl) {
+        try {
+          URL.revokeObjectURL(lastDownloadUrl);
+        } catch (_) { }
+        lastDownloadUrl = null;
+      }
+
+      const blob = new Blob([content], { type: contentType });
+
+      // Try using msSaveOrOpenBlob for IE compatibility
+      if (window.navigator && window.navigator.msSaveOrOpenBlob) {
+        window.navigator.msSaveOrOpenBlob(blob, fileName);
+        return;
+      }
+
+      const url = URL.createObjectURL(blob);
+      lastDownloadUrl = url; // Keep reference to revoke on next download
+
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = fileName;
+      link.style.display = "none";
+      document.body.appendChild(link);
+
+      try {
+        link.click();
+      } catch (err) {
+        console.error("Blob URL download failed, falling back to data URI:", err);
+        const encodedUri = "data:" + contentType + "," + encodeURIComponent(content);
+        link.href = encodedUri;
+        link.click();
+      } finally {
+        // Defer link DOM removal to ensure browser download engine has registered it
+        setTimeout(() => {
+          if (link.parentNode) {
+            document.body.removeChild(link);
+          }
+        }, 1000);
+      }
+    }
+
+    // Export Table Data to CSV
+    function exportToCSV() {
+      if (!filteredRows.length || !currentColumns.length) {
+        showToast('No rows available to export', 'error');
+        return;
+      }
+
+      // Build CSV String
+      const headerRow = currentColumns.map(col => `"${String(col).replace(/"/g, '""')}"`).join(',');
+      const rows = filteredRows.map(row => {
+        return currentColumns.map(col => {
+          let val = row[col];
+          if (val === null || val === undefined) {
+            return '';
+          }
+          if (typeof val === 'object') {
+            val = JSON.stringify(val);
+          }
+          return `"${String(val).replace(/"/g, '""')}"`;
+        }).join(',');
+      });
+
+      const csvContent = "\uFEFF" + [headerRow, ...rows].join("\n"); // Include BOM for proper UTF-8 Excel mapping
+      triggerDownload(csvContent, `${selectedDatabase}_${selectedTable}_export.csv`, 'text/csv;charset=utf-8;');
+      showToast('Exported CSV file successfully', 'success');
+    }
+
+    // Export Table Data to JSON File
+    function exportToJSON() {
+      if (!filteredRows.length) {
+        showToast('No rows available to export', 'error');
+        return;
+      }
+
+      const jsonString = JSON.stringify(filteredRows, null, 2);
+      triggerDownload(jsonString, `${selectedDatabase}_${selectedTable}_export.json`, 'application/json;charset=utf-8;');
+      showToast('Exported JSON file successfully', 'success');
+    }
+
+    // Helpers & Utility functions
+    function escapeHtml(str) {
+      return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function syntaxHighlightJson(json) {
+      if (typeof json !== 'string') {
+        json = JSON.stringify(json, undefined, 2);
+      }
+      json = escapeHtml(json);
+      return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+        let cls = 'json-number';
+        if (/^"/.test(match)) {
+          if (/:$/.test(match)) {
+            cls = 'json-key';
+          } else {
+            cls = 'json-value';
+          }
+        } else if (/true|false/.test(match)) {
+          cls = 'json-boolean';
+        } else if (/null/.test(match)) {
+          cls = 'json-null';
+        }
+        return `<span class="${cls}">${match}</span>`;
+      });
+    }
+  </script>
+</body>
+
+</html>

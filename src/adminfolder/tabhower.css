@@ -1,0 +1,48 @@
+
+/* Add this block to tabhower.css */
+.blur-background-active {
+    /* 1. Apply the blur effect (adjust 4px as needed) */
+    filter: blur(4px); 
+    
+    
+    pointer-events: none; 
+}
+.title-heading{
+  font-size:'16px';
+  text-align: left;
+  font-weight: 600;
+
+}
+.title-heading1{
+  font-size:'10px';
+  text-align: left;
+  font-weight: 600;
+
+}
+
+.footprints{
+ position: absolute;
+    top: 15px;       /* Keeps it at the top */
+    left: 5px;       /* Small left margin */
+    font-size: 16px; /* Font size */
+    font-weight: 800;
+    color: #2F2E2EFF;
+    text-align: left;
+    width: auto;
+    margin-left: 2%;
+}
+.footprintsinner{
+  
+    left: 5px;       /* Small left margin */
+    font-size: 14px; /* Font size */
+    font-weight: 800;
+    color: #2F2E2EFF;
+    text-align: left;
+    width: auto;
+    margin-left: 2%;
+}
+@keyframes blinkRed {
+  0% { background-color: #fdb3b3ff; }
+  50% { background-color: #0a3d62; }
+  100% { background-color: #fdb3b3ff; }
+}

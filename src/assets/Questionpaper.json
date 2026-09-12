@@ -1,0 +1,1731 @@
+[
+    {
+    "id": 1,
+    "class": "3",
+    "subject": "Mathematics",
+    "question": "What is 8 + 7?",
+    "options": ["14", "15", "16", "17"],
+    "answer": "15"
+  },
+  {
+    "id": 2,
+    "class": "3",
+    "subject": "Mathematics",
+    "question": "Which number comes after 29?",
+    "options": ["28", "30", "31", "32"],
+    "answer": "30"
+  },
+  {
+    "id": 3,
+    "class": "3",
+    "subject": "Mathematics",
+    "question": "What is 5 × 6?",
+    "options": ["11", "30", "25", "35"],
+    "answer": "30"
+  },
+  {
+    "id": 4,
+    "class": "3",
+    "subject": "Mathematics",
+    "question": "Which is the smallest number?",
+    "options": ["15", "7", "12", "9"],
+    "answer": "7"
+  },
+  {
+    "id": 5,
+    "class": "3",
+    "subject": "Mathematics",
+    "question": "What is 50 – 23?",
+    "options": ["27", "28", "29", "26"],
+    "answer": "27"
+  },
+  {
+    "id": 6,
+    "class": "3",
+    "subject": "Science",
+    "question": "Which of these is a mammal?",
+    "options": ["Frog", "Dog", "Crocodile", "Snake"],
+    "answer": "Dog"
+  },
+  {
+    "id": 7,
+    "class": "3",
+    "subject": "Science",
+    "question": "Which part of the plant makes food?",
+    "options": ["Root", "Stem", "Leaf", "Flower"],
+    "answer": "Leaf"
+  },
+  {
+    "id": 8,
+    "class": "3",
+    "subject": "Science",
+    "question": "Which planet is known as the Red Planet?",
+    "options": ["Earth", "Mars", "Jupiter", "Venus"],
+    "answer": "Mars"
+  },
+  {
+    "id": 9,
+    "class": "3",
+    "subject": "Science",
+    "question": "Which of these animals lays eggs?",
+    "options": ["Dog", "Cat", "Hen", "Cow"],
+    "answer": "Hen"
+  },
+  {
+    "id": 10,
+    "class": "3",
+    "subject": "Science",
+    "question": "Water changes into vapor by the process of:",
+    "options": ["Condensation", "Evaporation", "Freezing", "Melting"],
+    "answer": "Evaporation"
+  },
+  {
+    "id": 11,
+    "class": "3",
+    "subject": "English",
+    "question": "Choose the correct plural of 'Book':",
+    "options": ["Bookes", "Books", "Bookies", "Book"],
+    "answer": "Books"
+  },
+  {
+    "id": 12,
+    "class": "3",
+    "subject": "English",
+    "question": "Choose the correct past tense of 'Go':",
+    "options": ["Goed", "Went", "Gone", "Go"],
+    "answer": "Went"
+  },
+  {
+    "id": 13,
+    "class": "3",
+    "subject": "English",
+    "question": "Select the proper noun:",
+    "options": ["city", "river", "Delhi", "mountain"],
+    "answer": "Delhi"
+  },
+  {
+    "id": 14,
+    "class": "3",
+    "subject": "English",
+    "question": "Which is an adjective in the sentence: 'The red ball is big'?",
+    "options": ["ball", "red", "is", "big"],
+    "answer": "red"
+  },
+  {
+    "id": 15,
+    "class": "3",
+    "subject": "English",
+    "question": "Choose the correct article: '___ apple a day keeps the doctor away.'",
+    "options": ["An", "A", "The", "No article"],
+    "answer": "An"
+  },
+  {
+    "id": 16,
+    "class": "3",
+    "subject": "General Knowledge",
+    "question": "Which is the largest mammal?",
+    "options": ["Elephant", "Blue Whale", "Giraffe", "Lion"],
+    "answer": "Blue Whale"
+  },
+  {
+    "id": 17,
+    "class": "3",
+    "subject": "General Knowledge",
+    "question": "Which is the national bird of India?",
+    "options": ["Peacock", "Eagle", "Parrot", "Sparrow"],
+    "answer": "Peacock"
+  },
+  {
+    "id": 18,
+    "class": "3",
+    "subject": "General Knowledge",
+    "question": "How many continents are there on Earth?",
+    "options": ["5", "6", "7", "8"],
+    "answer": "7"
+  },
+  {
+    "id": 19,
+    "class": "3",
+    "subject": "General Knowledge",
+    "question": "Which is a source of light?",
+    "options": ["Moon", "Sun", "Earth", "Water"],
+    "answer": "Sun"
+  },
+  {
+    "id": 20,
+    "class": "3",
+    "subject": "General Knowledge",
+    "question": "Which gas do we breathe in to live?",
+    "options": ["Oxygen", "Carbon Dioxide", "Nitrogen", "Hydrogen"],
+    "answer": "Oxygen"
+  },
+  {
+    "id": 21,
+    "class": "3",
+    "subject": "Mathematics",
+    "question": "What is 9 × 3?",
+    "options": ["27", "26", "29", "28"],
+    "answer": "27"
+  },
+  {
+    "id": 22,
+    "class": "3",
+    "subject": "Mathematics",
+    "question": "Which shape has 4 equal sides?",
+    "options": ["Rectangle", "Square", "Triangle", "Circle"],
+    "answer": "Square"
+  },
+  {
+    "id": 23,
+    "class": "3",
+    "subject": "Science",
+    "question": "Which part of the body helps us to see?",
+    "options": ["Ear", "Eye", "Nose", "Hand"],
+    "answer": "Eye"
+  },
+  {
+    "id": 24,
+    "class": "3",
+    "subject": "English",
+    "question": "Choose the correct synonym of 'Happy':",
+    "options": ["Sad", "Joyful", "Angry", "Tired"],
+    "answer": "Joyful"
+  },
+  {
+    "id": 25,
+    "class": "3",
+    "subject": "Mathematics",
+    "question": "What is 100 – 45?",
+    "options": ["55", "54", "56", "65"],
+    "answer": "55"
+  },
+  {
+    "id": 26,
+    "class": "3",
+    "subject": "Science",
+    "question": "Which of these is a source of water?",
+    "options": ["River", "Book", "Sun", "Car"],
+    "answer": "River"
+  },
+  {
+    "id": 27,
+    "class": "3",
+    "subject": "English",
+    "question": "Fill in the blank: 'I ___ a cat.'",
+    "options": ["am", "is", "are", "be"],
+    "answer": "am"
+  },
+  {
+    "id": 28,
+    "class": "3",
+    "subject": "General Knowledge",
+    "question": "Which animal is known as the King of the Jungle?",
+    "options": ["Tiger", "Lion", "Elephant", "Leopard"],
+    "answer": "Lion"
+  },
+  {
+    "id": 29,
+    "class": "3",
+    "subject": "Mathematics",
+    "question": "Which is an odd number?",
+    "options": ["12", "14", "15", "20"],
+    "answer": "15"
+  },
+  {
+    "id": 30,
+    "class": "3",
+    "subject": "Science",
+    "question": "Which of these animals can fly?",
+    "options": ["Dog", "Bird", "Cat", "Elephant"],
+    "answer": "Bird"
+  },
+   {
+    "id": 1,
+    "class": "1",
+    "subject": "Mathematics",
+    "question": "What comes after 5?",
+    "options": ["4", "6", "7", "8"],
+    "answer": "6"
+  },
+  {
+    "id": 2,
+    "class": "1",
+    "subject": "Mathematics",
+    "question": "What is 2 + 3?",
+    "options": ["4", "5", "6", "7"],
+    "answer": "5"
+  },
+  {
+    "id": 3,
+    "class": "1",
+    "subject": "Mathematics",
+    "question": "How many apples are there? 🍎🍎🍎",
+    "options": ["2", "3", "4", "5"],
+    "answer": "3"
+  },
+  {
+    "id": 4,
+    "class": "1",
+    "subject": "Mathematics",
+    "question": "Which number is bigger?",
+    "options": ["1", "3", "2", "0"],
+    "answer": "3"
+  },
+  {
+    "id": 5,
+    "class": "1",
+    "subject": "Mathematics",
+    "question": "What is 5 − 2?",
+    "options": ["1", "2", "3", "4"],
+    "answer": "3"
+  },
+  {
+    "id": 6,
+    "class": "1",
+    "subject": "Science",
+    "question": "Which one is an animal?",
+    "options": ["Car", "Dog", "Table", "Chair"],
+    "answer": "Dog"
+  },
+  {
+    "id": 7,
+    "class": "1",
+    "subject": "Science",
+    "question": "Which part of the body helps us to see?",
+    "options": ["Ear", "Eye", "Nose", "Hand"],
+    "answer": "Eye"
+  },
+  {
+    "id": 8,
+    "class": "1",
+    "subject": "Science",
+    "question": "Which one gives us milk?",
+    "options": ["Dog", "Cow", "Cat", "Lion"],
+    "answer": "Cow"
+  },
+  {
+    "id": 9,
+    "class": "1",
+    "subject": "Science",
+    "question": "What do plants need to grow?",
+    "options": ["Water", "Stone", "Plastic", "Iron"],
+    "answer": "Water"
+  },
+  {
+    "id": 10,
+    "class": "1",
+    "subject": "Science",
+    "question": "Which is hot?",
+    "options": ["Ice", "Sun", "Water", "Moon"],
+    "answer": "Sun"
+  },
+  {
+    "id": 11,
+    "class": "1",
+    "subject": "English",
+    "question": "Which letter comes after A?",
+    "options": ["C", "B", "D", "E"],
+    "answer": "B"
+  },
+  {
+    "id": 12,
+    "class": "1",
+    "subject": "English",
+    "question": "Choose the correct word: A ___ barks.",
+    "options": ["Cat", "Dog", "Cow", "Bird"],
+    "answer": "Dog"
+  },
+  {
+    "id": 13,
+    "class": "1",
+    "subject": "English",
+    "question": "Which one is a vowel?",
+    "options": ["B", "C", "A", "D"],
+    "answer": "A"
+  },
+  {
+    "id": 14,
+    "class": "1",
+    "subject": "English",
+    "question": "Select the correct spelling:",
+    "options": ["Appl", "Aple", "Apple", "Apll"],
+    "answer": "Apple"
+  },
+  {
+    "id": 15,
+    "class": "1",
+    "subject": "English",
+    "question": "Which word is a color?",
+    "options": ["Run", "Red", "Eat", "Play"],
+    "answer": "Red"
+  },
+  {
+    "id": 16,
+    "class": "1",
+    "subject": "General Knowledge",
+    "question": "What is our national animal?",
+    "options": ["Lion", "Tiger", "Elephant", "Cow"],
+    "answer": "Tiger"
+  },
+  {
+    "id": 17,
+    "class": "1",
+    "subject": "General Knowledge",
+    "question": "Which shape is round?",
+    "options": ["Square", "Triangle", "Circle", "Rectangle"],
+    "answer": "Circle"
+  },
+  {
+    "id": 18,
+    "class": "1",
+    "subject": "General Knowledge",
+    "question": "Which vehicle flies in the sky?",
+    "options": ["Car", "Bus", "Aeroplane", "Bicycle"],
+    "answer": "Aeroplane"
+  },
+  {
+    "id": 19,
+    "class": "1",
+    "subject": "General Knowledge",
+    "question": "Which day comes after Sunday?",
+    "options": ["Friday", "Monday", "Saturday", "Tuesday"],
+    "answer": "Monday"
+  },
+  {
+    "id": 20,
+    "class": "1",
+    "subject": "General Knowledge",
+    "question": "Where do we live?",
+    "options": ["School", "Home", "Park", "Market"],
+    "answer": "Home"
+  },
+  {
+    "id": 21,
+    "class": "1",
+    "subject": "Mathematics",
+    "question": "Count the fingers on one hand.",
+    "options": ["3", "4", "5", "6"],
+    "answer": "5"
+  },
+  {
+    "id": 22,
+    "class": "1",
+    "subject": "Mathematics",
+    "question": "Which number is zero?",
+    "options": ["0", "1", "2", "3"],
+    "answer": "0"
+  },
+  {
+    "id": 23,
+    "class": "1",
+    "subject": "Science",
+    "question": "Which sense organ helps us hear?",
+    "options": ["Eye", "Ear", "Nose", "Tongue"],
+    "answer": "Ear"
+  },
+  {
+    "id": 24,
+    "class": "1",
+    "subject": "English",
+    "question": "Choose the correct word: The sun is ___.",
+    "options": ["Cold", "Hot", "Wet", "Soft"],
+    "answer": "Hot"
+  },
+  {
+    "id": 25,
+    "class": "1",
+    "subject": "Mathematics",
+    "question": "What is 1 + 1?",
+    "options": ["1", "2", "3", "4"],
+    "answer": "2"
+  },
+  {
+    "id": 26,
+    "class": "1",
+    "subject": "Science",
+    "question": "Which one is a bird?",
+    "options": ["Dog", "Cat", "Parrot", "Cow"],
+    "answer": "Parrot"
+  },
+  {
+    "id": 27,
+    "class": "1",
+    "subject": "English",
+    "question": "Which word is used for a boy?",
+    "options": ["Girl", "Man", "Boy", "Lady"],
+    "answer": "Boy"
+  },
+  {
+    "id": 28,
+    "class": "1",
+    "subject": "General Knowledge",
+    "question": "Which festival is called the festival of lights?",
+    "options": ["Holi", "Diwali", "Eid", "Christmas"],
+    "answer": "Diwali"
+  },
+  {
+    "id": 29,
+    "class": "1",
+    "subject": "Mathematics",
+    "question": "Which is the smallest number?",
+    "options": ["5", "3", "1", "4"],
+    "answer": "1"
+  },
+  {
+    "id": 30,
+    "class": "1",
+    "subject": "Science",
+    "question": "Which helps us to breathe?",
+    "options": ["Heart", "Lungs", "Brain", "Legs"],
+    "answer": "Lungs"
+  },
+    {
+    "id": 1,
+    "class": "2",
+    "subject": "Mathematics",
+    "question": "What is 9 + 6?",
+    "options": ["14", "15", "16", "13"],
+    "answer": "15"
+  },
+  {
+    "id": 2,
+    "class": "2",
+    "subject": "Mathematics",
+    "question": "Which number comes before 20?",
+    "options": ["18", "19", "21", "22"],
+    "answer": "19"
+  },
+  {
+    "id": 3,
+    "class": "2",
+    "subject": "Mathematics",
+    "question": "What is 5 × 4?",
+    "options": ["20", "15", "10", "25"],
+    "answer": "20"
+  },
+  {
+    "id": 4,
+    "class": "2",
+    "subject": "Mathematics",
+    "question": "Which number is the smallest?",
+    "options": ["12", "8", "15", "10"],
+    "answer": "8"
+  },
+  {
+    "id": 5,
+    "class": "2",
+    "subject": "Mathematics",
+    "question": "What is 30 − 12?",
+    "options": ["18", "17", "19", "16"],
+    "answer": "18"
+  },
+  {
+    "id": 6,
+    "class": "2",
+    "subject": "Science",
+    "question": "Which of these is a living thing?",
+    "options": ["Chair", "Stone", "Tree", "Table"],
+    "answer": "Tree"
+  },
+  {
+    "id": 7,
+    "class": "2",
+    "subject": "Science",
+    "question": "Which part of the plant grows under the soil?",
+    "options": ["Leaf", "Flower", "Root", "Fruit"],
+    "answer": "Root"
+  },
+  {
+    "id": 8,
+    "class": "2",
+    "subject": "Science",
+    "question": "Which animal lives in water?",
+    "options": ["Dog", "Cow", "Fish", "Horse"],
+    "answer": "Fish"
+  },
+  {
+    "id": 9,
+    "class": "2",
+    "subject": "Science",
+    "question": "Which sense organ helps us to smell?",
+    "options": ["Eye", "Ear", "Nose", "Tongue"],
+    "answer": "Nose"
+  },
+  {
+    "id": 10,
+    "class": "2",
+    "subject": "Science",
+    "question": "Which of these is a source of light?",
+    "options": ["Moon", "Sun", "Chair", "Table"],
+    "answer": "Sun"
+  },
+  {
+    "id": 11,
+    "class": "2",
+    "subject": "English",
+    "question": "Choose the correct plural of 'Cat':",
+    "options": ["Cats", "Cates", "Catis", "Cat"],
+    "answer": "Cats"
+  },
+  {
+    "id": 12,
+    "class": "2",
+    "subject": "English",
+    "question": "Choose the correct verb: 'She ___ happy.'",
+    "options": ["are", "is", "am", "be"],
+    "answer": "is"
+  },
+  {
+    "id": 13,
+    "class": "2",
+    "subject": "English",
+    "question": "Which word is a noun?",
+    "options": ["Run", "Happy", "Boy", "Fast"],
+    "answer": "Boy"
+  },
+  {
+    "id": 14,
+    "class": "2",
+    "subject": "English",
+    "question": "What is the opposite of 'Hot'?",
+    "options": ["Warm", "Cold", "Cool", "Boil"],
+    "answer": "Cold"
+  },
+  {
+    "id": 15,
+    "class": "2",
+    "subject": "English",
+    "question": "Fill in the blank: 'I ___ a book.'",
+    "options": ["has", "have", "is", "are"],
+    "answer": "have"
+  },
+  {
+    "id": 16,
+    "class": "2",
+    "subject": "General Knowledge",
+    "question": "Which animal is the largest on land?",
+    "options": ["Elephant", "Lion", "Horse", "Cow"],
+    "answer": "Elephant"
+  },
+  {
+    "id": 17,
+    "class": "2",
+    "subject": "General Knowledge",
+    "question": "What do we use to see time?",
+    "options": ["Book", "Clock", "Pen", "Bag"],
+    "answer": "Clock"
+  },
+  {
+    "id": 18,
+    "class": "2",
+    "subject": "General Knowledge",
+    "question": "How many months are there in a year?",
+    "options": ["10", "11", "12", "13"],
+    "answer": "12"
+  },
+  {
+    "id": 19,
+    "class": "2",
+    "subject": "General Knowledge",
+    "question": "Which festival is known as the festival of lights?",
+    "options": ["Holi", "Diwali", "Eid", "Christmas"],
+    "answer": "Diwali"
+  },
+  {
+    "id": 20,
+    "class": "2",
+    "subject": "General Knowledge",
+    "question": "Which bird can talk?",
+    "options": ["Crow", "Sparrow", "Parrot", "Peacock"],
+    "answer": "Parrot"
+  },
+  {
+    "id": 21,
+    "class": "2",
+    "subject": "Mathematics",
+    "question": "What is 7 × 3?",
+    "options": ["21", "20", "18", "24"],
+    "answer": "21"
+  },
+  {
+    "id": 22,
+    "class": "2",
+    "subject": "Mathematics",
+    "question": "Which shape has three sides?",
+    "options": ["Circle", "Square", "Triangle", "Rectangle"],
+    "answer": "Triangle"
+  },
+  {
+    "id": 23,
+    "class": "2",
+    "subject": "Science",
+    "question": "Which body part helps us to walk?",
+    "options": ["Hand", "Leg", "Eye", "Ear"],
+    "answer": "Leg"
+  },
+  {
+    "id": 24,
+    "class": "2",
+    "subject": "English",
+    "question": "Choose the correct spelling:",
+    "options": ["Skool", "School", "Scool", "Shool"],
+    "answer": "School"
+  },
+  {
+    "id": 25,
+    "class": "2",
+    "subject": "Mathematics",
+    "question": "What comes after 49?",
+    "options": ["48", "50", "51", "47"],
+    "answer": "50"
+  },
+  {
+    "id": 26,
+    "class": "2",
+    "subject": "Science",
+    "question": "Which of these is used for drinking water?",
+    "options": ["Bottle", "Stone", "Paper", "Stick"],
+    "answer": "Bottle"
+  },
+  {
+    "id": 27,
+    "class": "2",
+    "subject": "English",
+    "question": "Which word shows action?",
+    "options": ["Boy", "Run", "Red", "Ball"],
+    "answer": "Run"
+  },
+  {
+    "id": 28,
+    "class": "2",
+    "subject": "General Knowledge",
+    "question": "Which vehicle flies in the sky?",
+    "options": ["Car", "Bus", "Train", "Aeroplane"],
+    "answer": "Aeroplane"
+  },
+  {
+    "id": 29,
+    "class": "2",
+    "subject": "Mathematics",
+    "question": "Which number is even?",
+    "options": ["7", "9", "12", "15"],
+    "answer": "12"
+  },
+  {
+    "id": 30,
+    "class": "2",
+    "subject": "Science",
+    "question": "Which of these is a domestic animal?",
+    "options": ["Lion", "Tiger", "Cow", "Bear"],
+    "answer": "Cow"
+  }
+,
+  {
+    "id": 1,
+    "class": "5",
+    "subject": "Science",
+    "question": "Which of the following is a non‑renewable resource?",
+    "options": ["Solar energy", "Wind energy", "Coal", "Tidal energy"],
+    "answer": "Coal"
+  },
+  {
+    "id": 2,
+    "class": "5",
+    "subject": "Science",
+    "question": "The boiling point of water at normal atmospheric pressure is:",
+    "options": ["90°C", "100°C", "212°C", "80°C"],
+    "answer": "100°C"
+  },
+  {
+    "id": 3,
+    "class": "5",
+    "subject": "Science",
+    "question": "Which organ pumps blood in our body?",
+    "options": ["Brain", "Kidney", "Heart", "Lung"],
+    "answer": "Heart"
+  },
+  {
+    "id": 4,
+    "class": "5",
+    "subject": "Science",
+    "question": "The process of converting a solid directly into gas is called:",
+    "options": ["Melting", "Sublimation", "Evaporation", "Condensation"],
+    "answer": "Sublimation"
+  },
+  {
+    "id": 5,
+    "class": "5",
+    "subject": "Science",
+    "question": "Which part of the plant conducts photosynthesis?",
+    "options": ["Roots", "Stem", "Leaves", "Flowers"],
+    "answer": "Leaves"
+  },
+  {
+    "id": 6,
+    "class": "5",
+    "subject": "Mathematics",
+    "question": "What is 25% of 200?",
+    "options": ["25", "50", "75", "100"],
+    "answer": "50"
+  },
+  {
+    "id": 7,
+    "class": "5",
+    "subject": "Mathematics",
+    "question": "The value of π (pi) is approximately:",
+    "options": ["3.14", "2.14", "4.13", "1.34"],
+    "answer": "3.14"
+  },
+  {
+    "id": 8,
+    "class": "5",
+    "subject": "Mathematics",
+    "question": "The perimeter of a rectangle with length 8 cm and breadth 5 cm is:",
+    "options": ["26 cm", "30 cm", "13 cm", "40 cm"],
+    "answer": "26 cm"
+  },
+  {
+    "id": 9,
+    "class": "5",
+    "subject": "Mathematics",
+    "question": "Which number is a prime number?",
+    "options": ["15", "21", "17", "27"],
+    "answer": "17"
+  },
+  {
+    "id": 10,
+    "class": "5",
+    "subject": "Mathematics",
+    "question": "0.75 as a fraction is:",
+    "options": ["3/4", "1/4", "7/5", "75/1000"],
+    "answer": "3/4"
+  },
+  {
+    "id": 11,
+    "class": "5",
+    "subject": "History",
+    "question": "The Harappan Civilization was mainly discovered in:",
+    "options": ["Uttar Pradesh", "Gujarat", "Punjab", "Rajasthan"],
+    "answer": "Punjab"
+  },
+  {
+    "id": 12,
+    "class": "5",
+    "subject": "History",
+    "question": "The Great Bath was found in:",
+    "options": ["Mohenjo‑daro", "Kalibangan", "Harappa", "Lothal"],
+    "answer": "Mohenjo‑daro"
+  },
+  {
+    "id": 13,
+    "class": "5",
+    "subject": "History",
+    "question": "Who was the first President of India?",
+    "options": ["Rajendra Prasad", "Sarvepalli Radhakrishnan", "Zakir Husain", "Abdul Kalam"],
+    "answer": "Rajendra Prasad"
+  },
+  {
+    "id": 14,
+    "class": "5",
+    "subject": "History",
+    "question": "The Mughal emperor known for his policy of Sulh‑i‑Kul was:",
+    "options": ["Humayun", "Akbar", "Aurangzeb", "Shah Jahan"],
+    "answer": "Akbar"
+  },
+  {
+    "id": 15,
+    "class": "5",
+    "subject": "History",
+    "question": "The British introduced railways in India in the year:",
+    "options": ["1853", "1870", "1901", "1840"],
+    "answer": "1853"
+  },
+  {
+    "id": 16,
+    "class": "5",
+    "subject": "Geography",
+    "question": "The longest river in India is:",
+    "options": ["Yamuna", "Ganga", "Brahmaputra", "Indus"],
+    "answer": "Ganga"
+  },
+  {
+    "id": 17,
+    "class": "5",
+    "subject": "Geography",
+    "question": "The largest state of India by area is:",
+    "options": ["Maharashtra", "Rajasthan", "Uttar Pradesh", "Madhya Pradesh"],
+    "answer": "Rajasthan"
+  },
+  {
+    "id": 18,
+    "class": "5",
+    "subject": "Geography",
+    "question": "The Tropic of Cancer passes through how many states of India?",
+    "options": ["6", "7", "8", "5"],
+    "answer": "7"
+  },
+  {
+    "id": 19,
+    "class": "5",
+    "subject": "Geography",
+    "question": "Which soil type is best suited for cotton cultivation?",
+    "options": ["Alluvial soil", "Black soil", "Red soil", "Laterite soil"],
+    "answer": "Black soil"
+  },
+  {
+    "id": 20,
+    "class": "5",
+    "subject": "Geography",
+    "question": "The capital of Australia is:",
+    "options": ["Sydney", "Melbourne", "Canberra", "Perth"],
+    "answer": "Canberra"
+  },
+  {
+    "id": 21,
+    "class": "5",
+    "subject": "English",
+    "question": "Choose the correct synonym of “Brave”:",
+    "options": ["Cowardly", "Fearful", "Courageous", "Weak"],
+    "answer": "Courageous"
+  },
+  {
+    "id": 22,
+    "class": "5",
+    "subject": "English",
+    "question": "Identify the adjective in the sentence: “The tall boy kicked the ball.”",
+    "options": ["Boy", "Kicked", "Tall", "Ball"],
+    "answer": "Tall"
+  },
+  {
+    "id": 23,
+    "class": "5",
+    "subject": "English",
+    "question": "Who wrote “The Best Christmas Present in the World”?",
+    "options": ["Charles Dickens", "Michael Morpurgo", "Ruskin Bond", "William Wordsworth"],
+    "answer": "Michael Morpurgo"
+  },
+  {
+    "id": 24,
+    "class": "5",
+    "subject": "English",
+    "question": "Which one is a verb?",
+    "options": ["Quickly", "Happiness", "Run", "Beautiful"],
+    "answer": "Run"
+  },
+  {
+    "id": 25,
+    "class": "5",
+    "subject": "English",
+    "question": "Choose the correct plural form of 'Child':",
+    "options": ["Childs", "Childes", "Children", "Children"],
+    "answer": "Children"
+  },
+  {
+    "id": 26,
+    "class": "5",
+    "subject": "General Knowledge",
+    "question": "The national animal of India is:",
+    "options": ["Elephant", "Royal Bengal Tiger", "Peacock", "Lion"],
+    "answer": "Royal Bengal Tiger"
+  },
+  {
+    "id": 27,
+    "class": "5",
+    "subject": "General Knowledge",
+    "question": "The main source of energy for the Earth is:",
+    "options": ["Moon", "Sun", "Stars", "Wind"],
+    "answer": "Sun"
+  },
+  {
+    "id": 28,
+    "class": "5",
+    "subject": "General Knowledge",
+    "question": "Who invented the telephone?",
+    "options": ["Thomas Edison", "Alexander Graham Bell", "Isaac Newton", "Albert Einstein"],
+    "answer": "Alexander Graham Bell"
+  },
+  {
+    "id": 29,
+    "class": "5",
+    "subject": "General Knowledge",
+    "question": "The SI unit of force is:",
+    "options": ["Joule", "Watt", "Newton", "Pascal"],
+    "answer": "Newton"
+  },
+  {
+    "id": 30,
+    "class": "5",
+    "subject": "General Knowledge",
+    "question": "The main ingredient of glass is:",
+    "options": ["Iron", "Sand", "Clay", "Wood"],
+    "answer": "Sand"
+  },{"id":1,"class":"4","subject":"Mathematics","question":"What is 45 + 28?","options":["63","73","83","53"],"answer":"73"},
+  {"id":2,"class":"4","subject":"Mathematics","question":"What is 9 × 6?","options":["54","56","48","64"],"answer":"54"},
+  {"id":3,"class":"4","subject":"Mathematics","question":"Which is the smallest number?","options":["234","243","324","432"],"answer":"234"},
+  {"id":4,"class":"4","subject":"Mathematics","question":"How many sides does a square have?","options":["3","4","5","6"],"answer":"4"},
+  {"id":5,"class":"4","subject":"Mathematics","question":"What is 100 − 47?","options":["53","54","55","52"],"answer":"53"},
+
+  {"id":6,"class":"4","subject":"Science","question":"Which organ helps us breathe?","options":["Heart","Lungs","Brain","Liver"],"answer":"Lungs"},
+  {"id":7,"class":"4","subject":"Science","question":"Which gas do plants need?","options":["Oxygen","Nitrogen","Carbon Dioxide","Hydrogen"],"answer":"Carbon Dioxide"},
+  {"id":8,"class":"4","subject":"Science","question":"Which is a renewable resource?","options":["Coal","Petrol","Sunlight","Diesel"],"answer":"Sunlight"},
+  {"id":9,"class":"4","subject":"Science","question":"Which animal is a herbivore?","options":["Lion","Tiger","Cow","Dog"],"answer":"Cow"},
+  {"id":10,"class":"4","subject":"Science","question":"Which part of plant absorbs water?","options":["Leaf","Stem","Root","Flower"],"answer":"Root"},
+
+  {"id":11,"class":"4","subject":"English","question":"Choose the correct noun:","options":["Run","Happy","Dog","Quick"],"answer":"Dog"},
+  {"id":12,"class":"4","subject":"English","question":"Plural of 'Child' is:","options":["Childs","Children","Childes","Childrens"],"answer":"Children"},
+  {"id":13,"class":"4","subject":"English","question":"Opposite of 'Early' is:","options":["Fast","Late","Soon","Quick"],"answer":"Late"},
+  {"id":14,"class":"4","subject":"English","question":"Choose the verb:","options":["Blue","Run","Tall","Happy"],"answer":"Run"},
+  {"id":15,"class":"4","subject":"English","question":"Article used before vowel sound:","options":["A","An","The","No article"],"answer":"An"},
+
+  {"id":16,"class":"4","subject":"General Knowledge","question":"Capital of India is:","options":["Mumbai","Delhi","Kolkata","Chennai"],"answer":"Delhi"},
+  {"id":17,"class":"4","subject":"General Knowledge","question":"Largest planet is:","options":["Earth","Mars","Jupiter","Venus"],"answer":"Jupiter"},
+  {"id":18,"class":"4","subject":"General Knowledge","question":"National animal of India:","options":["Lion","Tiger","Elephant","Leopard"],"answer":"Tiger"},
+  {"id":19,"class":"4","subject":"General Knowledge","question":"How many oceans are there?","options":["3","4","5","6"],"answer":"5"},
+  {"id":20,"class":"4","subject":"General Knowledge","question":"Which instrument tells time?","options":["Scale","Clock","Thermometer","Barometer"],"answer":"Clock"},
+  {"id":1,"class":"6","subject":"Mathematics","question":"LCM of 4 and 6 is:","options":["10","12","14","24"],"answer":"12"},
+  {"id":2,"class":"6","subject":"Mathematics","question":"What is 15% of 200?","options":["25","30","35","40"],"answer":"30"},
+  {"id":3,"class":"6","subject":"Mathematics","question":"Which is a prime number?","options":["9","15","17","21"],"answer":"17"},
+  {"id":4,"class":"6","subject":"Mathematics","question":"Perimeter of square =","options":["4 × side","side²","2 × side","side ÷ 4"],"answer":"4 × side"},
+  {"id":5,"class":"6","subject":"Mathematics","question":"Value of 2³ is:","options":["6","8","9","12"],"answer":"8"},
+
+  {"id":6,"class":"6","subject":"Science","question":"Blood is pumped by:","options":["Brain","Heart","Lungs","Kidney"],"answer":"Heart"},
+  {"id":7,"class":"6","subject":"Science","question":"Which is a soluble substance?","options":["Sand","Salt","Chalk","Stone"],"answer":"Salt"},
+  {"id":8,"class":"6","subject":"Science","question":"Which gas supports burning?","options":["Oxygen","Nitrogen","CO₂","Hydrogen"],"answer":"Oxygen"},
+  {"id":9,"class":"6","subject":"Science","question":"Photosynthesis occurs in:","options":["Root","Stem","Leaf","Flower"],"answer":"Leaf"},
+  {"id":10,"class":"6","subject":"Science","question":"Which is a vertebrate?","options":["Earthworm","Snake","Ant","Snail"],"answer":"Snake"},
+  {"id":1,"class":"7","subject":"Mathematics","question":"What is the value of 3² + 4²?","options":["25","49","7","13"],"answer":"25"},
+  {"id":2,"class":"7","subject":"Mathematics","question":"Which is a rational number?","options":["√2","π","3/5","√3"],"answer":"3/5"},
+  {"id":3,"class":"7","subject":"Mathematics","question":"Area of rectangle =","options":["l + b","2(l+b)","l × b","l²"],"answer":"l × b"},
+  {"id":4,"class":"7","subject":"Mathematics","question":"What is 40% of 150?","options":["50","60","70","80"],"answer":"60"},
+  {"id":5,"class":"7","subject":"Mathematics","question":"Which angle is greater than 90°?","options":["Acute","Right","Obtuse","Straight"],"answer":"Obtuse"},
+
+  {"id":6,"class":"7","subject":"Science","question":"Blood cells are produced in:","options":["Heart","Bone marrow","Liver","Lungs"],"answer":"Bone marrow"},
+  {"id":7,"class":"7","subject":"Science","question":"Which acid is present in lemon?","options":["Acetic","Citric","Lactic","Sulphuric"],"answer":"Citric"},
+  {"id":8,"class":"7","subject":"Science","question":"Which vitamin is produced in sunlight?","options":["Vitamin A","Vitamin B","Vitamin C","Vitamin D"],"answer":"Vitamin D"},
+  {"id":9,"class":"7","subject":"Science","question":"Respiration takes place in:","options":["Mitochondria","Nucleus","Ribosome","Vacuole"],"answer":"Mitochondria"},
+  {"id":10,"class":"7","subject":"Science","question":"Which gas is used by plants?","options":["Oxygen","Nitrogen","Carbon Dioxide","Hydrogen"],"answer":"Carbon Dioxide"},
+
+  {"id":11,"class":"7","subject":"English","question":"Choose the correct adjective:","options":["Run","Blue","Quickly","Eat"],"answer":"Blue"},
+  {"id":12,"class":"7","subject":"English","question":"Synonym of 'Brave' is:","options":["Coward","Fearful","Bold","Weak"],"answer":"Bold"},
+  {"id":13,"class":"7","subject":"English","question":"Antonym of 'Begin' is:","options":["Start","Open","Close","End"],"answer":"End"},
+  {"id":14,"class":"7","subject":"English","question":"Choose the correct tense: 'She ___ singing.'","options":["is","are","was","were"],"answer":"is"},
+  {"id":15,"class":"7","subject":"English","question":"Plural of 'Ox' is:","options":["Oxes","Oxen","Oxs","Oxies"],"answer":"Oxen"},
+
+  {"id":16,"class":"7","subject":"General Knowledge","question":"Longest river in the world:","options":["Ganga","Nile","Amazon","Yangtze"],"answer":"Nile"},
+  {"id":17,"class":"7","subject":"General Knowledge","question":"Largest continent is:","options":["Africa","Asia","Europe","Australia"],"answer":"Asia"},
+  {"id":18,"class":"7","subject":"General Knowledge","question":"Indian currency is:","options":["Dollar","Euro","Rupee","Yen"],"answer":"Rupee"},
+  {"id":19,"class":"7","subject":"General Knowledge","question":"Father of the Nation:","options":["Nehru","Gandhi","Bose","Patel"],"answer":"Gandhi"},
+  {"id":20,"class":"7","subject":"General Knowledge","question":"Which planet has rings?","options":["Mars","Earth","Saturn","Venus"],"answer":"Saturn"},
+  {
+    "id": 1,
+    "class": "9",
+    "subject": "Mathematics",
+    "question": "Value of (a+b)² is:",
+    "options": ["a²+b²", "a²+b²+2ab", "2ab", "(a-b)²"],
+    "answer": "a²+b²+2ab"
+  },
+  {
+    "id": 2,
+    "class": "9",
+    "subject": "Mathematics",
+    "question": "Solution of a linear equation in one variable is called:",
+    "options": ["Coefficient", "Root", "Constant", "Variable"],
+    "answer": "Root"
+  },
+  {
+    "id": 3,
+    "class": "9",
+    "subject": "Mathematics",
+    "question": "The sum of angles of a triangle is:",
+    "options": ["90°", "180°", "360°", "270°"],
+    "answer": "180°"
+  },
+  {
+    "id": 4,
+    "class": "9",
+    "subject": "Mathematics",
+    "question": "Which number is rational?",
+    "options": ["√2", "π", "3/4", "√3"],
+    "answer": "3/4"
+  },
+  {
+    "id": 5,
+    "class": "9",
+    "subject": "Mathematics",
+    "question": "Pythagoras theorem is applicable to:",
+    "options": ["Right-angled triangle", "Equilateral triangle", "Isosceles triangle", "Scalene triangle"],
+    "answer": "Right-angled triangle"
+  },
+  {
+    "id": 6,
+    "class": "9",
+    "subject": "Science",
+    "question": "SI unit of mass is:",
+    "options": ["Gram", "Kilogram", "Newton", "Meter"],
+    "answer": "Kilogram"
+  },
+  {
+    "id": 7,
+    "class": "9",
+    "subject": "Science",
+    "question": "Acceleration due to gravity is approximately:",
+    "options": ["9.8 m/s²", "10 m/s²", "8.9 m/s²", "9 m/s²"],
+    "answer": "9.8 m/s²"
+  },
+  {
+    "id": 8,
+    "class": "9",
+    "subject": "Science",
+    "question": "Ozone layer protects Earth from:",
+    "options": ["Infrared rays", "UV rays", "X-rays", "Gamma rays"],
+    "answer": "UV rays"
+  },
+  {
+    "id": 9,
+    "class": "9",
+    "subject": "Science",
+    "question": "Red blood cells carry:",
+    "options": ["Oxygen", "CO₂", "Water", "Food"],
+    "answer": "Oxygen"
+  },
+  {
+    "id": 10,
+    "class": "9",
+    "subject": "Science",
+    "question": "The basic unit of life is:",
+    "options": ["Atom", "Molecule", "Cell", "Tissue"],
+    "answer": "Cell"
+  },
+  {
+    "id": 11,
+    "class": "9",
+    "subject": "English",
+    "question": "Choose the correct synonym of 'Brave':",
+    "options": ["Coward", "Bold", "Weak", "Afraid"],
+    "answer": "Bold"
+  },
+  {
+    "id": 12,
+    "class": "9",
+    "subject": "English",
+    "question": "Antonym of 'Begin' is:",
+    "options": ["Start", "End", "Open", "Close"],
+    "answer": "End"
+  },
+  {
+    "id": 13,
+    "class": "9",
+    "subject": "English",
+    "question": "Identify the verb: 'He runs fast.'",
+    "options": ["He", "Runs", "Fast", "None"],
+    "answer": "Runs"
+  },
+  {
+    "id": 14,
+    "class": "9",
+    "subject": "English",
+    "question": "Choose the correct article: '___ honest man.'",
+    "options": ["A", "An", "The", "No article"],
+    "answer": "An"
+  },
+  {
+    "id": 15,
+    "class": "9",
+    "subject": "English",
+    "question": "Plural of 'Child' is:",
+    "options": ["Childs", "Childes", "Children", "Childies"],
+    "answer": "Children"
+  },
+  {
+    "id": 16,
+    "class": "9",
+    "subject": "General Knowledge",
+    "question": "Longest river in the world is:",
+    "options": ["Ganga", "Nile", "Amazon", "Yangtze"],
+    "answer": "Nile"
+  },
+  {
+    "id": 17,
+    "class": "9",
+    "subject": "General Knowledge",
+    "question": "Largest planet in the Solar System is:",
+    "options": ["Earth", "Mars", "Jupiter", "Venus"],
+    "answer": "Jupiter"
+  },
+  {
+    "id": 18,
+    "class": "9",
+    "subject": "General Knowledge",
+    "question": "Indian currency is:",
+    "options": ["Dollar", "Euro", "Rupee", "Yen"],
+    "answer": "Rupee"
+  },
+  {
+    "id": 19,
+    "class": "9",
+    "subject": "General Knowledge",
+    "question": "National animal of India is:",
+    "options": ["Lion", "Tiger", "Elephant", "Leopard"],
+    "answer": "Tiger"
+  },
+  {
+    "id": 20,
+    "class": "9",
+    "subject": "General Knowledge",
+    "question": "Which planet is known as the Red Planet?",
+    "options": ["Earth", "Venus", "Mars", "Jupiter"],
+    "answer": "Mars"
+  },
+  {
+    "id": 21,
+    "class": "9",
+    "subject": "Mathematics",
+    "question": "Square root of 144 is:",
+    "options": ["12", "14", "16", "10"],
+    "answer": "12"
+  },
+  {
+    "id": 22,
+    "class": "9",
+    "subject": "Science",
+    "question": "Which organ in humans produces insulin?",
+    "options": ["Liver", "Pancreas", "Kidney", "Heart"],
+    "answer": "Pancreas"
+  },
+  {
+    "id": 23,
+    "class": "9",
+    "subject": "Science",
+    "question": "Which gas do humans exhale?",
+    "options": ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"],
+    "answer": "Carbon dioxide"
+  },
+  {
+    "id": 24,
+    "class": "9",
+    "subject": "Mathematics",
+    "question": "The sum of angles of a quadrilateral is:",
+    "options": ["360°", "180°", "90°", "270°"],
+    "answer": "360°"
+  },
+  {
+    "id": 25,
+    "class": "9",
+    "subject": "English",
+    "question": "Synonym of 'Difficult' is:",
+    "options": ["Easy", "Hard", "Simple", "Plain"],
+    "answer": "Hard"
+  },
+  {
+    "id": 26,
+    "class": "9",
+    "subject": "General Knowledge",
+    "question": "Who is the Father of the Nation?",
+    "options": ["Jawaharlal Nehru", "Subhash Chandra Bose", "Mahatma Gandhi", "Sardar Patel"],
+    "answer": "Mahatma Gandhi"
+  },
+  {
+    "id": 27,
+    "class": "9",
+    "subject": "Science",
+    "question": "Which organ in humans removes waste?",
+    "options": ["Heart", "Kidney", "Lungs", "Brain"],
+    "answer": "Kidney"
+  },
+  {
+    "id": 28,
+    "class": "9",
+    "subject": "Mathematics",
+    "question": "LCM of 6 and 8 is:",
+    "options": ["12", "24", "18", "14"],
+    "answer": "24"
+  },
+  {
+    "id": 29,
+    "class": "9",
+    "subject": "Science",
+    "question": "Which acid is present in lemon?",
+    "options": ["Acetic acid", "Citric acid", "Sulphuric acid", "Lactic acid"],
+    "answer": "Citric acid"
+  },
+  {
+    "id": 30,
+    "class": "9",
+    "subject": "General Knowledge",
+    "question": "How many continents are there on Earth?",
+    "options": ["5", "6", "7", "8"],
+    "answer": "7"
+  },
+  {
+    "id": 1,
+    "class": "10",
+    "subject": "Mathematics",
+    "question": "Roots of a quadratic equation are found by:",
+    "options": ["Factorization", "Quadratic formula", "Graphing", "All methods"],
+    "answer": "All methods"
+  },
+  {
+    "id": 2,
+    "class": "10",
+    "subject": "Mathematics",
+    "question": "Distance formula is derived from:",
+    "options": ["Trigonometry", "Algebra", "Pythagoras theorem", "Statistics"],
+    "answer": "Pythagoras theorem"
+  },
+  {
+    "id": 3,
+    "class": "10",
+    "subject": "Mathematics",
+    "question": "The sum of interior angles of a pentagon is:",
+    "options": ["540°", "360°", "720°", "180°"],
+    "answer": "540°"
+  },
+  {
+    "id": 4,
+    "class": "10",
+    "subject": "Mathematics",
+    "question": "A triangle with all sides equal is called:",
+    "options": ["Isosceles", "Equilateral", "Scalene", "Right-angled"],
+    "answer": "Equilateral"
+  },
+  {
+    "id": 5,
+    "class": "10",
+    "subject": "Science",
+    "question": "pH of an acidic solution is:",
+    "options": [">7", "=7", "<7", "None"],
+    "answer": "<7"
+  },
+  {
+    "id": 6,
+    "class": "10",
+    "subject": "Science",
+    "question": "Unit of electric current is:",
+    "options": ["Volt", "Ampere", "Ohm", "Watt"],
+    "answer": "Ampere"
+  },
+  {
+    "id": 7,
+    "class": "10",
+    "subject": "Science",
+    "question": "DNA stands for:",
+    "options": ["Deoxyribonucleic acid", "Double Nucleus Acid", "Dynamic Nuclear Acid", "None"],
+    "answer": "Deoxyribonucleic acid"
+  },
+  {
+    "id": 8,
+    "class": "10",
+    "subject": "Science",
+    "question": "Which gas is used in the preparation of fizzy drinks?",
+    "options": ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"],
+    "answer": "Carbon dioxide"
+  },
+  {
+    "id": 9,
+    "class": "10",
+    "subject": "Science",
+    "question": "Light year is a unit of:",
+    "options": ["Time", "Distance", "Speed", "Mass"],
+    "answer": "Distance"
+  },
+  {
+    "id": 10,
+    "class": "10",
+    "subject": "Mathematics",
+    "question": "The sum of angles in a triangle is:",
+    "options": ["180°", "360°", "90°", "270°"],
+    "answer": "180°"
+  },
+  {
+    "id": 11,
+    "class": "10",
+    "subject": "English",
+    "question": "Synonym of 'Obedient' is:",
+    "options": ["Disloyal", "Compliant", "Rebellious", "Lazy"],
+    "answer": "Compliant"
+  },
+  {
+    "id": 12,
+    "class": "10",
+    "subject": "English",
+    "question": "Antonym of 'Generous' is:",
+    "options": ["Kind", "Stingy", "Brave", "Honest"],
+    "answer": "Stingy"
+  },
+  {
+    "id": 13,
+    "class": "10",
+    "subject": "English",
+    "question": "Choose the correct tense: 'He ___ finished his work.'",
+    "options": ["has", "have", "had", "having"],
+    "answer": "has"
+  },
+  {
+    "id": 14,
+    "class": "10",
+    "subject": "English",
+    "question": "Plural of 'Cactus' is:",
+    "options": ["Cactuses", "Cacti", "Cactii", "Cactus"],
+    "answer": "Cacti"
+  },
+  {
+    "id": 15,
+    "class": "10",
+    "subject": "General Knowledge",
+    "question": "National flag of India has how many colors?",
+    "options": ["2", "3", "4", "5"],
+    "answer": "3"
+  },
+  {
+    "id": 16,
+    "class": "10",
+    "subject": "General Knowledge",
+    "question": "Atomic number of hydrogen is:",
+    "options": ["1", "2", "8", "10"],
+    "answer": "1"
+  },
+  {
+    "id": 17,
+    "class": "10",
+    "subject": "Science",
+    "question": "Which blood group is universal donor?",
+    "options": ["A", "B", "O", "AB"],
+    "answer": "O"
+  },
+  {
+    "id": 18,
+    "class": "10",
+    "subject": "Science",
+    "question": "Force is measured in:",
+    "options": ["Newton", "Joule", "Watt", "Pascal"],
+    "answer": "Newton"
+  },
+  {
+    "id": 19,
+    "class": "10",
+    "subject": "Mathematics",
+    "question": "Quadrilateral with only one pair of parallel sides is called:",
+    "options": ["Square", "Rectangle", "Parallelogram", "Trapezium"],
+    "answer": "Trapezium"
+  },
+  {
+    "id": 20,
+    "class": "10",
+    "subject": "Science",
+    "question": "Which acid is present in stomach?",
+    "options": ["Hydrochloric acid", "Sulphuric acid", "Citric acid", "Acetic acid"],
+    "answer": "Hydrochloric acid"
+  },
+  {
+    "id": 21,
+    "class": "10",
+    "subject": "Mathematics",
+    "question": "If a² + b² = c², triangle is called:",
+    "options": ["Equilateral", "Isosceles", "Right-angled", "Scalene"],
+    "answer": "Right-angled"
+  },
+  {
+    "id": 22,
+    "class": "10",
+    "subject": "Science",
+    "question": "Which gas is used in electric bulbs?",
+    "options": ["Oxygen", "Nitrogen", "Argon", "Hydrogen"],
+    "answer": "Argon"
+  },
+  {
+    "id": 23,
+    "class": "10",
+    "subject": "General Knowledge",
+    "question": "Which is the largest organ in the human body?",
+    "options": ["Heart", "Skin", "Liver", "Lungs"],
+    "answer": "Skin"
+  },
+  {
+    "id": 24,
+    "class": "10",
+    "subject": "Mathematics",
+    "question": "Factor of 36 is:",
+    "options": ["6", "12", "18", "All of these"],
+    "answer": "All of these"
+  },
+  {
+    "id": 25,
+    "class": "10",
+    "subject": "Science",
+    "question": "The chemical formula of water is:",
+    "options": ["H₂O", "CO₂", "NaCl", "O₂"],
+    "answer": "H₂O"
+  },
+  {
+    "id": 26,
+    "class": "10",
+    "subject": "English",
+    "question": "Choose correct preposition: 'She is good ___ Maths.'",
+    "options": ["in", "on", "at", "for"],
+    "answer": "at"
+  },
+  {
+    "id": 27,
+    "class": "10",
+    "subject": "General Knowledge",
+    "question": "Who wrote 'Gitanjali'?",
+    "options": ["Rabindranath Tagore", "Bankim Chandra Chatterjee", "Sarojini Naidu", "Munshi Premchand"],
+    "answer": "Rabindranath Tagore"
+  },
+  {
+    "id": 28,
+    "class": "10",
+    "subject": "Mathematics",
+    "question": "The HCF of 12 and 18 is:",
+    "options": ["6", "12", "18", "24"],
+    "answer": "6"
+  },
+  {
+    "id": 29,
+    "class": "10",
+    "subject": "Science",
+    "question": "Which metal is used in electrical wiring?",
+    "options": ["Copper", "Iron", "Aluminium", "Zinc"],
+    "answer": "Copper"
+  },
+    {
+    "id": 1,
+    "class": "8",
+    "subject": "Mathematics",
+    "question": "Cube of 7 is:",
+    "options": ["21", "49", "343", "14"],
+    "answer": "343"
+  },
+  {
+    "id": 2,
+    "class": "8",
+    "subject": "Mathematics",
+    "question": "Value of π (pi) is approximately:",
+    "options": ["3.14", "2.14", "4.13", "1.34"],
+    "answer": "3.14"
+  },
+  {
+    "id": 3,
+    "class": "8",
+    "subject": "Mathematics",
+    "question": "Which of the following is an irrational number?",
+    "options": ["1/2", "0.25", "√3", "2/5"],
+    "answer": "√3"
+  },
+  {
+    "id": 4,
+    "class": "8",
+    "subject": "Mathematics",
+    "question": "Perimeter of a square with side 5 cm is:",
+    "options": ["20 cm", "25 cm", "10 cm", "15 cm"],
+    "answer": "20 cm"
+  },
+  {
+    "id": 5,
+    "class": "8",
+    "subject": "Mathematics",
+    "question": "Simple Interest depends on:",
+    "options": ["Principal only", "Rate only", "Time only", "Principal, Rate and Time"],
+    "answer": "Principal, Rate and Time"
+  },
+  {
+    "id": 6,
+    "class": "8",
+    "subject": "Science",
+    "question": "The unit of force is:",
+    "options": ["Joule", "Watt", "Newton", "Pascal"],
+    "answer": "Newton"
+  },
+  {
+    "id": 7,
+    "class": "8",
+    "subject": "Science",
+    "question": "Which metal is liquid at room temperature?",
+    "options": ["Iron", "Mercury", "Copper", "Aluminium"],
+    "answer": "Mercury"
+  },
+  {
+    "id": 8,
+    "class": "8",
+    "subject": "Science",
+    "question": "Plants lose water through:",
+    "options": ["Respiration", "Photosynthesis", "Transpiration", "Condensation"],
+    "answer": "Transpiration"
+  },
+  {
+    "id": 9,
+    "class": "8",
+    "subject": "Science",
+    "question": "Which organ filters blood in humans?",
+    "options": ["Heart", "Liver", "Kidney", "Lungs"],
+    "answer": "Kidney"
+  },
+  {
+    "id": 10,
+    "class": "8",
+    "subject": "Science",
+    "question": "Speed is calculated by:",
+    "options": ["Distance × Time", "Distance ÷ Time", "Time ÷ Distance", "None"],
+    "answer": "Distance ÷ Time"
+  },
+  {
+    "id": 11,
+    "class": "8",
+    "subject": "English",
+    "question": "Choose the correct adjective:",
+    "options": ["Run", "Beautiful", "Quickly", "Eat"],
+    "answer": "Beautiful"
+  },
+  {
+    "id": 12,
+    "class": "8",
+    "subject": "English",
+    "question": "Synonym of 'Ancient' is:",
+    "options": ["Modern", "Old", "New", "Fresh"],
+    "answer": "Old"
+  },
+  {
+    "id": 13,
+    "class": "8",
+    "subject": "English",
+    "question": "Antonym of 'Expand' is:",
+    "options": ["Grow", "Increase", "Reduce", "Extend"],
+    "answer": "Reduce"
+  },
+  {
+    "id": 14,
+    "class": "8",
+    "subject": "English",
+    "question": "Choose the correct tense: 'She ___ playing.'",
+    "options": ["is", "are", "was", "were"],
+    "answer": "is"
+  },
+  {
+    "id": 15,
+    "class": "8",
+    "subject": "English",
+    "question": "Plural of 'Mouse' is:",
+    "options": ["Mouses", "Mousees", "Mice", "Mousies"],
+    "answer": "Mice"
+  },
+  {
+    "id": 16,
+    "class": "8",
+    "subject": "General Knowledge",
+    "question": "Largest continent in the world is:",
+    "options": ["Africa", "Asia", "Europe", "Australia"],
+    "answer": "Asia"
+  },
+  {
+    "id": 17,
+    "class": "8",
+    "subject": "General Knowledge",
+    "question": "Father of the Indian Constitution is:",
+    "options": ["Mahatma Gandhi", "Jawaharlal Nehru", "Dr. B. R. Ambedkar", "Sardar Patel"],
+    "answer": "Dr. B. R. Ambedkar"
+  },
+  {
+    "id": 18,
+    "class": "8",
+    "subject": "General Knowledge",
+    "question": "Which planet is known as the Red Planet?",
+    "options": ["Earth", "Venus", "Mars", "Jupiter"],
+    "answer": "Mars"
+  },
+  {
+    "id": 19,
+    "class": "8",
+    "subject": "General Knowledge",
+    "question": "National animal of India is:",
+    "options": ["Lion", "Elephant", "Tiger", "Leopard"],
+    "answer": "Tiger"
+  },
+  {
+    "id": 20,
+    "class": "8",
+    "subject": "General Knowledge",
+    "question": "How many states are there in India?",
+    "options": ["27", "28", "29", "30"],
+    "answer": "28"
+  },
+  {
+    "id": 21,
+    "class": "8",
+    "subject": "Mathematics",
+    "question": "What is 20% of 250?",
+    "options": ["40", "45", "50", "55"],
+    "answer": "50"
+  },
+  {
+    "id": 22,
+    "class": "8",
+    "subject": "Mathematics",
+    "question": "The value of 5² is:",
+    "options": ["10", "20", "25", "30"],
+    "answer": "25"
+  },
+  {
+    "id": 23,
+    "class": "8",
+    "subject": "Science",
+    "question": "Which gas is essential for breathing?",
+    "options": ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
+    "answer": "Oxygen"
+  },
+  {
+    "id": 24,
+    "class": "8",
+    "subject": "English",
+    "question": "Choose the correct article: '___ honest man.'",
+    "options": ["A", "An", "The", "No article"],
+    "answer": "An"
+  },
+  {
+    "id": 25,
+    "class": "8",
+    "subject": "Mathematics",
+    "question": "How many sides does a hexagon have?",
+    "options": ["5", "6", "7", "8"],
+    "answer": "6"
+  },
+  {
+    "id": 26,
+    "class": "8",
+    "subject": "Science",
+    "question": "Which source gives us energy?",
+    "options": ["Sun", "Moon", "Earth", "Stone"],
+    "answer": "Sun"
+  },
+  {
+    "id": 27,
+    "class": "8",
+    "subject": "English",
+    "question": "Which word is a verb?",
+    "options": ["Jump", "Blue", "Happy", "Tall"],
+    "answer": "Jump"
+  },
+  {
+    "id": 28,
+    "class": "8",
+    "subject": "General Knowledge",
+    "question": "Which instrument is used to measure temperature?",
+    "options": ["Barometer", "Thermometer", "Speedometer", "Altimeter"],
+    "answer": "Thermometer"
+  },
+  {
+    "id": 29,
+    "class": "8",
+    "subject": "Mathematics",
+    "question": "What is the value of 9 × 8?",
+    "options": ["72", "64", "81", "69"],
+    "answer": "72"
+  },
+  {
+    "id": 30,
+    "class": "8",
+    "subject": "Science",
+    "question": "Which organ controls the body?",
+    "options": ["Heart", "Brain", "Lungs", "Kidney"],
+    "answer": "Brain"
+  }
+]

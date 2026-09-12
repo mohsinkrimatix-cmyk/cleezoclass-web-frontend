@@ -1,0 +1,386 @@
+/* src/Homepage.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .no-bullets {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  body, html {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff; /* Black border background */
+    height: 100%;
+    width: 100%;
+  }
+  .nav-icons i {
+    font-size: 16px; /* Smaller icon size */
+    color: #fff;
+    padding: 1px; /* Adjust padding for a tighter fit */
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 3px; /* Decreased gap between icons */
+    
+  }
+  
+  .nav-icons i:last-child {
+    margin-right: 0; /* Remove margin from the last icon */
+  }
+  
+  .nav-icons i:hover {
+    background: linear-gradient(145deg, #292727, #292727);
+    box-shadow: 0 0 15px #00000088, 0 0 20px #00000044 inset;
+    /* Bigger shadow */
+    transform: scale(1.3); /* Increase icon size on hover */
+    padding: 12px; /* Increase padding to make the hover box bigger */
+  }
+  
+.top-bar {
+  display: flex;  /* Enables flexbox layout */
+  justify-content: space-between;  /* Distribute space between elements */
+  align-items: center;  /* Vertically align the items in the center */
+  border-bottom: 1px solid #000000;  /* thin, subtle line */
+  padding: 10px 20px;  /* optional spacing */
+  background-color: #0f0303;  /* optional background */
+}
+
+  .outer-container {
+    display: flex;
+    height: 87vh;
+    border: 12px solid white;
+    padding: 10px;
+    box-sizing: border-box;
+ /* Prevent scrolling */
+  }
+  .calendar-container {
+    padding: 10px 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  .calendar-icon-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative; 
+  }
+  
+  .date-label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+  }
+  
+.white-box-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .white-box-links li {
+    margin: 8px 0;
+  }
+  
+  .white-box-links button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .white-box-links button:hover {
+    background-color: #d8d8d8;
+  }
+  .hidden-date-input {
+    position: absolute; /* Positioning the date input */
+    top: 100%; /* Place the calendar input below the calendar icon */
+    left: -10;
+    z-index: 10; /* Ensure the calendar pop-up is above other elements */
+    opacity: 0; /* Initially hidden */
+    pointer-events: none; /* Disable interaction until the calendar button is clicked */
+  }
+  
+
+.grid-section {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+  .selected-date {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .calendar-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    
+    border-radius: 6px;
+    transition: background-color 0.2s;
+  }
+  
+  .calendar-button:hover {
+    background-color: #f0f0f0;
+  }
+  
+
+  .sidebar {
+    width: 60px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    border-radius: 10px;
+    
+  }
+  .logo {
+    width: 30px;
+    height: 30px;
+    background-color: #555;
+    border-radius: 50%;
+    margin-bottom: 70px;
+    overflow: hidden;
+    overflow-y: auto; 
+     /* Ensure image doesn't overflow the circle */
+  }
+  
+  .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the logo fits within the circle */
+  }
+  
+  .nav-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+  .icon {
+    color: #ffffff; /* Pure white */
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease, text-shadow 0.2s ease;
+  }
+  
+  .icon:hover {
+    transform: scale(1.2);
+    color: #ffffff; /* Stay white */
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.9); /* Bright glowing white */
+  }
+  
+.main-content {
+  flex: 1;
+  background-color: white;
+  margin-left: 15px;
+  border-radius: 15px;
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  height: 720px;
+  overflow-y: auto;
+
+  /* Firefox scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0) transparent;
+}
+
+/* Chrome, Edge, Safari scrollbar */
+.main-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+
+  .top-bar {
+    height: 100px; /* Increased height */
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  /* Make sure this overlaps sidebar and has no gap */
+  body, html {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .back-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background 0.2s ease;
+  }
+  
+  .back-button:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+  
+  .left-section h2 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .right-section {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .icon-button {
+    background-color: #eaeaea;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .icon-button.green {
+    background-color: #00c292;
+    color: white;
+  }
+  
+  .icon-button:hover {
+    background-color: #ccc;
+  }
+  
+  .dashboard-body {
+    margin-top: 20px;
+  }
+  
+  .white-box {
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .top-bar-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 2px;
+  }
+  
+  .school-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+  
+.dashboard-title {
+    font-size: 36px;
+   
+    color: #333;
+    font-weight: 600;
+    margin: 0;
+    flex-grow: 1; /* Allow the title to take up available space and push the buttons to the right */
+  }
+  .button-group {
+    display: flex;
+    justify-content: flex-end; /* Align items (buttons) to the right end */
+    gap: 10px; /* Horizontal space between buttons */
+  }
+  
+  
+  .share-button {
+    background-color: #ff8698;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 4px;
+    transition: background-color 0.2s;
+  }
+  
+  .share-button:hover {
+    background-color: #f5a227;
+  }
+  
+  .download-button {
+    background-color: #5eda45;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 4px;
+    transition: background-color 0.2s;
+  }
+  
+  .download-button:hover {
+    background-color: #41cac3;
+  }
+  .section-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, #f0eaea 0%, #ccc 50%, #f0eaea 100%);
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow below */
+    transition: all 0.3s ease;
+  }
+  
+  .section-divider:hover {
+    background: linear-gradient(to right, #e0dcdc 0%, #bbb 50%, #e0dcdc 100%); /* Darker effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  
+  .dashboard-header {
+    display: flex;
+    flex-direction: column; /* Stack line and header content */
+    gap: 10px;
+  }
+  .dashboard-header-content {
+    display: flex;
+    justify-content: space-between; /* Spread out content, pushing title left and buttons right */
+    align-items: center; /* Vertically center items */
+    width: 100%; /* Ensure it takes up the full width */
+  }
+  
+  

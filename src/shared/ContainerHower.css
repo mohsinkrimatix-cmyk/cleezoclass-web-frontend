@@ -1,0 +1,8 @@
+.container-hover {
+  transition: all 0.3s ease;
+}
+
+.container-hover:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.12);
+}

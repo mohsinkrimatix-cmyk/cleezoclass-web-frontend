@@ -1,0 +1,286 @@
+/* AcademicManagementPage.css */
+/* All class names end with -asc to avoid style conflicts with other components */
+
+.operations-dashboard-container-asc {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.header-section-asc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-title-asc {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.date-picker-container-asc {
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.date-label-asc {
+  font-size: 14px;
+  margin-right: 10px;
+  color: #555;
+}
+
+.date-input-asc {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.dashboard-grid-asc {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.dashboard-panel-asc {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.panel-title-asc {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* Attendance Management Panel */
+.attendance-card-asc {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+}
+
+.attendance-icon-asc {
+  width: 50px;
+  height: 50px;
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  margin-right: 15px;
+}
+
+.attendance-details-asc {
+  flex: 1;
+}
+
+.attendance-id-asc {
+  font-size: 14px;
+  color: #888;
+}
+
+.attendance-name-asc {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 3px 0;
+}
+
+.attendance-subtext-asc {
+  font-size: 14px;
+  color: #555;
+}
+
+.attendance-date-asc {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+}
+
+/* Staff Performance Panel */
+.performance-stats-asc {
+  margin-bottom: 20px;
+}
+
+.issues-detected-asc {
+  margin-bottom: 5px;
+}
+
+.issues-number-asc {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.issues-label-asc {
+  font-size: 14px;
+  color: #666;
+}
+
+.time-period-asc {
+  font-size: 14px;
+  color: #666;
+  display: flex;
+  align-items: center;
+}
+
+.change-indicator-asc {
+  margin-left: 8px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.positive-asc {
+  background-color: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+}
+
+.negative-asc {
+  background-color: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+}
+
+.performance-chart-container-asc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.donut-chart-asc {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: conic-gradient(
+    rgba(15,150,128,255)0% 92%,
+    #95a5a6 92% 100%
+  );
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.donut-chart-asc::before {
+  content: "";
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.donut-percentage-asc {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.percentage-value-asc {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+.percentage-label-asc {
+  font-size: 12px;
+  color: #777;
+}
+
+.performance-legend-asc {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.legend-item-asc {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+
+.legend-marker-good-asc,
+.legend-marker-average-asc,
+.legend-marker-defect-asc {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.legend-marker-good-asc {
+  background-color: #2ecc71;
+}
+
+.legend-marker-average-asc {
+  background-color: #95a5a6;
+}
+
+.legend-marker-defect-asc {
+  background-color: #e0e0e0;
+}
+
+.legend-text-asc {
+  color: #666;
+}
+
+/* Academic Management Panel */
+.academic-stats-asc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.performance-percentage-asc {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.chart-container-asc {
+  margin-bottom: 20px;
+}
+
+.driving-behavior-chart-asc {
+  margin-top: 20px;
+}
+
+.behavior-legend-asc {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
+.behavior-item-asc {
+  font-size: 12px;
+  color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-grid-asc {
+    grid-template-columns: 1fr;
+  }
+  
+  .header-section-asc {
+    flex-direction: column;
+  }
+  
+  .date-picker-container-asc {
+    margin-top: 10px;
+  }
+}

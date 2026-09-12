@@ -1,0 +1,642 @@
+/* ============================================
+   HR BIOMETRIC - ENHANCED UI, NO WHITE SPACE
+   ============================================ */
+
+.bio-page {
+  font-family: 'Century Gothic', 'AppleGothic', sans-serif;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  padding: 0.82rem 1.2rem 0.5rem 1.2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  height: calc(100vh - 140px);  /* Fill viewport */
+  overflow: hidden;
+}
+
+/* ============================================
+   FLEX ROWS - FILL AVAILABLE SPACE
+   ============================================ */
+.bio-row {
+  display: flex;
+  gap: 0.6rem;
+  width: 100%;
+  min-height: 0;
+}
+
+/* Row 1: Welcome (20%) + Biometrics + Enrollments */
+.bio-row-1 {
+  flex: 0 0 28%;  /* 28% of available height */
+  min-height: 0;
+}
+
+.bio-row-1 .hr-welcome-block {
+  width: 20%;
+  flex-shrink: 0;
+  min-width: 0;
+  min-height: 0;
+  border-radius: 0.75rem;
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.bio-row-1 .hr-welcome-block h2 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.bio-row-1 .hr-welcome-block p {
+  margin: 0.2rem 0;
+  font-size: 1.2rem;
+  color: #374151;
+  line-height: 1.4;
+}
+
+.bio-row-1 .bio-biometrics,
+.bio-row-1 .bio-enrollments {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* Row 2: Attendance + Complaints (stacked) | Actions (50%) */
+.bio-row-2 {
+  flex: 1;  /* Takes remaining space */
+  min-height: 0;
+  display: flex;
+  gap: 0.6rem;
+}
+
+.bio-row-2-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-width: 0;
+  min-height: 0;
+}
+
+.bio-row-2 .bio-attendance {
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+}
+
+.bio-row-2 .bio-complaints {
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+}
+
+.bio-row-2 .bio-actions-panel {
+  width: 50%;
+  flex-shrink: 0;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* Row 3: Premium (Full Width) */
+.bio-row-3 {
+  flex: 0 0 auto;
+  min-height: 0;
+}
+
+.bio-row-3 .accountant-premium-card {
+  width: 100%;
+  min-height: 110px;
+}
+
+/* ============================================
+   BASE CARD - WITH BORDERS
+   ============================================ */
+.bio-card {
+  min-width: 0;
+  min-height: 0;
+  background: #ffffff;
+  border: 2px solid #d1d5db;
+  border-radius: 0.75rem;
+  padding: 0.8rem 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  height: 100%;
+}
+
+/* ============================================
+   CARD HEADER
+   ============================================ */
+.bio-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.6rem;
+  /* border-bottom: 2px solid #e5e7eb; */
+  flex-shrink: 0;
+}
+
+.bio-section-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  flex: 1;
+}
+
+.bio-card-header svg {
+  font-size: 0.95rem;
+  color: #f9b1b8;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   CARD BODY — scrollable
+   ============================================ */
+.bio-card-body {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  scrollbar-width: thin;
+  scrollbar-color: #9ca3af transparent;
+}
+
+.bio-card-body::-webkit-scrollbar {
+  width: 0.35rem;
+}
+
+.bio-card-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.bio-card-body::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 999px;
+}
+
+/* ============================================
+   ACTIONS PANEL
+   ============================================ */
+.bio-actions-panel {
+  min-width: 0;
+  min-height: 0;
+  background: #ffffff;
+  /* border: 2px solid #d1d5db; */
+  border-radius: 0.75rem;
+  padding: 0.8rem 1rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  height: 100%;
+}
+
+/* ============================================
+   SUMMARY GRID (Stats)
+   ============================================ */
+.bio-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.bio-stat-card {
+  background: #ffffff;
+  /* border: 2px solid #d1d5db; */
+  border-radius: 0.6rem;
+  padding: 0.6rem 0.5rem;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.bio-stat-label {
+  font-size: 0.65rem;
+  color: #4b5563;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.bio-stat-value {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.bio-btn-row {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 0.4rem;
+  margin-bottom: 0.6rem;
+}
+
+.bio-btn-outline {
+  background: #f9b1b8;
+  /* border: 2px solid #9ca3af; */
+  border-radius: 0.5rem;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bio-btn-outline:hover {
+  background: #e5e7eb;
+  border-color: #6b7280;
+}
+
+/* ============================================
+   ACTION ITEMS
+   ============================================ */
+.bio-action-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.65rem;
+  cursor: pointer;
+  border-radius: 0.6rem;
+  margin-bottom: 0.3rem;
+  background: #f9fafb;
+  /* border: 2px solid #d1d5db; */
+  transition: all 0.2s ease;
+}
+
+.bio-action-item:hover {
+  background: #ffffff;
+  border-color: #f9b1b8;
+}
+
+.bio-action-with-plus {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bio-plus-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  /* border: 2px solid #111827; */
+  border-radius: 0.38rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.bio-action-text {
+  font-size: 0.78rem;
+  color: #111827;
+  font-weight: 500;
+}
+
+
+.bio-complaint-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.bio-dropdown {
+  padding: 0.5rem 0.65rem;
+  border-radius: 0.55rem;
+  /* border: 2px solid #9ca3af; */
+  font-size: 0.82rem;
+  background: #ffffff;
+  color: #111827;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.bio-btn-ok {
+  background: #f3f4f6;
+  width: 60px;
+  color: #111827;
+  /* border: 2px solid #9ca3af; */
+  border-radius: 0.55rem;
+  padding: 0.45rem 0.85rem;
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.bio-btn-ok:hover {
+  background: #e5e7eb;
+  border-color: #6b7280;
+}
+
+/* ============================================
+   ROW CARDS (exits, edits, leaves)
+   ============================================ */
+.bio-row-card {
+  background: #ffffff;
+  /* border: 2px solid #d1d5db; */
+  /* border-left: 4px solid #6b7280; */
+  border-radius: 0.6rem;
+  padding: 0.55rem 0.65rem;
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bio-row-card:hover {
+  background: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.bio-row-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: #111827;
+  margin-bottom: 0.2rem;
+}
+
+.bio-row-detail {
+  font-size: 0.72rem;
+  color: #4b5563;
+  line-height: 1.35;
+}
+
+/* ============================================
+   PREMIUM CARD
+   ============================================ */
+.accountant-premium-card {
+  background: #ffffff;
+  /* border: 2px solid #d1d5db; */
+  border-radius: 0.75rem;
+  padding: 1.1rem 1.3rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 110px;
+}
+
+.accountant-premium-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.accountant-premium-card p {
+  margin: 0;
+  font-size: 0.82rem;
+  color: #4b5563;
+  line-height: 1.45;
+  max-width: 500px;
+}
+
+.accountant-premium-card button {
+  background: #111827;
+  color: #ffffff;
+  /* border: 2px solid #111827; */
+  padding: 0.5rem 1.1rem;
+  border-radius: 0.55rem;
+  font-weight: 600;
+  font-size: 0.82rem;
+  cursor: pointer;
+  margin-top: 0.4rem;
+  transition: all 0.2s ease;
+}
+
+.accountant-premium-card button:hover {
+  background: #374151;
+  border-color: #374151;
+}
+
+/* ============================================
+   POPUPS
+   ============================================ */
+.bio-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.bio-popup-content {
+  background: #ffffff;
+  border-radius: 1.2rem;
+  padding: 1.5rem;
+  width: 65%;
+  max-width: 900px;
+  max-height: 85vh;
+  overflow: auto;
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.3);
+  border: 3px solid #9ca3af;
+  position: relative;
+}
+
+.bio-popup-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.8rem;
+  background: #f3f4f6;
+  color: #111827;
+  border: 2px solid #9ca3af;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bio-popup-title {
+  text-align: center;
+  margin: 0.5rem 0 1.2rem 0;
+  color: #111827;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.bio-iframe-popup {
+  background: #ffffff;
+  border-radius: 1.2rem;
+  width: 75%;
+  height: 75vh;
+  overflow: hidden;
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.3);
+  border: 3px solid #9ca3af;
+}
+
+.bio-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ============================================
+   TABLES
+   ============================================ */
+.bio-table-wrapper {
+  overflow: auto;
+  border-radius: 0.65rem;
+  border: 2px solid #d1d5db;
+}
+
+.bio-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.bio-table th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #374151;
+  color: #ffffff;
+  text-align: center;
+  padding: 0.75rem 0.8rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-right: 1px solid rgba(255, 255, 255, 0.22);
+  font-weight: 700;
+}
+
+.bio-table td {
+  text-align: center;
+  padding: 0.7rem 0.8rem;
+  color: #111827;
+  border-right: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.85rem;
+}
+
+.bio-row-even { background: #ffffff; }
+.bio-row-odd { background: #f9fafb; }
+
+/* ============================================
+   HIDE SCROLLBARS
+   ============================================ */
+.bio-card-body,
+.bio-actions-panel,
+.bio-table-wrapper {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.bio-card-body::-webkit-scrollbar,
+.bio-actions-panel::-webkit-scrollbar,
+.bio-table-wrapper::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* ============================================
+   RESPONSIVE - 1024px
+   ============================================ */
+@media (max-width: 1024px) {
+  .bio-page {
+    height: auto;
+    overflow: visible;
+  }
+
+  .bio-row {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .bio-row-1,
+  .bio-row-2 {
+    height: auto;
+  }
+
+  .bio-row-1 .hr-welcome-block,
+  .bio-row-1 .bio-biometrics,
+  .bio-row-1 .bio-enrollments,
+  .bio-row-2 .bio-attendance,
+  .bio-row-2 .bio-complaints,
+  .bio-row-2 .bio-actions-panel {
+    width: 100%;
+    min-height: 180px;
+  }
+
+  .bio-card,
+  .hr-welcome-block,
+  .bio-actions-panel {
+    height: auto;
+  }
+}
+
+/* ============================================
+   RESPONSIVE - 768px
+   ============================================ */
+@media (max-width: 768px) {
+  .bio-page {
+    padding: 12px;
+  }
+
+  .bio-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bio-popup-content,
+  .bio-iframe-popup {
+    width: 95%;
+  }
+}
+
+.bio-header-icon svg {
+  font-size: 1.1rem;
+  color: #f9b1b8;
+  /* background: #e5e7eb; */
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}

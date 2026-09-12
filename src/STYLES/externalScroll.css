@@ -1,0 +1,45 @@
+/* Container for floating scroll buttons */
+.scroll-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000; /* ensure it floats above content */
+}
+
+/* Individual scroll button */
+.scroll-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.scroll-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* Optional: rotate icon for scroll up */
+.scroll-btn.up svg {
+  transform: rotate(180deg);
+}
+.second-section {
+  transition: opacity 0.3s, transform 0.3s;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.second-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

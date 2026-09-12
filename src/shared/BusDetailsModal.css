@@ -1,0 +1,256 @@
+/* Modal Overlay */
+.sgo-bus-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Container */
+.sgo-bus-modal-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Modal Header */
+.sgo-bus-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Close Button */
+.sgo-bus-close-x {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Form Grid */
+.sgo-bus-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+/* Form Group */
+.sgo-bus-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.sgo-bus-form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.sgo-bus-form-group input,
+.sgo-bus-form-group select,
+.sgo-bus-form-group textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Modal Footer */
+.sgo-bus-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  gap: 10px;
+}
+.sgo-bus-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.sgo-bus-modal-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.sgo-bus-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sgo-bus-close-x {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.sgo-bus-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sgo-bus-branches-section {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.sgo-bus-branches-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sgo-bus-branches-section li {
+  padding: 5px 0;
+}
+
+.sgo-bus-qty-section {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sgo-bus-qty-section input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.sgo-bus-list-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sgo-bus-card {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sgo-bus-number-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.sgo-bus-number-group input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.sgo-bus-add-details-btn {
+  padding: 8px 12px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.sgo-bus-details-form {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.sgo-bus-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.sgo-bus-form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.sgo-bus-form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.sgo-bus-form-group input,
+.sgo-bus-form-group select,
+.sgo-bus-form-group textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.sgo-bus-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.sgo-bus-save-btn {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.sgo-bus-cancel-btn {
+  padding: 10px 20px;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Save Button */
+.sgo-bus-save-btn {
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Cancel Button */
+.sgo-bus-cancel-btn {
+  padding: 10px 20px;
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
